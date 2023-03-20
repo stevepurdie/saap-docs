@@ -108,3 +108,4 @@ nav:
 plugins:
     - search
     - mermaid2
+    - table-reader  
