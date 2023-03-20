@@ -1,0 +1,110 @@
+site_name: Stakater App Agility Platform (SAAP)
+docs_dir: content
+site_url: https://docs.stakater.com/
+repo_url: https://github.com/stakater/saap-docs
+edit_uri: blob/main/content/
+use_directory_urls: false
+theme:
+    name: material
+    prev_next_buttons_location: none
+    logo: assets/images/favicon.svg
+    favicon: assets/images/favicon.svg
+    custom_dir: custom_theme/
+    palette:
+        primary: white
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra:
+    analytics:
+        provider: google
+        property: G-TTH1YYW5TX
+    consent:
+        title: Cookie consent
+        actions:
+            - accept
+            - reject
+            - manage
+        description: >-
+            We use cookies to recognize your repeated visits and preferences, as well
+            as to measure the effectiveness of our documentation and whether users
+            find what they're searching for. With your consent, you're helping us to
+            make our documentation better.
+
+nav:
+    - About:
+        - about/overview.md
+        - Service Definition:
+            - about/service-definition/overview.md
+            - about/service-definition/account-management.md
+            - about/service-definition/logging.md
+            - about/service-definition/monitoring.md
+            - about/service-definition/networking.md
+            - about/service-definition/storage.md
+            - about/service-definition/platform.md
+            - about/service-definition/security.md
+            - about/service-definition/secrets-management.md    
+            - about/service-definition/artifacts-management.md                    
+            - about/service-definition/cicd-pipelines.md
+            - about/service-definition/multitenancy.md            
+        - Responsibility Matrix:
+            - about/responsibility-matrix/overview.md
+            - about/responsibility-matrix/incident-operations-management.md
+            - about/responsibility-matrix/change-management.md
+            - about/responsibility-matrix/identity-access-management.md                                
+            - about/responsibility-matrix/security-regulation-compliance.md
+            - about/responsibility-matrix/application-data.md
+        - Cloud Providers:
+            - about/cloud-providers/overview.md
+            - about/cloud-providers/aws.md
+            - about/cloud-providers/azure.md
+            - about/cloud-providers/gcp.md
+            - about/cloud-providers/binero.md   
+            - about/cloud-providers/upcloud.md                                                         
+        - about/high-availability.md
+        - about/sla.md
+        - about/update-lifecycle.md                                                      
+        - Support:
+            - about/support/support.md
+    - For Administrators:
+        - for-administrators/overview.md
+    - For Delivery Engineers:
+        - for-delivery-engineers/overview.md        
+    - For Developers:
+        - for-developers/overview.md
+    - For CISOs:
+        - for-cisos/overview.md
+    - For Partners:
+        - for-partners/overview.md
+    - Managed Addons:
+        - managed-addons/overview.md
+        - Nexus:
+            - managed-addons/nexus/overview.md
+            - About: 
+                - managed-addons/nexus/about/overview.md
+                - managed-addons/nexus/about/benefits.md
+                - managed-addons/nexus/about/slas.md
+                - managed-addons/nexus/about/release-notes.md                                      
+        - Vault:
+            - managed-addons/vault/overview.md            
+    - Help:
+        - help/overview.md
+        - Kubernetes Concepts:
+            - help/k8s-concepts/overview.md
+            - help/k8s-concepts/storage-basics.md
+        - Troubleshooting:
+            - help/troubleshooting/overview.md            
+        - FAQs:
+            - help/faqs/overview.md
+
+plugins:
+    - search
+    - mermaid2
