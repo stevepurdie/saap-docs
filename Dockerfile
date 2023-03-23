@@ -1,6 +1,6 @@
-FROM python:3.11-alpine as builder
+FROM python:3.11 as builder
 
-RUN pip3 install mkdocs-material mkdocs-mermaid2-plugin
+RUN pip3 install mkdocs-material mkdocs-mermaid2-plugin mkdocs-table-reader-plugin
 
 # set workdir
 RUN mkdir -p $HOME/application
@@ -19,11 +19,11 @@ COPY default.conf /etc/nginx/conf.d/
 # set non-root user
 USER 1001
 
-LABEL name="Multi Tenant Operator Documentation" \
+LABEL name="SAAP Documentation" \
       maintainer="Stakater <hello@stakater.com>" \
       vendor="Stakater" \
       release="1" \
-      summary="Documentation for Multi Tenant Operator"
+      summary="Documentation for SAAP"
 
 EXPOSE 8080:8080/tcp
 

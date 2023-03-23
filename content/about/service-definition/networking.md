@@ -12,15 +12,10 @@ Custom domains and subdomains are not available for the platform service routes,
 
 SAAP includes TLS security certificates needed for both internal and external services on the cluster. For external routes, there are two, separate TLS wildcard certificates that are provided and installed on each cluster, one for the web console and route default hostnames and the second for the API endpoint. Let’s Encrypt is the certificate authority used for certificates. Routes within the cluster, for example, the internal API endpoint, use TLS certificates signed by the cluster’s built-in certificate authority and require the CA bundle available in every pod for trusting the TLS certificate.
 
-## Loadbalancers
-
+## Load-balancers
 
 ## Network usage
 
-
 ## Cluster ingress
 
-
 ## Cluster egress
-
-

@@ -1,6 +1,6 @@
 site_name: Stakater App Agility Platform (SAAP)
 docs_dir: content
-site_url: https://docs.stakater.com/
+site_url: https://docs.stakater.com/saap/
 repo_url: https://github.com/stakater/saap-docs
 edit_uri: blob/main/content/
 use_directory_urls: false
@@ -51,15 +51,15 @@ nav:
             - about/service-definition/storage.md
             - about/service-definition/platform.md
             - about/service-definition/security.md
-            - about/service-definition/secrets-management.md    
-            - about/service-definition/artifacts-management.md                    
+            - about/service-definition/secrets-management.md
+            - about/service-definition/artifacts-management.md
             - about/service-definition/cicd-pipelines.md
-            - about/service-definition/multitenancy.md            
+            - about/service-definition/multitenancy.md
         - Responsibility Matrix:
             - about/responsibility-matrix/overview.md
             - about/responsibility-matrix/incident-operations-management.md
             - about/responsibility-matrix/change-management.md
-            - about/responsibility-matrix/identity-access-management.md                                
+            - about/responsibility-matrix/identity-access-management.md                            
             - about/responsibility-matrix/security-regulation-compliance.md
             - about/responsibility-matrix/applications-data.md
         - Cloud Providers:
@@ -67,17 +67,17 @@ nav:
             - about/cloud-providers/aws.md
             - about/cloud-providers/azure.md
             - about/cloud-providers/gcp.md
-            - about/cloud-providers/binero.md   
-            - about/cloud-providers/upcloud.md                                                         
+            - about/cloud-providers/binero.md
+            - about/cloud-providers/upcloud.md
         - about/high-availability.md
         - about/sla.md
-        - about/update-lifecycle.md                                                      
+        - about/update-lifecycle.md
         - Support:
             - about/support/support.md
     - For Administrators:
         - for-administrators/overview.md
     - For Delivery Engineers:
-        - for-delivery-engineers/overview.md        
+        - for-delivery-engineers/overview.md
     - For Developers:
         - for-developers/overview.md
     - For CISOs:
@@ -92,20 +92,20 @@ nav:
                 - managed-addons/nexus/about/overview.md
                 - managed-addons/nexus/about/benefits.md
                 - managed-addons/nexus/about/slas.md
-                - managed-addons/nexus/about/release-notes.md                                      
+                - managed-addons/nexus/about/release-notes.md
         - Vault:
-            - managed-addons/vault/overview.md            
+            - managed-addons/vault/overview.md
     - Help:
         - help/overview.md
         - Kubernetes Concepts:
             - help/k8s-concepts/overview.md
             - help/k8s-concepts/storage-basics.md
         - Troubleshooting:
-            - help/troubleshooting/overview.md            
+            - help/troubleshooting/overview.md         
         - FAQs:
             - help/faqs/overview.md
 
 plugins:
     - search
     - mermaid2
-    - table-reader  
+    - table-reader
