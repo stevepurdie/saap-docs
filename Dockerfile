@@ -1,6 +1,6 @@
 FROM python:3.11-alpine as builder
 
-RUN pip3 install mkdocs-material mkdocs-mermaid2-plugin
+RUN pip3 install mkdocs-material mkdocs-mermaid2-plugin mkdocs-table-reader-plugin
 
 # set workdir
 RUN mkdir -p $HOME/application
