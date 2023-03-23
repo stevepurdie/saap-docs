@@ -29,7 +29,8 @@ New users can sign up using their official email address by following this proce
     ![image](./images/signup-support-5.png)
 
 ## Request Support
-As a registered user you can go to the [Service Desk Portal](https://stakater-cloud.atlassian.net/servicedesk/customer/portals) to raise a support request. 
+
+As a registered user you can go to the [Service Desk Portal](https://stakater-cloud.atlassian.net/servicedesk/customer/portals) to raise a support request.
 
 ![image](./images/signup-support-6.png)
 

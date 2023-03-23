@@ -1,6 +1,6 @@
 # High availability
 
-## About high availability 
+## About high availability
 
 High availability (HA) is a core discipline in an IT infrastructure to keep your apps up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failures in an IT infrastructure. For example, you can prepare for the failure of one system by adding redundancy and setting up failover mechanisms.
 
@@ -18,7 +18,7 @@ SAAP can help further protect you against many common Kubernetes issues by addin
 
 !!! note "NOTE"
 
-	An outage can occur at several different levels of infrastructure and cluster components.
+ An outage can occur at several different levels of infrastructure and cluster components.
 
 SAAP provides several approaches to add more availability to your cluster by adding redundancy and anti-affinity. Review the following image to learn about potential points of failure and how to eliminate them.
 
@@ -40,7 +40,7 @@ Worker nodes are the virtual machines that contain your application pods. By def
 
 !!! note "NOTE"
 
-	When accounting for possible node failures, it is also important to understand how storage is affected.
+ When accounting for possible node failures, it is also important to understand how storage is affected.
 
 ### Potential failure point 3: Cluster availability
 

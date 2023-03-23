@@ -14,13 +14,8 @@ SAAP includes TLS security certificates needed for both internal and external se
 
 ## Loadbalancers
 
-
 ## Network usage
-
 
 ## Cluster ingress
 
-
 ## Cluster egress
-
-

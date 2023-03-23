@@ -2,7 +2,6 @@
 
 ## Billing
 
-
 ## Cloud Providers
 
 SAAP is available as a managed service on the following cloud providers:
@@ -14,4 +13,3 @@ SAAP is available as a managed service on the following cloud providers:
 - UpCloud
 
 ## Cluster Provisioning
-
