@@ -4,7 +4,7 @@
 
 ## Container Image Format
 
-## Containerfile
+## Container-file
 
 ## Container Identification
 

@@ -2,9 +2,9 @@
 
 ## About high availability
 
-High availability (HA) is a core discipline in an IT infrastructure to keep your apps up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failures in an IT infrastructure. For example, you can prepare for the failure of one system by adding redundancy and setting up failover mechanisms.
+High availability (HA) is a core discipline in an IT infrastructure to keep your apps up and running, even after a partial or full site failure. The main purpose of high availability is to eliminate potential points of failures in an IT infrastructure. For example, you can prepare for the failure of one system by adding redundancy and setting up fail-over mechanisms.
 
-Availability and disaster avoidance are extremely important aspects of any application platform. SAAP provides many protections against failures at several levels, but customer-deployed applications must be appropriately configured for high availability. In addition, to account for cloud provider outages that might occur, other options are available, such as deploying a cluster across multiple availability zones or maintaining multiple clusters with failover mechanisms.
+Availability and disaster avoidance are extremely important aspects of any application platform. SAAP provides many protections against failures at several levels, but customer-deployed applications must be appropriately configured for high availability. In addition, to account for cloud provider outages that might occur, other options are available, such as deploying a cluster across multiple availability zones or maintaining multiple clusters with fail-over mechanisms.
 
 ### What level of availability is best?
 
@@ -12,7 +12,7 @@ You can achieve high availability on different levels in your IT infrastructure 
 
 ## Potential points of failure
 
-SAAP provides many features and options for protecting your workloads against downtime, but applications must be architected appropriately to take advantage of these features.
+SAAP provides many features and options for protecting your workloads against downtime, but applications must have proper architecture to take advantage of these features.
 
 SAAP can help further protect you against many common Kubernetes issues by adding Stakater Site Reliability Engineer (SRE) support and the option to deploy a multi-zone cluster, but there are a number of ways in which a container or infrastructure can still fail. By understanding potential points of failure, you can understand risks and appropriately architect both your applications and your clusters to be as resilient as necessary at each specific level.
 
@@ -50,7 +50,7 @@ In the event of a complete control plane node outage, the OpenShift APIs will no
 
 All services running on infrastructure nodes are configured by Stakater to be highly available and distributed across infrastructure nodes. In the event of a complete infrastructure outage, these services will be unavailable until these nodes have been recovered.
 
-The Kubernetes master is the main component that keeps your cluster up and running. The master stores cluster resources and their configurations in the etcd database that serves as the single point of truth for your cluster. The Kubernetes API server is the main entry point for all cluster management requests from the worker nodes to the master, or when you want to interact with your cluster resources. To protect your cluster master from a zone failure: create a cluster in a multizone location, which spreads the master across zones or consider setting up a second cluster in another zone.
+The Kubernetes master is the main component that keeps your cluster up and running. The master stores cluster resources and their configurations in the etcd database that serves as the single point of truth for your cluster. The Kubernetes API server is the main entry point for all cluster management requests from the worker nodes to the master, or when you want to interact with your cluster resources. To protect your cluster master from a zone failure: create a cluster in a multi-zone location, which spreads the master across zones or consider setting up a second cluster in another zone.
 
 ### Potential failure point 4: Zone availability
 

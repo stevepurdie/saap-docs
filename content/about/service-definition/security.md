@@ -12,7 +12,7 @@ Authentication for the cluster is configured as part of cluster creation process
 
 ## Privileged containers
 
-Privileged containers are not available by default on SAAP. The anyuid and nonroot Security Context Constraints (SCC) are available for members of the sca group, and should address many use cases. Privileged containers are only available for cluster-admin users.
+Privileged containers are not available by default on SAAP. The `anyuid` and `nonroot` Security Context Constraints (SCC) are available for members of the `sca` group, and should address many use cases. Privileged containers are only available for cluster-admin users.
 
 ## Customer administrator user
 
