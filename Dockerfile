@@ -19,11 +19,11 @@ COPY default.conf /etc/nginx/conf.d/
 # set non-root user
 USER 1001
 
-LABEL name="Multi Tenant Operator Documentation" \
+LABEL name="SAAP Documentation" \
       maintainer="Stakater <hello@stakater.com>" \
       vendor="Stakater" \
       release="1" \
-      summary="Documentation for Multi Tenant Operator"
+      summary="Documentation for SAAP"
 
 EXPOSE 8080:8080/tcp
 
