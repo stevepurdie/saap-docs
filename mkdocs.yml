@@ -1,6 +1,6 @@
 site_name: Stakater App Agility Platform (SAAP)
 docs_dir: content
-site_url: https://docs.stakater.com/saap/
+site_url: https://docs.stakater.com/
 repo_url: https://github.com/stakater/saap-docs
 edit_uri: blob/main/content/
 use_directory_urls: false
