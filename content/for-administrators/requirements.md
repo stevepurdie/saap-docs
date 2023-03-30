@@ -105,7 +105,7 @@ Minimum one monitoring node must be used for all production deployments. For hig
 | | [Prometheus](https://github.com/prometheus/prometheus) | 100 | 2.50 |
 | **Total**|    | **3290** | **12.15** |
 
-For more details of monitoring, please visit [Creating Application Alerts](../sre/monitoring/app-alerts.md).
+For more details of monitoring, please visit [Creating Application Alerts](../managed-addons/monitoring-stack/app-alerts.md).
 
 No user workloads run on monitoring nodes.
 
