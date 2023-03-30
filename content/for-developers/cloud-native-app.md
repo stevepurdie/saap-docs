@@ -857,7 +857,6 @@ Write tests at different layer to ensure high quality code.
 
 Most of the text has been copied from these awesome resources; and copyrights belong to them:
 
-- <https://www.cdta.org/sites/default/files/awards/beyond_the_12-factor_app_pivotal.pdf>
 - <https://www.redhat.com/architect/12-factor-app>
 - <https://12factor.net/>
 - <https://cloud.google.com/architecture/twelve-factor-app-development-on-gcp>
