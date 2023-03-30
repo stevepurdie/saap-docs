@@ -1,4 +1,4 @@
-# Overview
+# Addons
 
 Here is the list of fully managed addons available on Stakater App Agility Platform:
 

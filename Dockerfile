@@ -19,7 +19,7 @@ COPY default.conf /etc/nginx/conf.d/
 # set non-root user
 USER 1001
 
-LABEL name="SAAP Documentation" \
+LABEL name="Stakater App Agility Platform (SAAP) Documentation" \
       maintainer="Stakater <hello@stakater.com>" \
       vendor="Stakater" \
       release="1" \
