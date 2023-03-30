@@ -73,10 +73,12 @@ nav:
         - about/high-availability.md
         - about/sla.md
         - about/update-lifecycle.md
+        - about/onboarding.md
         - Support:
             - about/support/support.md
     - For Administrators:
         - for-administrators/overview.md
+        - for-administrators/requirements.md
     - For Delivery Engineers:
         - for-delivery-engineers/overview.md
     - For Developers:
