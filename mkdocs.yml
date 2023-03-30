@@ -41,7 +41,7 @@ extra:
 
 nav:
     - About:
-        - about/overview.md
+        - index.md
         - Service Definition:
             - about/service-definition/overview.md
             - about/service-definition/account-management.md
@@ -62,6 +62,7 @@ nav:
             - about/responsibility-matrix/identity-access-management.md                            
             - about/responsibility-matrix/security-regulation-compliance.md
             - about/responsibility-matrix/applications-data.md
+            - about/responsibility-matrix/disaster-recovery.md
         - Cloud Providers:
             - about/cloud-providers/overview.md
             - about/cloud-providers/aws.md
@@ -95,11 +96,40 @@ nav:
                 - managed-addons/nexus/about/release-notes.md
         - Vault:
             - managed-addons/vault/overview.md
+        - ArgoCD:
+            - managed-addons/argocd/overview.md
+        - Cert Manager:
+            - managed-addons/cert-manager/overview.md
+        - External Secrets Operator:
+            - managed-addons/external-secrets-operator/overview.md
+        - Forecastle:
+            - managed-addons/forecastle/overview.md
+        - Ingress Monitor Controller:
+            - managed-addons/imc/overview.md
+        - Konfigurator:
+            - managed-addons/konfigurator/overview.md
+        - Logging:
+            - managed-addons/logging-stack/overview.md
+        - Monitoring:
+            - managed-addons/monitoring-stack/overview.md
+        - Multi Tenant Operator:
+            - managed-addons/mto/overview.md
+        - Reloader:
+            - managed-addons/reloader/overview.md
+        - SonarQube:
+            - managed-addons/sonarqube/overview.md
+        - Tekton:
+            - managed-addons/tekton/overview.md
+        - Tronador:
+            - managed-addons/tronador/overview.md
+        - Velero:
+            - managed-addons/velero/overview.md
     - Help:
         - help/overview.md
         - Kubernetes Concepts:
             - help/k8s-concepts/overview.md
             - help/k8s-concepts/storage-basics.md
+            - help/k8s-concepts/container-anatomy.md
         - Troubleshooting:
             - help/troubleshooting/overview.md         
         - FAQs:
