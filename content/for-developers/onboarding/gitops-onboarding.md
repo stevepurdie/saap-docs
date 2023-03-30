@@ -19,7 +19,7 @@ To make things easier, we have created a [template](https://github.com/stakater/
 1. Now let's copy the structure that we saw in the [template](https://github.com/stakater/infra-gitops-config.git). Add a folder bearing your cluster's name at the root of the repository that you just created. If you plan on using this repository for multiple clusters, add a folder for each cluster.
 1. Inside the folder created in step 2, add two folders; one named `argocd-apps`, and another one named `tenant-operator-config`
     > The `argocd-apps` folder will contain ArgoCD applications that will _watch_ different resources added to the same repository. Let's spare ourselves from the details for now.
-1. Open the tenant-operator-config folder and add two folder inside it: quotas, tenants
+1. Open the `tenant-operator-config` folder and add two folders inside it: `quotas` and `tenants`
 1. The tenants folder will contain the tenant you want to add to your cluster. Let's create one called `gabbar` by adding the file below:
 
     ```yaml

@@ -157,7 +157,7 @@ The application developer best understands the application dependencies, and it 
 
 The build stage is where a code repository is converted into a versioned, binary artifact. It is during this stage that the dependencies declared during the design phase are fetched and bundled into the build artifact (often just simply called a “build”). In the Java world, a build might be a WAR1 or a JAR file, or it could be a ZIP file or a binary executable for other languages and frameworks.
 
-Builds are ideally created by a Continuous Integration server, and there is a 1:many relationship between builds and deployments. A single build should be able to be released or deployed to any number of environments, and each of those unmodified builds should work as expected. The immutability of this artifact and adherence to the other factors (especially environment parity) give you confidence that your app will work in production if it worked in QA.
+Builds are ideally created by a Continuous Integration server, and there is a `1:many` relationship between builds and deployments. A single build should be able to be released or deployed to any number of environments, and each of those unmodified builds should work as expected. The immutability of this artifact and adherence to the other factors (especially environment parity) give you confidence that your app will work in production if it worked in QA.
 
 If you ever find yourself troubleshooting "works on my machine" problems, that is a clear sign that the four stages of this process are likely not as separate as they should be. Forcing your team to use a CI server may often seem like a lot of upfront work, but once running, you’ll see that the “one build, many deploys” pattern works.
 
@@ -167,7 +167,7 @@ Once you have confidence that your codebase will work anywhere it should, and yo
 
 In the cloud-native world, the release is typically done by pushing to your cloud environment. The output of the build stage is combined with environment- and app-specific configuration information to produce another immutable artifact, a release.
 
-Releases need to be unique, and every release should ideally be tagged with some kind of unique ID, such as a timestamp or an auto-incremented number. Thinking back to the 1:many relationship between builds and releases, it makes sense that releases should not be tagged with the build ID.
+Releases need to be unique, and every release should ideally be tagged with some kind of unique ID, such as a timestamp or an auto-incremented number. Thinking back to the `1:many` relationship between builds and releases, it makes sense that releases should not be tagged with the build ID.
 
 Let’s say that your CI system has just built your application and labeled that artifact build-1234. The CI system might then release that application to the dev, staging, and production environments. The scheme is up to you, but each of those releases should be unique because each one combined the original build with environment specific configuration settings.
 
