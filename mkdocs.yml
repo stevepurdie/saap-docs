@@ -42,6 +42,9 @@ extra:
 nav:
     - About:
         - index.md
+        - Enterprise Kubernetes: about/saap-vs-k8s.md
+        - about/saap-features.md
+        - about/saap-key-differentiators.md
         - Service Definition:
             - about/service-definition/overview.md
             - about/service-definition/account-management.md
@@ -59,7 +62,7 @@ nav:
             - about/responsibility-matrix/overview.md
             - about/responsibility-matrix/incident-operations-management.md
             - about/responsibility-matrix/change-management.md
-            - about/responsibility-matrix/identity-access-management.md                            
+            - about/responsibility-matrix/identity-access-management.md
             - about/responsibility-matrix/security-regulation-compliance.md
             - about/responsibility-matrix/applications-data.md
             - about/responsibility-matrix/disaster-recovery.md
@@ -73,27 +76,80 @@ nav:
         - about/high-availability.md
         - about/sla.md
         - about/update-lifecycle.md
-        - Support:
-            - about/support/support.md
+        - about/onboarding.md
+        - about/release-notes.md
     - For Administrators:
         - for-administrators/overview.md
+        - for-administrators/requirements.md
+        - for-administrators/giving-access-to-oauth-users.md
+        - for-administrators/autoscaling.md
+        - for-administrators/hibernating-your-cluster.md
+        - for-administrators/node-configuration.md
+        - for-administrators/volume-expander.md
+        - for-administrators/external-dns.md
+        - for-administrators/hosting-dns.md
+        - for-administrators/routes.md
     - For Delivery Engineers:
         - for-delivery-engineers/overview.md
+        - GitOps:
+            - for-delivery-engineers/gitops/introduction.md
+            - for-delivery-engineers/gitops/github.md
+            - for-delivery-engineers/gitops/gitlab.md
+            - for-delivery-engineers/gitops/bot-account.md
+            - for-delivery-engineers/gitops/structure.md
+            - for-delivery-engineers/gitops/environments.md
+            - for-delivery-engineers/gitops/environments.md
+            - for-delivery-engineers/gitops/faq.md
     - For Developers:
         - for-developers/overview.md
+        - for-developers/cloud-native-app.md
+        - for-developers/helm.md
+        - Onboarding:
+            - for-developers/onboarding/gitops-onboarding.md
+            - for-developers/onboarding/tenant-onboarding.md
+            - for-developers/onboarding/application-onboarding.md
+            - for-developers/onboarding/environment-onboarding.md
+            - for-developers/onboarding/developer-training.md
+        - Local Development:
+            - for-developers/local-development/inner-loop.md
+            - for-developers/local-development/inner-vs-outer-loop.md
+            - for-developers/local-development/local-development-workflow.md
+            - for-developers/local-development/tilt/step-by-step-guide.md
     - For CISOs:
         - for-cisos/overview.md
+        - for-cisos/policies/policies.md
+        - Red Hat Advanced Cluster Security (RHACS):
+            - for-cisos/rhacs/introduction.md
+            - for-cisos/rhacs/accessing-rhacs.md
+            - for-cisos/rhacs/permissions.md
+        - Authentication and Authorization:
+            - for-cisos/authentication-authorization/google-idp.md
+            - for-cisos/authentication-authorization/azure-idp.md
+            - for-cisos/authentication-authorization/keycloak-idp.md
+            - for-cisos/authentication-authorization/saml-idp.md
+            - for-cisos/authentication-authorization/saap-authorization-roles.md
+            - for-cisos/authentication-authorization/curated-list-operators.md
+        - Backup and Restore:
+            - for-cisos/backup-restore/introduction.md
+            - for-cisos/backup-restore/velero-cli.md
+            - for-cisos/backup-restore/backup-restore.md
+            - for-cisos/backup-restore/troubleshooting.md
+            - for-cisos/backup-restore/cleanup.md
+            - for-cisos/backup-restore/stateful-app-example.md
+            - for-cisos/backup-restore/restore-with-gitops.md
+            - for-cisos/backup-restore/limitations.md
     - For Partners:
         - for-partners/overview.md
     - Managed Addons:
         - managed-addons/overview.md
         - Nexus:
             - managed-addons/nexus/overview.md
-            - About: 
-                - managed-addons/nexus/about/overview.md
-                - managed-addons/nexus/about/benefits.md
-                - managed-addons/nexus/about/slas.md
-                - managed-addons/nexus/about/release-notes.md
+            - managed-addons/nexus/accessing-repository.md
+            - managed-addons/nexus/permissions.md
+            - managed-addons/nexus/routes.md
+            - managed-addons/nexus/maven-setup.md
+            - managed-addons/nexus/grant-nexus-admin-keycloak.md
+            - managed-addons/nexus/faq.md
         - Vault:
             - managed-addons/vault/overview.md
         - ArgoCD:
@@ -110,30 +166,48 @@ nav:
             - managed-addons/konfigurator/overview.md
         - Logging:
             - managed-addons/logging-stack/overview.md
+            - managed-addons/logging-stack/kibana-view-logs.md
         - Monitoring:
             - managed-addons/monitoring-stack/overview.md
+            - managed-addons/monitoring-stack/stack.md
+            - managed-addons/monitoring-stack/app-uptime.md
+            - managed-addons/monitoring-stack/app-alerts.md
+            - managed-addons/monitoring-stack/goldilocks.md
+            - managed-addons/monitoring-stack/grafana-dashboard.md
+            - managed-addons/monitoring-stack/downtime-notifications-uptimerobot.md
+            - managed-addons/monitoring-stack/log-alerts.md
+            - managed-addons/monitoring-stack/predefined-prometheusrules.md
+            - managed-addons/monitoring-stack/workload-application-alerts.md
         - Multi Tenant Operator:
             - managed-addons/mto/overview.md
         - Reloader:
             - managed-addons/reloader/overview.md
         - SonarQube:
             - managed-addons/sonarqube/overview.md
+            - managed-addons/sonarqube/sonarqube-upgrade.md
         - Tekton:
-            - managed-addons/tekton/overview.md
+            - managed-addons/tekton/introduction.md
+            - managed-addons/tekton/cluster-tasks.md
+            - managed-addons/tekton/openshift-pipelines/openshift-pipelines.md
+            - managed-addons/tekton/openshift-pipelines/deploying-cicd-pipeline.md
+            - managed-addons/tekton/openshift-pipelines/deploying-delivery-pipeline.md
         - Tronador:
             - managed-addons/tronador/overview.md
         - Velero:
             - managed-addons/velero/overview.md
     - Help:
         - help/overview.md
+        - help/support/support.md
         - Kubernetes Concepts:
             - help/k8s-concepts/overview.md
             - help/k8s-concepts/storage-basics.md
             - help/k8s-concepts/container-anatomy.md
-        - Troubleshooting:
-            - help/troubleshooting/overview.md         
         - FAQs:
-            - help/faqs/overview.md
+            - help/faqs/product.md
+            - help/faqs/purchasing.md
+            - help/faqs/customization.md
+            - help/faqs/developers.md
+            - help/faqs/operations.md
 
 plugins:
     - search
