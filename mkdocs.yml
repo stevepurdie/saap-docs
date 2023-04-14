@@ -75,7 +75,6 @@ nav:
             - about/cloud-providers/upcloud.md
             - about/cloud-providers/exoscale.md            
         - about/high-availability.md
-        - about/sla.md
         - about/update-lifecycle.md
         - about/onboarding.md
     - For Administrators:
@@ -197,6 +196,7 @@ nav:
             - managed-addons/velero/overview.md
     - Legal Documents:
         - legal-documents/gtc.md
+        - legal-documents/sla.md        
         - legal-documents/agreement.md
         - legal-documents/dpa.md
         - legal-documents/nda.md
