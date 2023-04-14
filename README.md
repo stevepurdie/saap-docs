@@ -41,3 +41,9 @@ Finally serve the docs using the built-in web server which is based on Python ht
 ```
 $ mkdocs serve
 ```
+
+or 
+
+```
+$ python3 -m mkdocs serve 
+```

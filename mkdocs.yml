@@ -73,6 +73,7 @@ nav:
             - about/cloud-providers/gcp.md
             - about/cloud-providers/binero.md
             - about/cloud-providers/upcloud.md
+            - about/cloud-providers/exoscale.md            
         - about/high-availability.md
         - about/sla.md
         - about/update-lifecycle.md
@@ -194,6 +195,12 @@ nav:
             - managed-addons/tronador/overview.md
         - Velero:
             - managed-addons/velero/overview.md
+    - Legal Documents:
+        - legal-documents/gtc.md
+        - legal-documents/agreement.md
+        - legal-documents/dpa.md
+        - legal-documents/nda.md
+        - legal-documents/pp.md                                    
     - Help:
         - help/overview.md
         - help/support/support.md

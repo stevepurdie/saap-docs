@@ -1,4 +1,4 @@
-# Binero - OpenStack
+# Binero
 
 A OpenStack account is needed to create and manage cluster on Binero OpenStack. The following criteria must be met
 

@@ -172,10 +172,6 @@ The SLA does not apply to any:
 
     - 13.5.10 for subscriptions reserved, but not paid for, at the time of the incident.
 
-## Stakater App Agility Platform
-
-Stakater will provide to the Customer the Stakater App Agility Platform ("**SAAP**") and build and manage Customer's OpenShift cluster to allow Customer to optimise its cloud strategy and enable its teams across its organisations to consume Red Hat OpenShift-as-a-Service (the "**Service**").
-
 ## Payments
 
 Payment is due once during a Service Period and the Customer will be charged for the number of worker nodes that have been running during the monthly Service Period.
