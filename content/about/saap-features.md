@@ -1,4 +1,4 @@
-# Stakater App Agility Platform Features
+# Key Features
 
 ## Fully managed enterprise Kubernetes
 

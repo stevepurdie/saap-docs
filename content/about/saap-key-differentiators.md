@@ -1,4 +1,4 @@
-# Stakater App Agility Platform Key Differentiators
+# Key Differentiators
 
 Stakater App Agility Platform is a true hybrid-cloud enabler. All components of Stakater App Agility Platform use common standards which can run on any cloud service, so it is easy for you to run in a hybrid environment, as well as migrate from one cloud to another. We don’t just run the platform, we enable it for you, giving you substantial Return on your Investment
 
