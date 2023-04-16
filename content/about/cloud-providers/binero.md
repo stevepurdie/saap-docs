@@ -8,7 +8,7 @@ A OpenStack account is needed to create and manage cluster on Binero OpenStack. 
 
   | Type | Limit |
   |---|---|
-  | Instances | 100|
+  | Instances | 100 |
   | vCPUs | 200 |
   | RAM | 2TB |
   | Volumes | 1000 |
@@ -19,3 +19,32 @@ A OpenStack account is needed to create and manage cluster on Binero OpenStack. 
   | Security Groups Rules | 1000 |
   | Ports  | 5000 |
   | Routers | 10 |
+
+## Instance Types
+
+SAAP offers the following worker node types and sizes on Binero:
+
+### General Purpose
+
+- ...
+
+### Memory Optimized
+
+- ...
+
+### Compute Optimized
+
+- ..
+
+## Network usage
+
+- 5000 GB included free per month
+- Extra will be charged 0.25 SEK per GB per month
+
+## Cloud network configuration
+
+### Floating Ips
+
+- 20 SEK per IPV4 IP Address
+
+_TODO_

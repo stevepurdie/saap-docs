@@ -1,8 +1,8 @@
-# Exoscale
+# Complior
 
 ## Instance Types
 
-SAAP offers the following worker node types and sizes on Exoscale:
+SAAP offers the following worker node types and sizes on Complior:
 
 ### General Purpose
 

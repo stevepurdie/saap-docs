@@ -85,7 +85,6 @@ nav:
         - for-administrators/hibernating-your-cluster.md
         - for-administrators/node-configuration.md
         - for-administrators/volume-expander.md
-        - for-administrators/external-dns.md
         - for-administrators/hosting-dns.md
         - for-administrators/routes.md
     - For Delivery Engineers:
@@ -101,8 +100,6 @@ nav:
             - for-delivery-engineers/gitops/faq.md
     - For Developers:
         - for-developers/overview.md
-        - for-developers/cloud-native-app.md
-        - for-developers/helm.md
         - Onboarding:
             - for-developers/onboarding/gitops-onboarding.md
             - for-developers/onboarding/tenant-onboarding.md
@@ -208,6 +205,8 @@ nav:
             - help/k8s-concepts/overview.md
             - help/k8s-concepts/storage-basics.md
             - help/k8s-concepts/container-anatomy.md
+            - help/k8s-concepts/cloud-native-app.md
+            - help/k8s-concepts/helm.md
         - FAQs:
             - help/faqs/product.md
             - help/faqs/purchasing.md

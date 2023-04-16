@@ -1,8 +1,8 @@
-# Exoscale
+# SafeSpring
 
 ## Instance Types
 
-SAAP offers the following worker node types and sizes on Exoscale:
+SAAP offers the following worker node types and sizes on SafeSpring:
 
 ### General Purpose
 
