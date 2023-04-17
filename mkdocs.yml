@@ -74,7 +74,6 @@ nav:
             - about/cloud-providers/binero.md
             - about/cloud-providers/upcloud.md
             - about/cloud-providers/exoscale.md            
-        - about/high-availability.md
         - about/update-lifecycle.md
         - about/onboarding.md
     - For Administrators:
@@ -207,6 +206,7 @@ nav:
             - help/k8s-concepts/container-anatomy.md
             - help/k8s-concepts/cloud-native-app.md
             - help/k8s-concepts/helm.md
+            - help/k8s-concepts/high-availability.md
         - FAQs:
             - help/faqs/product.md
             - help/faqs/purchasing.md
