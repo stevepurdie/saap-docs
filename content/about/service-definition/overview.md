@@ -8,7 +8,7 @@
 6. Managed Backup Recovery (Velero)
 7. Managed Secrets Management (Vault)
 8. Managed Multi-tenancy (MTO)
-9. Managed Service Mesh (Istio, Kiali, Jagaer)
+9. Managed Service Mesh (Istio, Kiali, Jaeger)
 10. Managed Certs
 11. Managed CD (ArgoCD)
 12. Managed CI (Tekton)
