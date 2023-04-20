@@ -44,8 +44,4 @@ SAAP offers the following worker node types and sizes on AWS:
 
 ## Network usage
 
-TODO
-
 ## Cloud network configuration
-
-TODO

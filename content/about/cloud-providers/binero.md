@@ -46,5 +46,3 @@ SAAP offers the following worker node types and sizes on Binero:
 ### Floating Ips
 
 - 20 SEK per IPV4 IP Address
-
-_TODO_
