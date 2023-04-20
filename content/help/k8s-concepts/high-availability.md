@@ -22,8 +22,6 @@ SAAP can help further protect you against many common Kubernetes issues by addin
 
 SAAP provides several approaches to add more availability to your cluster by adding redundancy and anti-affinity. Review the following image to learn about potential points of failure and how to eliminate them.
 
-TODO - add image
-
 ### Potential failure point 1: Container or pod availability
 
 Containers and pods are, by design, short-lived and can fail unexpectedly. Appropriately scaling services so that multiple instances of your application pods are running protects against issues with any individual pod or container. The node scheduler can also ensure that these workloads are distributed across different worker nodes to further improve resiliency.
