@@ -79,7 +79,7 @@ nav:
     - For Administrators:
         - for-administrators/overview.md
         - for-administrators/requirements.md
-        - for-administrators/giving-access-to-oauth-users.md
+        - for-administrators/giving-access-to-users.md
         - for-administrators/autoscaling.md
         - for-administrators/hibernating-your-cluster.md
         - for-administrators/node-configuration.md
