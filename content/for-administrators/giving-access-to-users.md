@@ -16,11 +16,11 @@ SAAP Cluster is an administrator level role for a user (with restrictive access)
 - Administrate non-managed Projects/Namespaces
 - Install/Modify/Delete operators in non-managed Projects/Namespaces
 
-To grant this permission to a user plz open a support case with Username/Email of the desired user.
+To grant this permission to a user please open a support case with Username/Email of the desired user.
 
 ## Tenant level Permissions
 
-These permissions are granted per Tenant and are only restricted to the tenant's Namespaces/Projects. For detailed explantion of these roles see [Tenant Member Roles](https://docs.stakater.com/mto/main/tenant-roles.html)
+These permissions are granted per Tenant and are only restricted to the tenant's Namespaces/Projects. For detailed explanation of these roles see [Tenant Member Roles](https://docs.stakater.com/mto/main/tenant-roles.html)
 
 These roles can be granted by [SAAP Cluster Admin](#saap-cluster-admin) by creating/editing the *Tenant* CR.
 
