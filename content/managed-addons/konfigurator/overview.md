@@ -17,7 +17,7 @@ A Kubernetes operator that can dynamically generate app configuration when Kuber
 ## Deploying to Kubernetes
 
 Deploying Konfigurator requires:
-    
+
 1. Deploying CRD to your cluster
 2. Deploying Konfigurator operator
 
