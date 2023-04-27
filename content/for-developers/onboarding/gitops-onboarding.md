@@ -199,6 +199,7 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
             prune: true
             selfHeal: true
       ```
+
     Similarly create another ArgoCD application inside stage folder that points to stage directory in `stakater-nordmart-review`.
 
       ```yaml
