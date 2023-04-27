@@ -65,6 +65,7 @@ For example, to set the channel to stable-4.12:
 ```yaml
 oc adm upgrade channel fast-4.10
 ```
+
 ## Prerequisites
 
 - Have access to the cluster as a user with `admin` privileges.
@@ -99,6 +100,7 @@ version   4.10.3    True        False         43d     Cluster version is 4.10.3
 [user@host ~]$ oc get clusterversion -o jsonpath='{.items[0].spec.channel}{"\n"}'
 stable-4.10
 ```
+
 View the available updates and note the version number of the update that you want to apply.
 
 ```
@@ -163,6 +165,7 @@ If the rollout completed successfully, updates in the history have a state of Co
     Verified:           false
     Version:            4.10.3
 ```
+
 After the process completes, you can confirm that the cluster has been updated to the new version.
 
 ```
