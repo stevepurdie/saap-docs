@@ -16,7 +16,7 @@ The cluster scoped infrastructural configurations are deployed through this repo
 To make things easier, we have created a [template](https://github.com/stakater/infra-gitops-config.git) that you can use to create your infra repository.
 
 1. Open up your SCM and create any empty repository
-1. Now let's copy the structure that we saw in the [template](https://github.com/stakater/infra-gitops-config.git). Add a folder bearing your cluster's name at the root of the repository that you just created. 
+1. Now let's copy the structure that we saw in the [template](https://github.com/stakater/infra-gitops-config.git). Add a folder bearing your cluster's name at the root of the repository that you just created.
     > If you plan on using this repository for multiple clusters, add a folder for each cluster.
 1. Inside the folder created in step 2, add two folders; one named `argocd-apps`, and another one named `tenant-operator-config`
     > The `argocd-apps` folder will contain ArgoCD applications that will _watch_ different resources added to the same repository. Let's spare ourselves from the details for now.
@@ -138,7 +138,7 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
       ├── gabbar
       ```
 
-    Inside this folder we can define multiple applications per tenant. 
+    Inside this folder we can define multiple applications per tenant.
 
 1. We need to create a `argocd-apps` folder inside this `gabbar` folder. This folder will deploy the applications defined inside its siblings folders (in `gabbar` folder).
 
@@ -175,8 +175,8 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
                  └── stakater-nordmart-review-stage.yaml
       ```
 
-    Create an ArgoCD application inside dev folder that points to dev directory in `stakater-nordmart-review`. Create a file named `APP_NAME-ENV_NAME.yaml` with following spec: 
-  
+    Create an ArgoCD application inside dev folder that points to dev directory in `stakater-nordmart-review`. Create a file named `APP_NAME-ENV_NAME.yaml` with following spec:
+
         # Name: stakater-nordmart-review.yaml (APP_NAME.yaml)
         # Path: gabbar/argocd-apps/dev (TENANT_NAME/argocd-apps/ENV_NAME/)
         apiVersion: argoproj.io/v1alpha1
