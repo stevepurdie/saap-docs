@@ -74,11 +74,11 @@ oc adm upgrade channel fast-4.10
 
 - Ensure all Operators previously installed through Operator Lifecycle Manager (OLM) are updated to their latest version in their latest channel. Updating the Operators ensures they have a valid update path when the default OperatorHub catalogs switch from the current minor version to the next during a cluster update.
 
-- Ensure that all machine config pools (MCPs) are running and not paused. Nodes associated with a paused MCP are skipped during the update process.
+- Ensure that all machine config pools are running and not paused. Nodes associated with a paused MCP are skipped during the update process.
 
 - Review the list of APIs that were removed in previous Kubernetes version, migrate any affected components to use the new API version, and provide the administrator acknowledgment.
 
-- If you run an Operator or you have configured any application with the pod disruption budget, you might experience an interruption during the upgrade process. If minAvailable is set to 1 in PodDisruptionBudget, the nodes are drained to apply pending machine configs which might block the eviction process. If several nodes are rebooted, all the pods might run on only one node, and the PodDisruptionBudget field can prevent the node drain.
+- If you run an Operator or you have configured any application with the pod disruption budget, you might experience an interruption during the upgrade process. If min Available is set to 1 in PodDisruptionBudget, the nodes are drained to apply pending machine configs which might block the eviction process. If several nodes are rebooted, all the pods might run on only one node, and the PodDisruptionBudget field can prevent the node drain.
 
 ## Update the Cluster Using the Web Console
 
@@ -120,7 +120,6 @@ Run the following command to install the latest available update for your cluste
 [user@host ~]$ oc adm upgrade --to-latest=true
 ```
 
-
 Run the following command to install a specific version. VERSION corresponds to one of the available versions that the oc adm upgrade command returns.
 
 ```
@@ -146,7 +145,7 @@ The following command allows you to review the cluster version status history to
 
 The history contains a list of the most recent versions applied to the cluster. This value is updated when the CVO applies an update. The list is ordered by date, where the newest update is first in the list.
 
-If the rollout completed successfully, updates in the history have a state of Completed. Otherwise, the update has a state of Partial if the update failed or did not complete.
+If the roll-out completed successfully, updates in the history have a state of Completed. Otherwise, the update has a state of Partial if the update failed or did not complete.
 
 ```
 [user@host ~]$ oc describe clusterversion
