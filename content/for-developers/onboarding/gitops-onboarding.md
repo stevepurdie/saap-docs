@@ -237,7 +237,7 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
               └── stage
       ```
 
-1. Now we need to add ArgoCD applications for environments defined in `gabbar/argocd-apps` to the relevant cluster folder. Create dev and stage folder inside `argocd-apps` folder.
+1. Now we need to add ArgoCD applications for environments defined in `gabbar/argocd-apps` inside relevant cluster folder `argocd-apps/CLUSTERNAME`. Create dev and stage folders inside `argocd-apps` folder.
 
       ```bash
       ├── argocd-apps
@@ -294,10 +294,12 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
       > Find the template file [here](https://github.com/stakater-lab/apps-gitops-config/blob/main/00-argocd-apps/CLUSTER_NAME/TENANT_NAME-ENV_NAME.yamlSample)
 
 ## Linking Apps GitOps with Infra GitOps
+
 We need to create ArgoCD applications that will deploy the apps of apps structure defined in our `apps-gitops-config` repository.
 
-Suppose we want to deploy our application workloads of our dev (CLUSTER_NAME) cluster. We can create an ArgoCD application for `apps-gitops-config` repository pointing to `argocd-apps/dev (argocd-apps/CLUSTER_NAME)`. 
-```
+Suppose we want to deploy our application workloads of our dev (CLUSTER_NAME) cluster. We can create an ArgoCD application for `apps-gitops-config` repository pointing to `argocd-apps/dev (argocd-apps/CLUSTER_NAME)`.
+
+```bash
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -317,6 +319,7 @@ spec:
       prune: true
       selfHeal: true
 ```
+
 > Find the template file [here](https://github.com/stakater/infra-gitops-config/blob/main/CLUSTER_NAME/argocd-apps/apps-gitops-config.yamlSample)
 
 We need to add this resource inside `argocd-apps` folder in `infra-gitops-config/dev (infra-gitops-config/CLUSTER_NAME)`.
