@@ -177,49 +177,52 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
 
     Create an ArgoCD application inside dev folder that points to dev directory in `stakater-nordmart-review`. Create a file named `APP_NAME-ENV_NAME.yaml` with following spec:
 
-        # Name: stakater-nordmart-review.yaml (APP_NAME.yaml)
-        # Path: gabbar/argocd-apps/dev (TENANT_NAME/argocd-apps/ENV_NAME/)
-        apiVersion: argoproj.io/v1alpha1
-        kind: Application
-        metadata:
-          name: gabbar-dev-stakater-nordmart-review
-          namespace: openshift-gitops
-        spec:
-          destination:
-            namespace: TARGET_NAMESPACE
-            server: 'https://kubernetes.default.svc'
-          project: gabbar
-          source:
-            path: gabbar/stakater-nordmart-review/dev
-            repoURL: 'APPS_GITOPS_REPO_URL'
-            targetRevision: HEAD
-          syncPolicy:
-            automated:
-              prune: true
-              selfHeal: true
+      ```yaml
+      # Name: stakater-nordmart-review.yaml(APP_NAME.yaml)
+      # Path: gabbar/argocd-apps/dev (TENANT_NAMEargocd-apps/ENV_NAME/)
+      apiVersion: argoproj.io/v1alpha1
+      kind: Application
+      metadata:
+        name: gabbar-dev-stakater-nordmart-review
+        namespace: openshift-gitops
+      spec:
+        destination:
+          namespace: TARGET_NAMESPACE
+          server: 'https://kubernetes.default.svc'
+        project: gabbar
+        source:
+          path: gabbar/stakater-nordmart-review/dev
+          repoURL: 'APPS_GITOPS_REPO_URL'
+          targetRevision: HEAD
+        syncPolicy:
+          automated:
+            prune: true
+            selfHeal: true
+      ```
+    Similarly create another ArgoCD application inside stage folder that points to stage directory in `stakater-nordmart-review`.
 
-      Similarly create another ArgoCD application inside stage folder that points to stage directory in `stakater-nordmart-review`.
-
-        # Name: stakater-nordmart-review.yaml (APP_NAME.yaml)
-        # Path: gabbar/argocd-apps/stage (TENANT_NAME/argocd-apps/ENV_NAME/)
-        apiVersion: argoproj.io/v1alpha1
-        kind: Application
-        metadata:
-          name: gabbar-stage-stakater-nordmart-review
-          namespace: openshift-gitops
-        spec:
-          destination:
-            namespace: gabbar-stage
-            server: 'https://kubernetes.default.svc'
-          project: gabbar
-          source:
-            path: gabbar/stakater-nordmart-review/stage
-            repoURL: 'APPS_GITOPS_REPO_URL'
-            targetRevision: HEAD
-          syncPolicy:
-            automated:
-              prune: true
-              selfHeal: true
+      ```yaml
+      # Name: stakater-nordmart-review.yaml (APP_NAME.yaml)
+      # Path: gabbar/argocd-apps/stage (TENANT_NAME/argocd-appsENV_NAME/)
+      apiVersion: argoproj.io/v1alpha1
+      kind: Application
+      metadata:
+        name: gabbar-stage-stakater-nordmart-review
+        namespace: openshift-gitops
+      spec:
+        destination:
+          namespace: gabbar-stage
+          server: 'https://kubernetes.default.svc'
+        project: gabbar
+        source:
+          path: gabbar/stakater-nordmart-review/stage
+          repoURL: 'APPS_GITOPS_REPO_URL'
+          targetRevision: HEAD
+        syncPolicy:
+          automated:
+            prune: true
+            selfHeal: true
+      ```
 
       > Find the template file [here](https://github.com/stakater-lab/apps-gitops-config/blob/main/01-TENANT_NAME/00-argocd-apps/APP_NAME-ENV_NAME.yamlSample)
 
@@ -249,47 +252,49 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
 
     Next, create the following ArgoCD applications:
 
-        # Name: gabbar-stage.yaml (TENANT_NAME-ENV_NAME.yaml)
-        # Path: argocd-apps/stage
-        apiVersion: argoproj.io/v1alpha1
-        kind: Application
-        metadata:
-          name: gabbar-stage
-          namespace: openshift-gitops
-        spec:
-          destination:
-            namespace: gabbar-stage
-            server: 'https://kubernetes.default.svc'
-          project: gabbar
-          source:
-            path: gabbar/argocd-apps/stage
-            repoURL: 'APPS_GITOPS_REPO_URL'
-            targetRevision: HEAD
-          syncPolicy:
-            automated:
-              prune: true
-              selfHeal: true
-        ---
-        # Name: gabbar-dev.yaml (TENANT_NAME-ENV_NAME.yaml)
-        # Path: argocd-apps/dev
-        apiVersion: argoproj.io/v1alpha1
-        kind: Application
-        metadata:
-          name: gabbar-dev
-          namespace: openshift-gitops
-        spec:
-          destination:
-            namespace: gabbar-dev
-            server: 'https://kubernetes.default.svc'
-          project: gabbar
-          source:
-            path: gabbar/argocd-apps/dev
-            repoURL: 'APPS_GITOPS_REPO_URL'
-            targetRevision: HEAD
-          syncPolicy:
-            automated:
-              prune: true
-              selfHeal: true
+      ```yaml
+      # Name: gabbar-stage.yaml (TENANT_NAME-ENV_NAME.yaml)
+      # Path: argocd-apps/stage
+      apiVersion: argoproj.io/v1alpha1
+      kind: Application
+      metadata:
+        name: gabbar-stage
+        namespace: openshift-gitops
+      spec:
+        destination:
+          namespace: gabbar-stage
+          server: 'https://kubernetes.default.svc'
+        project: gabbar
+        source:
+          path: gabbar/argocd-apps/stage
+          repoURL: 'APPS_GITOPS_REPO_URL'
+          targetRevision: HEAD
+        syncPolicy:
+          automated:
+            prune: true
+            selfHeal: true
+      ---
+      # Name: gabbar-dev.yaml (TENANT_NAME-ENV_NAME.yaml)
+      # Path: argocd-apps/dev
+      apiVersion: argoproj.io/v1alpha1
+      kind: Application
+      metadata:
+        name: gabbar-dev
+        namespace: openshift-gitops
+      spec:
+        destination:
+          namespace: gabbar-dev
+          server: 'https://kubernetes.default.svc'
+        project: gabbar
+        source:
+          path: gabbar/argocd-apps/dev
+          repoURL: 'APPS_GITOPS_REPO_URL'
+          targetRevision: HEAD
+        syncPolicy:
+          automated:
+            prune: true
+            selfHeal: true
+      ```
 
       > Find the template file [here](https://github.com/stakater-lab/apps-gitops-config/blob/main/00-argocd-apps/CLUSTER_NAME/TENANT_NAME-ENV_NAME.yamlSample)
 
@@ -299,7 +304,7 @@ We need to create ArgoCD applications that will deploy the apps of apps structur
 
 Suppose we want to deploy our application workloads of our dev (CLUSTER_NAME) cluster. We can create an ArgoCD application for `apps-gitops-config` repository pointing to `argocd-apps/dev (argocd-apps/CLUSTER_NAME)`.
 
-```bash
+```yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
