@@ -107,7 +107,7 @@ We have set up the basic structure for our infra repository. Let's move on to th
 
 More Info on **Tenant** and **Quota** at : [Multi Tenant Operator Custom Resources](https://docs.stakater.com/mto/main/customresources.html)
 
-## Apps Gitops Config
+## Apps GitOps Config
 
 This repository is the single source of truth for declarative workloads to be deployed on cluster. It separates workloads per tenant.
 
