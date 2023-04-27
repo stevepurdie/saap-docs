@@ -65,3 +65,108 @@ For example, to set the channel to stable-4.12:
 ```yaml
 oc adm upgrade channel fast-4.10
 ```
+## Prerequisites
+
+- Have access to the cluster as a user with `admin` privileges.
+
+- Have a recent `etcd backup` in case your update fails and you must restore your cluster to a previous state.
+
+- Ensure all Operators previously installed through Operator Lifecycle Manager (OLM) are updated to their latest version in their latest channel. Updating the Operators ensures they have a valid update path when the default OperatorHub catalogs switch from the current minor version to the next during a cluster update.
+
+- Ensure that all machine config pools (MCPs) are running and not paused. Nodes associated with a paused MCP are skipped during the update process.
+
+- Review the list of APIs that were removed in previous Kubernetes version, migrate any affected components to use the new API version, and provide the administrator acknowledgment.
+
+- If you run an Operator or you have configured any application with the pod disruption budget, you might experience an interruption during the upgrade process. If minAvailable is set to 1 in PodDisruptionBudget, the nodes are drained to apply pending machine configs which might block the eviction process. If several nodes are rebooted, all the pods might run on only one node, and the PodDisruptionBudget field can prevent the node drain.
+
+## Update the Cluster Using the Web Console
+
+We can update the cluster via the web console, or from the command-line. Updating via the web console is easier than using the command-line. The `Administration → Cluster Settings` page displays an `Update Status` of Available updates when a new update is available. From this page, click `Update now` to begin the process:
+
+![Updating Channel](./images/updates-channel-3.png)
+
+## Update the Cluster Using the Command Line
+
+The following steps describe the procedure for updating a cluster as a cluster administrator using the command-line interface:
+
+Retrieve the cluster version and review the current update channel information and confirm the channel. If you are running the cluster in production, then ensure that the channel reads stable.
+
+```
+[user@host ~]$ oc get clusterversion
+NAME      VERSION   AVAILABLE   PROGRESSING   SINCE   STATUS
+version   4.10.3    True        False         43d     Cluster version is 4.10.3
+
+[user@host ~]$ oc get clusterversion -o jsonpath='{.items[0].spec.channel}{"\n"}'
+stable-4.10
+```
+View the available updates and note the version number of the update that you want to apply.
+
+```
+[user@host ~]$ oc adm upgrade
+Cluster version is 4.10.3
+
+Updates:
+
+VERSION IMAGE
+4.10.4   quay.io/openshift-release-dev/ocp-release@sha256:...
+...output omitted...
+```
+Apply the latest update to your cluster or update to a specific version:
+Run the following command to install the latest available update for your cluster.
+
+```
+[user@host ~]$ oc adm upgrade --to-latest=true
+```
+
+
+Run the following command to install a specific version. VERSION corresponds to one of the available versions that the oc adm upgrade command returns.
+
+```
+[user@host ~]$ oc adm upgrade --to=VERSION
+```
+
+The previous command initializes the update process. Run the following command to review the status of the Cluster Version Operator (CVO) and the installed cluster operators.
+
+```
+[user@host ~]$ oc get clusterversion
+NAME     VERSION  AVAILABLE  PROGRESSING  SINCE  STATUS
+version  4.10.3   True       True         30m    Working towards 4.10.4 ...
+
+[user@host ~]$ oc get clusteroperators
+NAME                  VERSION   AVAILABLE   PROGRESSING   DEGRADED
+authentication        4.10.3    True        False         False
+cloud-credential      4.10.4    False       True          False
+openshift-apiserver   4.10.4    True        False         True
+...output omitted...
+```
+
+The following command allows you to review the cluster version status history to monitor the status of the update. It might take some time for all the objects to finish updating.
+
+The history contains a list of the most recent versions applied to the cluster. This value is updated when the CVO applies an update. The list is ordered by date, where the newest update is first in the list.
+
+If the rollout completed successfully, updates in the history have a state of Completed. Otherwise, the update has a state of Partial if the update failed or did not complete.
+
+```
+[user@host ~]$ oc describe clusterversion
+...output omitted...
+  History:
+    Completion Time:    2022-04-28T04:38:12Z
+    Image:              quay.io/openshift-release-dev/ocp-release@sha256:...
+    Started Time:       2022-04-28T03:35:05Z
+    State:              Partial
+    Verified:           true
+    Version:            4.10.4
+    Completion Time:    2022-03-15T12:39:02Z
+    Image:              quay.io/openshift-release-dev/ocp-release@sha256:...
+    Started Time:       2022-03-15T12:23:14Z
+    State:              Completed
+    Verified:           false
+    Version:            4.10.3
+```
+After the process completes, you can confirm that the cluster has been updated to the new version.
+
+```
+[user@host ~]$ oc get clusterversion
+NAME     VERSION  AVAILABLE  PROGRESSING  SINCE  STATUS
+version  4.10.4   True       True         30m    Cluster version is 4.10.4
+```
