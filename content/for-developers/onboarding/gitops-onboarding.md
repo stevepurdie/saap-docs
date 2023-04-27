@@ -105,12 +105,14 @@ If you notice the path, you will realize that this application is pointing to 't
 
 We have set up the basic structure for our infra repository. Let's move on to the apps repository.
 
-More Info on **Tenant** and **Qouta** at : [Multi Tenant Operator Custom Resources](https://docs.stakater.com/mto/main/customresources.html)
-## `Apps Gitops Config`
+More Info on **Tenant** and **Quota** at : [Multi Tenant Operator Custom Resources](https://docs.stakater.com/mto/main/customresources.html)
+
+## Apps Gitops Config
 
 This repository is the single source of truth for declarative workloads to be deployed on cluster. It separates workloads per tenant.
 
 To make things easier, we have created a [template](https://github.com/stakater-lab/apps-gitops-config.git) that you can use to create your infra repository.
+
 ### Hierarchy
 
 Tenant (Product) owns Applications which are promoted to different Environments on different clusters.
@@ -119,7 +121,7 @@ Cluster >> Tenants (teams/products) >> Applications >> Environments (distributed
 
 A cluster can hold multiple tenants; and each tenant can hold multiple applications; and each application be deployed into multiple environments.
 
-This gitops structure supports:
+This GitOps structure supports:
 
 - Multiple clusters
 - Multiple tenants/teams/products
@@ -127,9 +129,10 @@ This gitops structure supports:
 - Multiple environments (both static and dynamic)
 
 ### Add a tenant
-Lets proceed by adding a tenant to the apps gitops repository.
 
-1. Create a folder at root level for your tenant. Lets use **gabbar** as tenant name which was deployed in the previous section via infra gitops config.
+Lets proceed by adding a tenant to the `apps-gitops-config` repository.
+
+1. Create a folder at root level for your tenant. Lets use `gabbar` as tenant name which was deployed in the previous section via `infra-gitops-config` repository.
 
       ```bash
       ├── gabbar
@@ -137,13 +140,14 @@ Lets proceed by adding a tenant to the apps gitops repository.
 
     Inside this folder we can define multiple applications per tenant. 
 
-1. We need to create a **argocd-apps** folder inside this **gabbar** folder. This folder will deploy the applications defined inside its siblings folders (in gabbar folder).
+1. We need to create a `argocd-apps` folder inside this `gabbar` folder. This folder will deploy the applications defined inside its siblings folders (in `gabbar` folder).
+
       ```bash
       ├── gabbar
           └── argocd-apps
       ```
 
-1. Lets add an application for tenant gabbar, Lets call this application **stakater-nordmart-review**. Create a folder named stakater-nordmart-review in gabbar folder.
+1. Lets add an application for tenant `gabbar`, Lets call this application `stakater-nordmart-review`. Create a folder named `stakater-nordmart-review` in `gabbar` folder.
 
       ```bash
       ├── gabbar
@@ -152,6 +156,7 @@ Lets proceed by adding a tenant to the apps gitops repository.
 
     This application has two environments: dev and stage. Former is deployed to dev cluster and latter is deployed to stage cluster.
     We need to create two new folders now:
+
       ```bash
       ├── gabbar
           └── stakater-nordmart-review
@@ -159,7 +164,7 @@ Lets proceed by adding a tenant to the apps gitops repository.
               └── stage
       ```
 
-    We need the corresponding folders inside argocd-apps folder and define argocd apps pointing to these folders.
+    We need the corresponding folders inside `argocd-apps` folder and define ArgoCD applications pointing to these folders.
 
       ```bash
       ├── gabbar
@@ -170,7 +175,7 @@ Lets proceed by adding a tenant to the apps gitops repository.
                  └── stakater-nordmart-review-stage.yaml
       ```
 
-    Create an argocd application inside dev folder that points to dev directory in stakater-nordmart-review. Create a file named APP_NAME-ENV.yaml with following spec: 
+    Create an ArgoCD application inside dev folder that points to dev directory in `stakater-nordmart-review`. Create a file named `APP_NAME-ENV_NAME.yaml` with following spec: 
   
         # Name: stakater-nordmart-review.yaml (APP_NAME.yaml)
         # Path: gabbar/argocd-apps/dev (TENANT_NAME/argocd-apps/ENV_NAME/)
@@ -193,7 +198,7 @@ Lets proceed by adding a tenant to the apps gitops repository.
               prune: true
               selfHeal: true
 
-      Similarly create another argocd application inside stage folder that points to stage directory in stakater-nordmart-review.
+      Similarly create another ArgoCD application inside stage folder that points to stage directory in `stakater-nordmart-review`.
 
         # Name: stakater-nordmart-review.yaml (APP_NAME.yaml)
         # Path: gabbar/argocd-apps/stage (TENANT_NAME/argocd-apps/ENV_NAME/)
@@ -219,6 +224,7 @@ Lets proceed by adding a tenant to the apps gitops repository.
       > Find the template file [here](https://github.com/stakater-lab/apps-gitops-config/blob/main/01-TENANT_NAME/00-argocd-apps/APP_NAME-ENV_NAME.yamlSample)
 
       After performing all the steps you should have the following folder structure:
+
       ```bash
       ├── gabbar
           ├── argocd-apps
@@ -230,15 +236,18 @@ Lets proceed by adding a tenant to the apps gitops repository.
               ├── dev
               └── stage
       ```
-1. Now we need to add argocd apps for environments defined in gabbar/argocd-apps to the relevant cluster folders. Create dev and stage folders inside argocd-apps folder. 
+
+1. Now we need to add ArgoCD applications for environments defined in `gabbar/argocd-apps` to the relevant cluster folder. Create dev and stage folder inside `argocd-apps` folder.
+
       ```bash
       ├── argocd-apps
           ├── dev
           └── stage
       ```
-    > Folders in argocd-apps corresponds to clusters, these folder contain argocd apps pointing to 1 or more environments inside multiple tenant folders, Folders in gabbar/argocd-apps correspond to environments.
 
-    Next, create the following argocd apps:
+    > Folders in `argocd-apps` corresponds to clusters, these folder contain ArgoCD applications pointing to 1 or more environments inside multiple tenant folders, Folders in `gabbar/argocd-apps` correspond to environments.
+
+    Next, create the following ArgoCD applications:
 
         # Name: gabbar-stage.yaml (TENANT_NAME-ENV_NAME.yaml)
         # Path: argocd-apps/stage
@@ -284,10 +293,10 @@ Lets proceed by adding a tenant to the apps gitops repository.
 
       > Find the template file [here](https://github.com/stakater-lab/apps-gitops-config/blob/main/00-argocd-apps/CLUSTER_NAME/TENANT_NAME-ENV_NAME.yamlSample)
 
-## Linking Apps Gitops with Infra Gitops
-We need to create argocd applications that will deploy the apps of apps structure defined in our apps-gitops-config.
+## Linking Apps GitOps with Infra GitOps
+We need to create ArgoCD applications that will deploy the apps of apps structure defined in our `apps-gitops-config` repository.
 
-Suppose we want to deploy our application workloads of our dev (CLUSTER_NAME) cluster. We can create an argocd app for apps-gitops-repo pointing to argocd-apps/dev (argocd-apps/CLUSTER_NAME). 
+Suppose we want to deploy our application workloads of our dev (CLUSTER_NAME) cluster. We can create an ArgoCD application for `apps-gitops-config` repository pointing to `argocd-apps/dev (argocd-apps/CLUSTER_NAME)`. 
 ```
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -310,7 +319,7 @@ spec:
 ```
 > Find the template file [here](https://github.com/stakater/infra-gitops-config/blob/main/CLUSTER_NAME/argocd-apps/apps-gitops-config.yamlSample)
 
-We need to add this resource inside argocd-apps folder in infra-gitops-config/CLUSTER_NAME (infra-gitops-config/dev).
+We need to add this resource inside `argocd-apps` folder in `infra-gitops-config/dev (infra-gitops-config/CLUSTER_NAME)`.
 
   ```bash
   ├── dev
