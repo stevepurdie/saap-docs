@@ -170,20 +170,22 @@ Lets proceed by adding a tenant to the apps gitops repository.
                  └── stakater-nordmart-review-stage.yaml
       ```
 
-    Create an argocd application inside dev folder that points to dev directory in stakater-nordmart-review. Create a file named APP_NAME-ENV.yaml with following spec:
+    Create an argocd application inside dev folder that points to dev directory in stakater-nordmart-review. Create a file named APP_NAME-ENV.yaml with following spec: 
   
+        # Name: stakater-nordmart-review.yaml (APP_NAME.yaml)
+        # Path: gabbar/argocd-apps/dev (TENANT_NAME/argocd-apps/ENV_NAME/)
         apiVersion: argoproj.io/v1alpha1
         kind: Application
         metadata:
-          name: TENANT_NAME-ENV_NAME-APP_NAME
+          name: gabbar-dev-stakater-nordmart-review
           namespace: openshift-gitops
         spec:
           destination:
             namespace: TARGET_NAMESPACE
             server: 'https://kubernetes.default.svc'
-          project: TENANT_NAME
+          project: gabbar
           source:
-            path: TENANT_NAME/APP_NAME/ENV_NAME
+            path: gabbar/stakater-nordmart-review/dev
             repoURL: 'APPS_GITOPS_REPO_URL'
             targetRevision: HEAD
           syncPolicy:
@@ -191,10 +193,10 @@ Lets proceed by adding a tenant to the apps gitops repository.
               prune: true
               selfHeal: true
 
-      Replace *TENANT_NAME* with **gabbar**, *ENV_NAME* with **dev**, *APP_NAME* with **stakater-nordmart-review**, *TARGET_NAMESPACE* with gabbar-dev.
+      Similarly create another argocd application inside stage folder that points to stage directory in stakater-nordmart-review.
 
-      Similarly create another argocd application inside stage folder that points to dev directory in stakater-nordmart-review.
-
+        # Name: stakater-nordmart-review.yaml (APP_NAME.yaml)
+        # Path: gabbar/argocd-apps/stage (TENANT_NAME/argocd-apps/ENV_NAME/)
         apiVersion: argoproj.io/v1alpha1
         kind: Application
         metadata:
@@ -213,6 +215,8 @@ Lets proceed by adding a tenant to the apps gitops repository.
             automated:
               prune: true
               selfHeal: true
+
+      > Find the template file [here](https://github.com/stakater-lab/apps-gitops-config/blob/main/01-TENANT_NAME/00-argocd-apps/APP_NAME-ENV_NAME.yamlSample)
 
       After performing all the steps you should have the following folder structure:
       ```bash
@@ -278,12 +282,12 @@ Lets proceed by adding a tenant to the apps gitops repository.
               prune: true
               selfHeal: true
 
+      > Find the template file [here](https://github.com/stakater-lab/apps-gitops-config/blob/main/00-argocd-apps/CLUSTER_NAME/TENANT_NAME-ENV_NAME.yamlSample)
 
 ## Linking Apps Gitops with Infra Gitops
 We need to create argocd applications that will deploy the apps of apps structure defined in our apps-gitops-config.
 
-Suppose we want to deploy our application workloads of our dev cluster. We can create an argocd apps for apps-gitops-repo pointing to argocd-apps/CLUSTER_NAME (argocd-apps/dev). Following template should be used:
-
+Suppose we want to deploy our application workloads of our dev (CLUSTER_NAME) cluster. We can create an argocd app for apps-gitops-repo pointing to argocd-apps/dev (argocd-apps/CLUSTER_NAME). 
 ```
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -297,10 +301,19 @@ spec:
   project: default
   source:
     path: argocd-apps/dev
-    repoURL: 'https://github.com/your-org/apps-gitops-repo.git'
+    repoURL: 'APPS_GITOPS_REPO_URL'
     targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
 ```
+> Find the template file [here](https://github.com/stakater/infra-gitops-config/blob/main/CLUSTER_NAME/argocd-apps/apps-gitops-config.yamlSample)
+
+We need to add this resource inside argocd-apps folder in infra-gitops-config/CLUSTER_NAME (infra-gitops-config/dev).
+
+  ```bash
+  ├── dev
+      └── argocd-apps
+          └── apps-gitops-config.yaml
+  ```
