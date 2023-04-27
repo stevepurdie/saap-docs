@@ -92,7 +92,7 @@ The following steps describe the procedure for updating a cluster as a cluster a
 
 Retrieve the cluster version and review the current update channel information and confirm the channel. If you are running the cluster in production, then ensure that the channel reads stable.
 
-```
+```bash
 [user@host ~]$ oc get clusterversion
 NAME      VERSION   AVAILABLE   PROGRESSING   SINCE   STATUS
 version   4.10.3    True        False         43d     Cluster version is 4.10.3
@@ -123,7 +123,7 @@ Run the following command to install the latest available update for your cluste
 
 Run the following command to install a specific version. VERSION corresponds to one of the available versions that the `oc adm upgrade` command returns.
 
-```
+```bash
 [user@host ~]$ oc adm upgrade --to=VERSION
 ```
 
