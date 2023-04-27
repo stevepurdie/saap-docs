@@ -6,7 +6,7 @@ We can update an OpenShift Container Platform 4 cluster with a single operation 
 
 With upgrade channels, we can choose an upgrade strategy. Upgrade channels are specific to a minor version of OpenShift Container Platform. Upgrade channels only control release selection and do not impact the version of the cluster that you install.
 
-A channel name consists of three parts: the tier (release candidate, fast, and stable), the major version (4), and the minor version (.2). Example channel names include: stable-4.10, fast-4.10, and candidate-4.10. Each channel delivers patches for a given cluster version.
+A channel name consists of three parts: the tier (release candidate, fast, and stable), the major version (4), and the minor version (.2). Example channel names include: stable-4.x, fast-4.x, and candidate-4.x. Each channel delivers patches for a given cluster version.
 
 ### Candidate Channel
 
@@ -14,7 +14,7 @@ The candidate channel delivers updates for testing feature acceptance in the nex
 
 ### Fast Channel
 
-The fast channel delivers updates as soon as they are available. This channel is best suited for development and QA environments. You can use the fast-4.10 channel to upgrade from a previous minor version of OpenShift Container Platform.
+The fast channel delivers updates as soon as they are available. This channel is best suited for development and QA environments. You can use the fast-4.x channel to upgrade from a previous minor version of OpenShift Container Platform.
 
 ### Stable Channel
 
@@ -26,15 +26,15 @@ If Red Hat observes operational issues from a fast channel update, then that upd
 
 ## Describing Upgrade Paths
 
-The following describes how these upgrade paths would apply to Red Hat OpenShift Container Platform version 4.10:
+The following describes how these upgrade paths would apply to Red Hat OpenShift Container Platform version 4.x:
 
-- When using the stable-4.10 channel, you can upgrade your cluster from 4.10.0 to 4.10.1 or 4.10.2. If an issue is discovered     in the 4.10.3 release, then you cannot upgrade to that version. When a patch becomes available in the 4.10.4 release, you can update your cluster to that version.
+- When using the stable-4.x channel, you can upgrade your cluster from 4.x.0 to 4.x.1 or 4.x.2. If an issue is discovered     in the 4.x.3 release, then you cannot upgrade to that version. When a patch becomes available in the 4.x.4 release, you can update your cluster to that version.
 
     This channel is suited for production environments, as the releases in that channel are tested by Red Hat SREs and support services.
-- The fast-4.10 channel can deliver 4.10.1 and 4.10.2 updates but not 4.11.1. This channel is also supported by Red Hat and can be applied to production environments.
+- The fast-4.x channel is also supported by Red Hat and can be applied to production environments.
 
     Administrators must specifically choose a different minor version channel, such as fast-4.11, in order to upgrade to a new release in a new minor version.
-- The candidate-4.10 channel allows you to install the latest features of OpenShift. With this channel, you can upgrade to all z-stream releases, such as 4.10.1, 4.10.2, 4.10.3, and so on.
+- The candidate-4.x channel allows you to install the latest features of OpenShift. With this channel, you can upgrade to all z-stream releases, such as 4.x.1, 4.x.2, 4.x.3, and so on.
 
     You use this channel to have access to the latest features of the product as they get released. This channel is suited for development and pre-production environments.
 
@@ -44,7 +44,7 @@ To ensure the stability of the cluster and the proper level of support, we shoul
 
 ## Changing Update Channel
 
-We can change the update channel to stable-4.10, fast-4.10, or candidate-4.10 using the web console or the OpenShift CLI client:
+We can change the update channel to stable-4.x, fast-4.x, or candidate-4.x using the web console or the OpenShift CLI client:
 
 - In the web console, navigate to the `Administration → Cluster Settings` page on the details tab, and then click the pencil icon.
 
@@ -60,10 +60,10 @@ A window displays options to select an update channel.
 oc adm upgrade channel <channel>
 ```
 
-For example, to set the channel to stable-4.12:
+For example, to set the channel to fast-4.x:
 
 ```bash
-oc adm upgrade channel fast-4.10
+oc adm upgrade channel fast-4.x
 ```
 
 ## Prerequisites
@@ -95,22 +95,22 @@ Retrieve the cluster version and review the current update channel information a
 ```bash
 [user@host ~]$ oc get clusterversion
 NAME      VERSION   AVAILABLE   PROGRESSING   SINCE   STATUS
-version   4.10.3    True        False         43d     Cluster version is 4.10.3
+version   4.x.3    True        False         43d     Cluster version is 4.x.3
 
 [user@host ~]$ oc get clusterversion -o jsonpath='{.items[0].spec.channel}{"\n"}'
-stable-4.10
+stable-4.x
 ```
 
 View the available updates and note the version number of the update that you want to apply.
 
 ```bash
 [user@host ~]$ oc adm upgrade
-Cluster version is 4.10.3
+Cluster version is 4.x.3
 
 Updates:
 
 VERSION IMAGE
-4.10.4   quay.io/openshift-release-dev/ocp-release@sha256:...
+4.x.4   quay.io/openshift-release-dev/ocp-release@sha256:...
 ...output omitted...
 ```
 
@@ -132,13 +132,13 @@ The previous command initializes the update process. Run the following command t
 ```bash
 [user@host ~]$ oc get clusterversion
 NAME     VERSION  AVAILABLE  PROGRESSING  SINCE  STATUS
-version  4.10.3   True       True         30m    Working towards 4.10.4 ...
+version  4.x.3   True       True         30m    Working towards 4.x.4 ...
 
 [user@host ~]$ oc get clusteroperators
 NAME                  VERSION   AVAILABLE   PROGRESSING   DEGRADED
-authentication        4.10.3    True        False         False
-cloud-credential      4.10.4    False       True          False
-openshift-apiserver   4.10.4    True        False         True
+authentication        4.x.3    True        False         False
+cloud-credential      4.x.4    False       True          False
+openshift-apiserver   4.x.4    True        False         True
 ...output omitted...
 ```
 
@@ -157,13 +157,13 @@ If the roll-out completed successfully, updates in the history have a state of C
     Started Time:       2022-04-28T03:35:05Z
     State:              Partial
     Verified:           true
-    Version:            4.10.4
+    Version:            4.x.4
     Completion Time:    2022-03-15T12:39:02Z
     Image:              quay.io/openshift-release-dev/ocp-release@sha256:...
     Started Time:       2022-03-15T12:23:14Z
     State:              Completed
     Verified:           false
-    Version:            4.10.3
+    Version:            4.x.3
 ```
 
 After the process completes, you can confirm that the cluster has been updated to the new version.
@@ -171,5 +171,5 @@ After the process completes, you can confirm that the cluster has been updated t
 ```bash
 [user@host ~]$ oc get clusterversion
 NAME     VERSION  AVAILABLE  PROGRESSING  SINCE  STATUS
-version  4.10.4   True       True         30m    Cluster version is 4.10.4
+version  4.x.4   True       True         30m    Cluster version is 4.x.4
 ```
