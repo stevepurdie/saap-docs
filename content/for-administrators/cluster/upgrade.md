@@ -56,13 +56,13 @@ A window displays options to select an update channel.
 
 - Execute the following command to switch to another update channel using the oc client.
 
-```yaml
+```bash
 oc adm upgrade channel <channel>
 ```
 
 For example, to set the channel to stable-4.12:
 
-```yaml
+```bash
 oc adm upgrade channel fast-4.10
 ```
 
@@ -103,7 +103,7 @@ stable-4.10
 
 View the available updates and note the version number of the update that you want to apply.
 
-```
+```bash
 [user@host ~]$ oc adm upgrade
 Cluster version is 4.10.3
 
@@ -113,14 +113,15 @@ VERSION IMAGE
 4.10.4   quay.io/openshift-release-dev/ocp-release@sha256:...
 ...output omitted...
 ```
+
 Apply the latest update to your cluster or update to a specific version:
 Run the following command to install the latest available update for your cluster.
 
-```
+```bash
 [user@host ~]$ oc adm upgrade --to-latest=true
 ```
 
-Run the following command to install a specific version. VERSION corresponds to one of the available versions that the oc adm upgrade command returns.
+Run the following command to install a specific version. VERSION corresponds to one of the available versions that the `oc adm upgrade` command returns.
 
 ```
 [user@host ~]$ oc adm upgrade --to=VERSION
@@ -128,7 +129,7 @@ Run the following command to install a specific version. VERSION corresponds to 
 
 The previous command initializes the update process. Run the following command to review the status of the Cluster Version Operator (CVO) and the installed cluster operators.
 
-```
+```bash
 [user@host ~]$ oc get clusterversion
 NAME     VERSION  AVAILABLE  PROGRESSING  SINCE  STATUS
 version  4.10.3   True       True         30m    Working towards 4.10.4 ...
@@ -147,7 +148,7 @@ The history contains a list of the most recent versions applied to the cluster. 
 
 If the roll-out completed successfully, updates in the history have a state of Completed. Otherwise, the update has a state of Partial if the update failed or did not complete.
 
-```
+```bash
 [user@host ~]$ oc describe clusterversion
 ...output omitted...
   History:
@@ -167,7 +168,7 @@ If the roll-out completed successfully, updates in the history have a state of C
 
 After the process completes, you can confirm that the cluster has been updated to the new version.
 
-```
+```bash
 [user@host ~]$ oc get clusterversion
 NAME     VERSION  AVAILABLE  PROGRESSING  SINCE  STATUS
 version  4.10.4   True       True         30m    Cluster version is 4.10.4
