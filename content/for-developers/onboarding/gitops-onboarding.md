@@ -44,7 +44,7 @@ To make things easier, we have created a [template](https://github.com/stakater/
       namespaces:
       - build
       - dev
-      - prod
+      - stage
       specificMetadata:
       - namespaces:
           - gabbar-build
