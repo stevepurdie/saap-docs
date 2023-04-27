@@ -226,4 +226,81 @@ Lets proceed by adding a tenant to the apps gitops repository.
               ├── dev
               └── stage
       ```
+1. Now we need to add argocd apps for environments defined in gabbar/argocd-apps to the relevant cluster folders. Create dev and stage folders inside argocd-apps folder. 
+      ```bash
+      ├── argocd-apps
+          ├── dev
+          └── stage
+      ```
+    > Folders in argocd-apps corresponds to clusters, these folder contain argocd apps pointing to 1 or more environments inside multiple tenant folders, Folders in gabbar/argocd-apps correspond to environments.
 
+    Next, create the following argocd apps:
+
+        # Name: gabbar-stage.yaml (TENANT_NAME-ENV_NAME.yaml)
+        # Path: argocd-apps/stage
+        apiVersion: argoproj.io/v1alpha1
+        kind: Application
+        metadata:
+          name: gabbar-stage
+          namespace: openshift-gitops
+        spec:
+          destination:
+            namespace: gabbar-stage
+            server: 'https://kubernetes.default.svc'
+          project: gabbar
+          source:
+            path: gabbar/argocd-apps/stage
+            repoURL: 'APPS_GITOPS_REPO_URL'
+            targetRevision: HEAD
+          syncPolicy:
+            automated:
+              prune: true
+              selfHeal: true
+        ---
+        # Name: gabbar-dev.yaml (TENANT_NAME-ENV_NAME.yaml)
+        # Path: argocd-apps/dev
+        apiVersion: argoproj.io/v1alpha1
+        kind: Application
+        metadata:
+          name: gabbar-dev
+          namespace: openshift-gitops
+        spec:
+          destination:
+            namespace: gabbar-dev
+            server: 'https://kubernetes.default.svc'
+          project: gabbar
+          source:
+            path: gabbar/argocd-apps/dev
+            repoURL: 'APPS_GITOPS_REPO_URL'
+            targetRevision: HEAD
+          syncPolicy:
+            automated:
+              prune: true
+              selfHeal: true
+
+
+## Linking Apps Gitops with Infra Gitops
+We need to create argocd applications that will deploy the apps of apps structure defined in our apps-gitops-config.
+
+Suppose we want to deploy our application workloads of our dev cluster. We can create an argocd apps for apps-gitops-repo pointing to argocd-apps/CLUSTER_NAME (argocd-apps/dev). Following template should be used:
+
+```
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apps-gitops-repo
+  namespace: openshift-gitops
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: argocd-apps/dev
+    repoURL: 'https://github.com/your-org/apps-gitops-repo.git'
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+```
