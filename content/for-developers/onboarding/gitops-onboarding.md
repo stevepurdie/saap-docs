@@ -241,7 +241,7 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
               └── stage
       ```
 
-1. Add ArgoCD applications for environment (dev & stage) defined in `gabbar/argocd-apps`. These environment belong to specific cluster.
+1. Add ArgoCD applications for these environments (dev & stage) defined in `gabbar/argocd-apps`. These environment belong to specific cluster.
 
     Create dev and stage folder at `argocd-apps/` to represent dev and stage cluster.
 
@@ -370,7 +370,7 @@ metadata:
 stringData:
   type: git
   url: https://github.com/argoproj/private-repo
-  # Use a personal access token in place of a password 
+  # Use a personal access token in place of a password.
   password: my-pat-or-fgt
   username: my-username
 ```
