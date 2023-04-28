@@ -346,11 +346,12 @@ We need to add secret in ArgoCD namespace that will allow read access over the `
 
 You need to configure token or SSH based access over the `apps-gitops-config` repository.
 Use the following links:
+
 - For token access
-  - [Create a personal access token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or [Create a fine grained token](https://github.blog/2022-10-18-introducing-fine-grained-personal-access-tokens-for-github/)
+  - [Create a personal access token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or [Create a fine-grained token](https://github.blog/2022-10-18-introducing-fine-grained-personal-access-tokens-for-github/)
 - For SSH Access
     - [Generate SSH Key Pair](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
-    - [Add SSH Public key to User Account]() or [Add SSH Public key as Deploy Key to Repository]()
+    - [Add SSH Public key to your GitHub Account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or [Add Deploy Key to your Repository](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys)
 
 ### Create a Secret with Token or SSH key
 
@@ -406,6 +407,7 @@ Login to the ArgoCD UI. Click `Setting` from left sidebar, then `Repositories` t
 If connection status is failed, hover over the ❌ adjacent to `Failed` to view the error.
 
 #### SSH Handshake Failed: Key mismatch
+
 If you see the following error. Check `argocd-ssh-known-hosts-cm` config map in ArgoCD namespace to verify that public key for repository server is added as `ssh_known_hosts`.
 ![`argocd-repo-connection-ssh-issue`](images/argocd-repo-connection-ssh-issue.png)
 
