@@ -243,7 +243,7 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
 
 1. Add ArgoCD applications for these environments (dev & stage) defined in `gabbar/argocd-apps`. These environment belong to specific cluster.
 
-    Create dev and stage folder at `argocd-apps/` to represent dev and stage cluster.
+    Create dev and stage folders at `argocd-apps/` to represent dev and stage cluster.
 
       ```bash
       ├── argocd-apps
@@ -348,10 +348,10 @@ You need to configure token or SSH based access over the `apps-gitops-config` re
 Use the following links:
 
 - For token access
-  - [Create a personal access token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or [Create a fine-grained token](https://github.blog/2022-10-18-introducing-fine-grained-personal-access-tokens-for-github/)
+  - [`Create a personal access token`](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or [`Create a fine-grained token`](https://github.blog/2022-10-18-introducing-fine-grained-personal-access-tokens-for-github/)
 - For SSH Access
-    - [Generate SSH Key Pair](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
-    - [Add an SSH Public key to your GitHub Account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or [Add a Deploy Key to your Repository](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys)
+    - [`Generate SSH Key Pair`](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
+    - [`Add SSH Public key to your GitHub Account`](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or [`Add Deploy Key to your Repository`](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys)
 
 ### Create a Secret with Token or SSH key
 
