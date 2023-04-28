@@ -243,7 +243,7 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
 
 1. Add ArgoCD applications for environment (dev & stage) defined in `gabbar/argocd-apps`. These environment belong to specific cluster.
 
-    Create dev and stage folder at `argocd-apps/` to represent dev and stage cluster.
+    Create dev and stage folders at `argocd-apps/` to represent dev and stage cluster.
 
       ```bash
       ├── argocd-apps
