@@ -393,7 +393,7 @@ stringData:
     -----END OPENSSH PRIVATE KEY-----
 ```
 
-More Info on Connecting ArgoCD to Private Repositories [here](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repositories)
+> More Info on Connecting ArgoCD to Private Repositories [here](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repositories)
 
 Login to the ArgoCD UI. Click `Setting` from left sidebar, then `Repositories` to view connected repositories.
 
@@ -406,11 +406,9 @@ Login to the ArgoCD UI. Click `Setting` from left sidebar, then `Repositories` t
 If connection status is failed, hover over the ❌ adjacent to `Failed` to view the error.
 
 #### SSH Handshake Failed: Key mismatch
-If you see the following error.
+If you see the following error. Check `argocd-ssh-known-hosts-cm` config map in ArgoCD namespace to verify that public key for repository server is added as `ssh_known_hosts`.
 ![`argocd-repo-connection-ssh-issue`](images/argocd-repo-connection-ssh-issue.png)
 
-Check `argocd-ssh-known-hosts-cm` config map in ArgoCD namespace to verify that public key for repository server is added as known_host.
+Some known hosts public keys might be missing in `argocd-ssh-known-hosts-cm` for older ArgoCD versions, Find full list of public keys against repository server here: https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#ssh-known-host-public-keys
 
-Some known hosts public keys might be missing in `argocd-ssh-known-hosts-cm` for older argocd versions, Find full list of public keys against repository server here: https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#ssh-known-host-public-keys
-
-Related Github Issue: https://github.com/argoproj/argo-cd/issues/7723
+Related GitHub Issue: https://github.com/argoproj/argo-cd/issues/7723
