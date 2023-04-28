@@ -364,7 +364,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: private-repo
-  namespace: argocd
+  namespace: argocd-ns
   labels:
     argocd.argoproj.io/secret-type: repository
 stringData:
