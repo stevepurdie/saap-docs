@@ -1,8 +1,8 @@
 # Hibernating your Cluster
 
-For clusters running non-critical workloads, e.g. test, development or those only utilized during business hours, it is possible to schedule Cluster Hibernation to save on cloud costs.
+For clusters running non-critical workloads, e.g. test, development or those only utilized during business hours, it is possible to schedule Cluster Hibernation to save on cloud costs, where Pay-as-you-go cloud computing (PAYG cloud computing) model is implemented.
 
-Cluster Hibernation automatically powers your cluster nodes up or down according to your defined cron schedule.
+Cluster Hibernation automatically powers your cluster nodes (including master nodes) up or down according to your defined cron schedule.
 
 It takes around 1-3 minutes to take your cluster offline and about 3-5 minutes to power back up depending on your cloud provider.
 
