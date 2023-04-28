@@ -175,11 +175,11 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
                  └── stakater-nordmart-review-stage.yaml
       ```
 
-    Create an ArgoCD application inside dev folder that points to dev directory in `stakater-nordmart-review`. Create a file named `APP_NAME-ENV_NAME.yaml` with following spec:
+    Create an ArgoCD application inside dev folder that points to dev directory in `stakater-nordmart-review`. Create a file named `APP_NAME.yaml` with following spec:
 
       ```yaml
       # Name: stakater-nordmart-review.yaml(APP_NAME.yaml)
-      # Path: gabbar/argocd-apps/dev (TENANT_NAMEargocd-apps/ENV_NAME/)
+      # Path: gabbar/argocd-apps/dev (TENANT_NAME/argocd-apps/ENV_NAME/)
       apiVersion: argoproj.io/v1alpha1
       kind: Application
       metadata:
@@ -204,7 +204,7 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
 
       ```yaml
       # Name: stakater-nordmart-review.yaml (APP_NAME.yaml)
-      # Path: gabbar/argocd-apps/stage (TENANT_NAME/argocd-appsENV_NAME/)
+      # Path: gabbar/argocd-apps/stage (TENANT_NAME/argocd-apps/ENV_NAME/)
       apiVersion: argoproj.io/v1alpha1
       kind: Application
       metadata:
