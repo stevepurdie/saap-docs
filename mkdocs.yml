@@ -66,7 +66,6 @@ nav:
             - about/responsibility-matrix/change-management.md
             - about/responsibility-matrix/identity-access-management.md
             - about/responsibility-matrix/security-regulation-compliance.md
-            - about/responsibility-matrix/applications-data.md
             - about/responsibility-matrix/disaster-recovery.md
         - Cloud Providers:
             - about/cloud-providers/overview.md
@@ -231,4 +230,3 @@ nav:
 plugins:
     - search
     - mermaid2
-    - table-reader
