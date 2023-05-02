@@ -398,7 +398,7 @@ stringData:
 
 Login to the ArgoCD UI. Click `Setting` from left sidebar, then `Repositories` to view connected repositories.
 
-  ![`argocd-repositories`](images/argocd-repositories.png)
+  ![`argocd-repositories`](images/ArgoCD-repositories.png)
 
 > Make sure connection status is successful
 
@@ -409,7 +409,7 @@ If connection status is failed, hover over the ❌ adjacent to `Failed` to view 
 #### SSH Handshake Failed: Key mismatch
 
 If you see the following error. Check `argocd-ssh-known-hosts-cm` config map in ArgoCD namespace to verify that public key for repository server is added as `ssh_known_hosts`.
-![`argocd-repo-connection-ssh-issue`](images/argocd-repo-connection-ssh-issue.png)
+![`argocd-repo-connection-ssh-issue`](images/ArgoCD-repo-connection-ssh-issue.png)
 
 Some known hosts public keys might be missing in `argocd-ssh-known-hosts-cm` for older ArgoCD versions, Find full list of public keys against repository server here: https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#ssh-known-host-public-keys
 
