@@ -303,6 +303,8 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
 
 ## Linking Apps GitOps with Infra GitOps
 
+> You will need to do this once per apps-gitops-config repository.
+
 We need to create ArgoCD applications that will deploy the apps of apps structure defined in our `apps-gitops-config` repository.
 
 Suppose we want to deploy our application workloads of our dev (CLUSTER_NAME) cluster. We can create an ArgoCD application for `apps-gitops-config` repository pointing to `argocd-apps/dev (argocd-apps/CLUSTER_NAME)`.
