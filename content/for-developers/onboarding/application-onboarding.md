@@ -4,16 +4,16 @@ This guide covers the step-by-step guide to onboard a new project/application/mi
 
 Changes required in application repository:
 
-1. Add Dockerfile to application repository and push it to nexus
-1. Add Helm Chart to application repository and push it to nexus
-1. Push Docker Image to Nexus Docker.
-1. Push Helm Chart to Nexus Helm
+1. Add Dockerfile to application repository.
+1. Push Docker Image to Nexus Docker Repository.
+1. Add Helm Chart to application repository.
+1. Push Helm Chart to Nexus Helm Repository.
 
 Changes required in `gitops config repository`:
 
-1. Add dev environment in `apps-gitops-config` repository for application
-1. Add application to the dev environment and sync ArgoCD Application
-1. View Application in Cluster
+1. Add an environment in `apps-gitops-config` repository for application.
+1. Add application helm chart to the dev environment and sync ArgoCD Application.
+1. View Application in Cluster.
 
 Replace angle brackets with following values in below templates:
 
@@ -23,9 +23,23 @@ Replace angle brackets with following values in below templates:
 - `<gitops-repo>`:  URL of your GitOps repo
 - `<nexus-repo>`: URL of nexus repository
 
+In this section, we will use [stakater-nordmart-review-ui](https://github.com/stakater-lab/stakater-nordmart-review-ui) application as an example and add it to our GitOps structure we made in the previous section.
+
+## Prerequisites
+
+- `tenant` for application must be defined via `infra-gitops-config` [See Gitops Onboarding]()
+- `tenant` for application should be onboarded onto `apps-gitops-config` [See Gitops Onboarding]()
+- [helm](https://helm.sh/docs/intro/install/) 
+- [git](https://git-scm.com/downloads)
+- [oc](https://docs.openshift.com/container-platform/4.11/cli_reference/openshift_cli/getting-started-cli.html)
+- [buildah](https://github.com/containers/buildah/blob/main/install.md)
+
+## Login to Docker and Helm Repository hosted by Nexus
+
+
 ## 1. Add **Dockerfile** to application repository
 
-We need a **Dockerfile** for our application present inside our code repo.  Navigate to [`RedHat image registry`](https://catalog.redhat.com/software/containers/search) and find a suitable image for the application.
+We need a **Dockerfile** for our application present inside our code repo to build a container image.  Navigate to [`RedHat image registry`](https://catalog.redhat.com/software/containers/search) and find a suitable base image for the application.
 
 Below is a Dockerfile for a ReactJS application for product reviews. Visit for more info: <https://github.com/stakater-lab/stakater-nordmart-review-ui>
 
@@ -61,7 +75,33 @@ Look into the following dockerizing guides for a start.
 | Django             | <https://blog.logrocket.com/dockerizing-django-app/>          |
 | General            | <https://www.redhat.com/sysadmin/containerizing-applications> |
 
-## 2. Add Helm Chart to application repository
+## 2. Push Docker Image to Nexus
+
+Lets clone the [stakater-nordmart-review-ui](https://github.com/stakater-lab/stakater-nordmart-review-ui) application.
+
+```bash
+git clone https://github.com/stakater-lab/stakater-nordmart-review-ui
+cd stakater-nordmart-review-ui
+```
+Navigate to the cluster Forecastle and get the Nexus URL. Get and copy the nexus url.
+
+![nexus-Forecastle](./images/nexus-forecastle.png)
+
+Replace the placeholders and Run the following command inside application folder.
+
+```sh
+# Buldah Bud Info : https://manpages.ubuntu.com/manpages/impish/man1/buildah-bud.1.html
+buildah bud --format=docker --tls-verify=false --no-cache -f ./Dockerfile -t <nexus-repo-url>/<tenant-name>/<app-name>:1.0.0 .
+```
+
+Lets push the image to nexus docker repo. Make sure to get credentials from Stakater Admin.
+
+```sh
+# Buildah push Info https://manpages.ubuntu.com/manpages/impish/man1/buildah-push.1.html
+buildah push --tls-verify=false --digestfile ./image-digest <nexus-repo-url>/<tenant-name>/stakater-nordmart-review:snapshot-pr-350-68b5d049 docker://<nexus-repo-url>/
+```
+
+## 3. Add Helm Chart to application repository
 
 In application repo add Helm Chart in ***deploy*** folder at the root of your repository. To configure Helm chart add following 2 files in ***deploy*** folder.
 
@@ -138,26 +178,6 @@ References to Explore:
 - [`stakater-nordmart-review`](https://github.com/stakater-lab/stakater-nordmart-review/deploy)
 - [`stakater-nordmart-review-ui`](https://github.com/stakater-lab/stakater-nordmart-review-ui/deploy)
 - [All configurations available via Application Chart Values](https://github.com/stakater/application/blob/master/application/values.yaml)
-
-## 3. Push Docker Image to Nexus
-
-Navigate to the cluster Forecastle and get the Nexus URL. Get and copy the nexus url.
-
-![nexus-Forecastle](./images/nexus-forecastle.png)
-
-Replace the placeholders and Run the following command inside application folder.
-
-```sh
-# Buldah Bud Info : https://manpages.ubuntu.com/manpages/impish/man1/buildah-bud.1.html
-buildah bud --format=docker --tls-verify=false --no-cache -f ./Dockerfile -t <nexus-repo-url>/<app-name>:1.0.0 .
-```
-
-Lets push the image to nexus docker repo. Make sure to get credentials from Stakater Admin.
-
-```sh
-# Buildah push Info https://manpages.ubuntu.com/manpages/impish/man1/buildah-push.1.html
-buildah push --tls-verify=false --digestfile ./image-digest <nexus-repo-url>/stakater-nordmart-review:snapshot-pr-350-68b5d049 docker://<nexus-repo-url>/
-```
 
 ## 4. Push Helm Chart to Nexus
 
