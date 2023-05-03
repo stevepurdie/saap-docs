@@ -42,7 +42,7 @@ Navigate to the cluster Forecastle, search `nexus` using the search bar on top m
 
 - `nexus-docker-reg-url`: Remove `https://` from the start and add `-docker` in URL after `nexus`. This URL points to Docker Registry referred as `nexus-docker-reg-url` in this tutorial eg `nexus-docker-stakater-nexus.apps.clustername.random123string.kubeapp.cloud`.
 
-- `nexus-helm-reg-url` : Remove `https://` from the start, add `-helm` in URL after `nexus` and Append `/repository/helm-charts/`. This URL points to Helm Registry referred as `nexus-helm-reg-url` in this tutorial eg `nexus-helm-stakater-nexus.apps.clustername.random123string.kubeapp.cloud/repository/helm-charts/`
+- `nexus-helm-reg-url` : Remove `https://` from the start, add `-helm` in URL after `nexus` and append `/repository/helm-charts/`. This URL points to Helm Registry referred as `nexus-helm-reg-url` in this tutorial eg `nexus-helm-stakater-nexus.apps.clustername.random123string.kubeapp.cloud/repository/helm-charts/`
 
   ![nexus-Forecastle](./images/nexus-forecastle.png)
 
