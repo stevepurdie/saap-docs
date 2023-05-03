@@ -10,6 +10,6 @@ General Data Protection Regulation (GDPR) has been adopted by the European Union
    New obligations for processors
    Potential for significant financial penalties for non-compliance
    Compulsory data breach notification
-2. Read more about GDPR
+1. Read more about GDPR
    - [EU GDPR Information Portal](https://www.eugdpr.org/)
    - [Red Hat GDPR website](https://www.redhat.com/en/gdpr)

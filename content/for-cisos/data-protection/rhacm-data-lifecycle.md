@@ -13,7 +13,7 @@ To best understand the Red Hat Advanced Cluster Management for Kubernetes platfo
 
     Information on how this technical data is collected/created, stored, accessed, secured, logged, and deleted is described in later sections of this document.
 
-2. Personal data used for online contact
+1. Personal data used for online contact
 Customers can submit online comments/feedback/requests for information about in a variety of ways, primarily:
 
     - The public Slack community if there is a Slack channel
