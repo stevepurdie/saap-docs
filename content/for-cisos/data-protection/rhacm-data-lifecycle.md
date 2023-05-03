@@ -1,5 +1,4 @@
-
-# **Data Life Cycle**
+# Data Life Cycle
 
 Red Hat Advanced Cluster Management for Kubernetes is an application platform for developing and managing on-premises, containerized applications. It is an integrated environment for managing containers that includes the container orchestrator Kubernetes, cluster lifecycle, application lifecycle, and security frameworks (governance, risk, and compliance).
 

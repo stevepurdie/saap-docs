@@ -133,6 +133,11 @@ nav:
             - for-cisos/backup-restore/stateful-app-example.md
             - for-cisos/backup-restore/restore-with-gitops.md
             - for-cisos/backup-restore/limitations.md
+        - Data Protection:
+            - for-cisos/data-protection/gdpr.md
+            - for-cisos/data-protection/rhacm-data-lifecycle.md
+            - for-cisos/data-protection/rhacm-data-collection.md
+            - for-cisos/data-protection/rhacm-data-storage.md
     - For Partners:
         - for-partners/overview.md
     - Managed Addons:
