@@ -1,4 +1,6 @@
+
 # **Data storage**
+
 The Red Hat Advanced Cluster Management for Kubernetes platform persists technical data that is related to configuration and management of the platform in stateful stores on local or remote file systems as configuration files or in databases. Consideration must be given to securing all data at rest. The Red Hat Advanced Cluster Management for Kubernetes platform supports encryption of data at rest in stateful stores that use `dm-crypt`.
 
 The following items highlight the areas where data is stored, which you might want to consider for GDPR.

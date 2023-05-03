@@ -1,4 +1,6 @@
+
 # **GDPR**
+
 General Data Protection Regulation (GDPR) has been adopted by the European Union ("EU") and applies from May 25, 2018.
 
 1. Why is GDPR important?

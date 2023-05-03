@@ -1,4 +1,6 @@
-# ** Data Collection
+
+# **Data Collection**
+
 The Red Hat Advanced Cluster Management for Kubernetes platform does not collect sensitive personal data. It does create and manage technical data, such as an administrator user ID and password, service user IDs and passwords, IP addresses, and Kubernetes node names, which might be considered personal data. The Red Hat Advanced Cluster Management for Kubernetes platform also deals with information about users who manage the platform. All such information is only accessible by the system administrator through a management console with role-based access control or by the system administrator though login to a Red Hat Advanced Cluster Management for Kubernetes platform node.
 
 Applications that run on the Red Hat Advanced Cluster Management for Kubernetes platform might collect personal data.
