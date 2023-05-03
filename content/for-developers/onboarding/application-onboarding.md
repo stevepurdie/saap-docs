@@ -34,8 +34,24 @@ In this section, we will use [stakater-nordmart-review-ui](https://github.com/st
 - [oc](https://docs.openshift.com/container-platform/4.11/cli_reference/openshift_cli/getting-started-cli.html)
 - [buildah](https://github.com/containers/buildah/blob/main/install.md)
 
-## Login to Docker and Helm Repository hosted by Nexus
+## Docker Image and Helm Chart Repository hosted by Nexus
 
+Navigate to the cluster Forecastle, search `nexus` using the search bar on top menu and copy the nexus url.
+
+- `nexus-docker-reg-url`: Remove `https://` from the start and add `-docker` in URL after `nexus`. This URL points to Docker Registry referred as `nexus-docker-reg-url` in this tutorial eg `nexus-docker-stakater-nexus.apps.clustername.random123string.kubeapp.cloud`.
+
+- `nexus-helm-reg-url` : Remove `https://` from the start, add `-helm` in URL after `nexus` and Append `/repository/helm-charts/`. This URL points to Helm Registry referred as `nexus-helm-reg-url` in this tutorial eg `nexus-helm-stakater-nexus.apps.clustername.random123string.kubeapp.cloud/repository/helm-charts/`
+
+  ![nexus-Forecastle](./images/nexus-forecastle.png)
+
+Ask admin for Docker and Helm Registry Credentials for pushing container images and helm chart respectively.
+
+### Login to Docker Registry 
+Run following command to login to the registry
+```sh
+buildah login <nexus-docker-reg-url>
+```
+Specify admin provided username and password to login.
 
 ## 1. Add **Dockerfile** to application repository
 
@@ -83,9 +99,6 @@ Lets clone the [stakater-nordmart-review-ui](https://github.com/stakater-lab/sta
 git clone https://github.com/stakater-lab/stakater-nordmart-review-ui
 cd stakater-nordmart-review-ui
 ```
-Navigate to the cluster Forecastle, search `nexus` using the search bar on top menu, copy the nexus url. Remove `https://` from the start and add `-docker` in URL after `nexus`. eg change 
-`nexus-stakater-nexus.apps.clustername.random123string.kubeapp.cloud` to `nexus-docker-stakater-nexus.apps.clustername.random123string.kubeapp.cloud`. This URL points to Docker Registry referred as `nexus-docker-reg-url` in this tutorial.
-![nexus-Forecastle](./images/nexus-forecastle.png)
 
 Replace the placeholders and Run the following command inside application folder.
 
@@ -191,11 +204,9 @@ helm package .
 ```
 This command packages a chart into a versioned chart archive file.
 
-Lets publish this chart to Helm Chart Registry using `curl`. Navigate to the cluster Forecastle, search `nexus` using the search bar on top menu and Copy the nexus url. Remove `https://` from the start, add `-helm` in URL after `nexus` and Append `/repository/helm-charts/` eg nexus-stakater-nexus.apps.clustername.random123string.kubeapp.cloud/repository/helm-charts/. This URL points to Helm Registry referred as `nexus-helm-reg-url` in this tutorial.
-
 ```sh
 # heml
-curl -u "<helm_user>":"<helm_password>" <nexus-repo-url>/repository/helm-charts --upload-file "stakater-nordmart-review-ui-1.0.0.tgz"
+curl -u "<helm_user>":"<helm_password>" <nexus-helm-reg-url> --upload-file "stakater-nordmart-review-ui-1.0.0.tgz"
 ```
 
 ## 5. Add application chart to `apps-gitops-config`
