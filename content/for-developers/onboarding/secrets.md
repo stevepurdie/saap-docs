@@ -57,4 +57,6 @@ externalSecret:
       labels:
         key: value
 ```
+From the above configuration, a kubernetes secret is created.
+
 For more information on ExternalSecrets, see [External Secrets documentation](https://external-secrets.io/v0.8.1/introduction/overview/)
