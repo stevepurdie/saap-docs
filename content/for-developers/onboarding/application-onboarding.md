@@ -47,7 +47,7 @@ Navigate to the cluster Forecastle, search `nexus` using the search bar on top m
   ![nexus-Forecastle](./images/nexus-forecastle.png)
 
 ### Login to Docker Registry 
-Run following command to login to the registry
+Run following command to log into the registry
 ```sh
 buildah login <nexus-docker-reg-url>
 ```
