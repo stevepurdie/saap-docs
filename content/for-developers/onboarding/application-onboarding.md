@@ -29,7 +29,7 @@ In this section, we will use [`stakater-nordmart-review-ui`](https://github.com/
 
 - `tenant` for application must be defined via `infra-gitops-config` [See GitOps Onboarding](gitops-onboarding.md)
 - `tenant` for application should be onboarded onto `apps-gitops-config` [See GitOps Onboarding](gitops-onboarding.md)
-- [helm](https://helm.sh/docs/intro/install/) 
+- [helm](https://helm.sh/docs/intro/install/)
 - [git](https://git-scm.com/downloads)
 - [oc](https://docs.openshift.com/container-platform/4.11/cli_reference/openshift_cli/getting-started-cli.html)
 - [buildah](https://github.com/containers/buildah/blob/main/install.md)
@@ -46,9 +46,10 @@ Navigate to the cluster Forecastle, search `nexus` using the search bar on top m
 
   ![nexus-Forecastle](./images/nexus-forecastle.png)
 
-### Login to Docker Registry 
+### Login to Docker Registry
 
-Run following command to log into the registry
+Run following command to log into the registry.
+
 ```sh
 buildah login <nexus-docker-reg-url>
 ```
@@ -175,7 +176,7 @@ If your application contains dependency charts run the following command in depl
 
     ![helm-dependency-build](./images/helm-dependency-build.png)
 
-4. Run the following command to see the Kubernetes manifests are being generated successfully and validate whether they match your required configuration. This simple helm chart generates deployment, service and route resources. 
+4. Run the following command to see the Kubernetes manifests are being generated successfully and validate whether they match your required configuration. This simple helm chart generates deployment, service and route resources.
 
     > View Application Chart Usage [here](https://github.com/stakater/application)
 
