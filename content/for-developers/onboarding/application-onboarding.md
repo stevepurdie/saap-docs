@@ -83,22 +83,22 @@ Lets clone the [stakater-nordmart-review-ui](https://github.com/stakater-lab/sta
 git clone https://github.com/stakater-lab/stakater-nordmart-review-ui
 cd stakater-nordmart-review-ui
 ```
-Navigate to the cluster Forecastle and get the Nexus URL. Get and copy the nexus url.
-
+Navigate to the cluster Forecastle, search `nexus` using the search bar on top menu, copy the nexus url. Remove `https://` from the start and add `-docker` in URL after `nexus`. eg change 
+`nexus-stakater-nexus.apps.clustername.random123string.kubeapp.cloud` to `nexus-docker-stakater-nexus.apps.clustername.random123string.kubeapp.cloud`. This URL points to Docker Registry referred as `nexus-docker-reg-url` in this tutorial.
 ![nexus-Forecastle](./images/nexus-forecastle.png)
 
 Replace the placeholders and Run the following command inside application folder.
 
 ```sh
 # Buldah Bud Info : https://manpages.ubuntu.com/manpages/impish/man1/buildah-bud.1.html
-buildah bud --format=docker --tls-verify=false --no-cache -f ./Dockerfile -t <nexus-repo-url>/<tenant-name>/<app-name>:1.0.0 .
+buildah bud --format=docker --tls-verify=false --no-cache -f ./Dockerfile -t <nexus-docker-reg-url>/<tenant-name>/<app-name>:1.0.0 .
 ```
 
 Lets push the image to nexus docker repo. Make sure to get credentials from Stakater Admin.
 
 ```sh
 # Buildah push Info https://manpages.ubuntu.com/manpages/impish/man1/buildah-push.1.html
-buildah push --tls-verify=false --digestfile ./image-digest <nexus-repo-url>/<tenant-name>/stakater-nordmart-review:snapshot-pr-350-68b5d049 docker://<nexus-repo-url>/
+buildah push <nexus-docker-reg-url>/<tenant-name>/stakater-nordmart-review:1.0.0 docker://<nexus-docker-reg-url>/<tenant-name>/stakater-nordmart-review:1.0.0
 ```
 
 ## 3. Add Helm Chart to application repository
@@ -110,15 +110,16 @@ In application repo add Helm Chart in ***deploy*** folder at the root of your re
     > More Info : Stakater Application Chart <https://github.com/stakater/application>
 
     ```yaml
-    apiVersion: v2
-    name: <application>
-    description: A Helm chart for Kubernetes
-    dependencies:
-    - name: application
-      version: 1.2.10
-      repository: https://stakater.github.io/stakater-charts
-    type: application
-    version: 1.0.0
+      apiVersion: v2
+      # Replace Chart Name with App Name
+      name: stakater-nordmart-review-ui
+      description: A Helm chart for Kubernetes
+      dependencies:
+      - name: application
+        version: 2.1.13
+        repository: https://stakater.github.io/stakater-charts
+      type: application
+      version: 1.0.0
     ```
 
 2. The values.yaml contains all the application specific **kubenetes resources** (deployments, configmaps, namespaces, secrets, services, route, podautoscalers, RBAC) for the particular environment. Configure Helm values as per application needs.
@@ -131,22 +132,16 @@ In application repo add Helm Chart in ***deploy*** folder at the root of your re
       # application name should be short so limit of 63 characters in route can be fulfilled.
       # Default route name formed is <application-name>-<namespace>.<base-domain> .
       # Config Maps have <application> prefixed
-      applicationName: <application>
+
+      # Replace applicationName with App Name
+      applicationName: stakater-nordmart-review-ui
 
       deployment:
+        # nexus-docker-config-forked is deployed in all tenant namespaces for pulling images
         imagePullSecrets: nexus-docker-config-forked
-        additionalLabels:
-          mylabel: mylabelvalue
-        envFrom:
-          <application>-dbconfig:
-            type: configmap
-            nameSuffix: dbconfig
-      configMap:
-        enabled: true
-        files:
-          dbconfig:
-            DB_NAME: "my-application-db"
-            MONGO_HOST: "my-db-host"
+        image:
+          repository: <nexus-docker-reg-url>/<tenant-name>/stakater-nordmart-review-ui
+          tag: 1.0.0
       route:
         enabled: true
         port:
@@ -158,16 +153,21 @@ If your application contains dependency charts run the following command in depl
 
     ```sh
     # Download helm dependencies in Chart.yaml
+    cd deploy/
+    # command info : helm dependency --help 
     helm dependency build
     ```
 
     ![helm-dependency-build](./images/helm-dependency-build.png)
 
-4. Run the following command to see the Kubernetes manifests are being generated successfully and validate whether they match your required configuration.
+4. Run the following command to see the Kubernetes manifests are being generated successfully and validate whether they match your required configuration. This simple helm chart generates deployment, service and route resources. 
+
+    > View Application Chart Usage [here](https://github.com/stakater/application)
 
     ```sh
     # Generates the chart against values file provided
     # and write the output to application-output.yaml
+    # command info : helm template --help 
     helm template . > application-output.yaml
     ```
 
@@ -189,8 +189,9 @@ Run the following command to package the helm chart into compressed file.
 helm package .
 # output : successfully packaged chart and saved it to: /Desktop/Tasks/stakater/stakater-nordmart-review-ui/deploy/stakater-nordmart-review-ui-1.0.0.tgz
 ```
+This command packages a chart into a versioned chart archive file.
 
-Now lets upload the chart to Nexus Helm Repo using curl.
+Lets publish this chart to Helm Chart Registry using `curl`. Navigate to the cluster Forecastle, search `nexus` using the search bar on top menu and Copy the nexus url. Remove `https://` from the start, add `-helm` in URL after `nexus` and Append `/repository/helm-charts/` eg nexus-stakater-nexus.apps.clustername.random123string.kubeapp.cloud/repository/helm-charts/. This URL points to Helm Registry referred as `nexus-helm-reg-url` in this tutorial.
 
 ```sh
 # heml
@@ -199,7 +200,7 @@ curl -u "<helm_user>":"<helm_password>" <nexus-repo-url>/repository/helm-charts 
 
 ## 5. Add application chart to `apps-gitops-config`
 
-Navigate to `apps-gitops-config` repository and add a helm chart in path `<tenant-name>/<app-name>/dev`.
+Navigate to `apps-gitops-config` repository and add a helm chart in path `gabbar/stakater-nordmart-review/dev` ie. `<tenant-name>/<app-name>/dev`.
 
 ![app-in-dev-env](./images/app-in-dev-env.png)
 
@@ -211,7 +212,7 @@ description: A Helm chart for Kubernetes
 dependencies:
   - name: <chart-name-in-deploy-folder>
     version: "1.0.0"
-    repository: <nexus-repo>/repository/helm-charts/
+    repository: <nexus-helm-reg-url>/repository/helm-charts/
 version: 1.0.0
 -----------------------------------------
 # <tenant-name>/<app-name>/dev/values.yaml
@@ -219,7 +220,7 @@ version: 1.0.0
   application:
     deployment:
       image:
-        repository: <nexus-repo>/<chart-name-in-deploy-folder>
+        repository: <nexus-docker-reg-url>/stakater-nordmart-review-ui
         tag: 1.0.0
 ```
 
