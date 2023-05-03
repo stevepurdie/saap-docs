@@ -15,6 +15,9 @@ The cluster scoped infrastructural configurations are deployed through this repo
 
 To make things easier, we have created a [template](https://github.com/stakater/infra-gitops-config.git) that you can use to create your infra repository.
 
+Team Stakater will create a root [Tenant](https://docs.stakater.com/mto/main/customresources.html#2-tenant), which will then create a root AppProject.
+This AppProject will be used to sync all the Applications in `Infra Gitops Config` and it will provide visibility of these Applications in ArgoCD UI to customer cluster admins.
+
 1. Open up your SCM and create any empty repository
 1. Now let's copy the structure that we saw in the [template](https://github.com/stakater/infra-gitops-config.git). Add a folder bearing your cluster's name at the root of the repository that you just created.
     > If you plan on using this repository for multiple clusters, add a folder for each cluster.
@@ -93,7 +96,7 @@ Open up the `argocd-apps` folder and add the following file to it:
         targetRevision: HEAD
         directory:
           recurse: true
-      project: default
+      project: root-tenant
       syncPolicy:
         automated:
           prune: true
@@ -319,7 +322,7 @@ spec:
   destination:
     namespace: openshift-gitops
     server: 'https://kubernetes.default.svc'
-  project: default
+  project: root-tenant
   source:
     path: argocd-apps/dev
     repoURL: 'APPS_GITOPS_REPO_URL'
