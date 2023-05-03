@@ -48,15 +48,15 @@ Request Priority | Description of the Request Priority
 
 ## Response Times
 
-Stakater guarantees certain reaction and response times for each priority. The reaction time is the maximum time taken for Stakater Support to become aware of the ticket. The response time is the maximum time taken for Stakater Support to make an initial response to the ticket.
+Stakater strives to reach certain response and resolution times for each ticket. The response time is the maximum time it should take for Stakater Support to make an initial response to the ticket. The resolution time is the maximum time it should take for Stakater to assign the ticket a resolution.
 
-Request Priority | Reaction time | Response Time
+Request Priority | Time to first response | Time to resolution
 --- | --- | ---
-`Highest` | 5 min | 2 h
-`High` | 5 min | 1 day
-`Medium` | 5 min | 3 working days
-`Low` | 2 working hours | 25 working days
-`Lowest` | 4 working hours | 25 working days
+`Highest` | 2 h | 1 day
+`High` | 1 day | 2 days
+`Medium` | 3 days | 3 days
+`Low` | 4 days | 4 days
+`Lowest` | 5 days | 5 days
 
 ## Resolution Time
 
