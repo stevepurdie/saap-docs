@@ -124,7 +124,7 @@ In application repo add Helm Chart in ***deploy*** folder at the root of your re
 
     ```yaml
       apiVersion: v2
-      # Replace Chart Name with App Name
+      # Replace Chart Name with App Name.
       name: stakater-nordmart-review-ui
       description: A Helm chart for Kubernetes
       dependencies:
@@ -211,7 +211,7 @@ curl -u "<helm_user>":"<helm_password>" <nexus-helm-reg-url> --upload-file "stak
 
 ## 5. Add application chart to `apps-gitops-config`
 
-Navigate to `apps-gitops-config` repository and add a helm chart in path `gabbar/stakater-nordmart-review/dev` ie. `<tenant-name>/<app-name>/dev`.
+Navigate to `apps-gitops-config` repository and add a helm chart in path `gabbar/stakater-nordmart-review/dev` i.e. `<tenant-name>/<app-name>/dev`.
 
 ![app-in-dev-env](./images/app-in-dev-env.png)
 
