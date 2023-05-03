@@ -23,12 +23,12 @@ Replace angle brackets with following values in below templates:
 - `<gitops-repo>`:  URL of your GitOps repo
 - `<nexus-repo>`: URL of nexus repository
 
-In this section, we will use [stakater-nordmart-review-ui](https://github.com/stakater-lab/stakater-nordmart-review-ui) application as an example and add it to our GitOps structure we made in the previous section.
+In this section, we will use [`stakater-nordmart-review-ui`](https://github.com/stakater-lab/stakater-nordmart-review-ui) application as an example and add it to our GitOps structure we made in the previous section.
 
 ## Prerequisites
 
-- `tenant` for application must be defined via `infra-gitops-config` [See Gitops Onboarding]()
-- `tenant` for application should be onboarded onto `apps-gitops-config` [See Gitops Onboarding]()
+- `tenant` for application must be defined via `infra-gitops-config` [See GitOps Onboarding](gitops-onboarding.md)
+- `tenant` for application should be onboarded onto `apps-gitops-config` [See GitOps Onboarding](gitops-onboarding.md)
 - [helm](https://helm.sh/docs/intro/install/) 
 - [git](https://git-scm.com/downloads)
 - [oc](https://docs.openshift.com/container-platform/4.11/cli_reference/openshift_cli/getting-started-cli.html)
@@ -40,17 +40,19 @@ In this section, we will use [stakater-nordmart-review-ui](https://github.com/st
 
 Navigate to the cluster Forecastle, search `nexus` using the search bar on top menu and copy the nexus url.
 
-- `nexus-docker-reg-url`: Remove `https://` from the start and add `-docker` in URL after `nexus`. This URL points to Docker Registry referred as `nexus-docker-reg-url` in this tutorial eg `nexus-docker-stakater-nexus.apps.clustername.random123string.kubeapp.cloud`.
+- `nexus-docker-reg-url`: Remove `https://` from the start and add `-docker` in URL after `nexus`. This URL points to Docker Registry referred as `nexus-docker-reg-url` in this tutorial for example `nexus-docker-stakater-nexus.apps.clustername.random123string.kubeapp.cloud`.
 
-- `nexus-helm-reg-url` : Remove `https://` from the start, add `-helm` in URL after `nexus` and append `/repository/helm-charts/`. This URL points to Helm Registry referred as `nexus-helm-reg-url` in this tutorial eg `nexus-helm-stakater-nexus.apps.clustername.random123string.kubeapp.cloud/repository/helm-charts/`
+- `nexus-helm-reg-url` : Remove `https://` from the start, add `-helm` in URL after `nexus` and append `/repository/helm-charts/`. This URL points to Helm Registry referred as `nexus-helm-reg-url` in this tutorial for example `nexus-helm-stakater-nexus.apps.clustername.random123string.kubeapp.cloud/repository/helm-charts/`
 
   ![nexus-Forecastle](./images/nexus-forecastle.png)
 
 ### Login to Docker Registry 
+
 Run following command to log into the registry
 ```sh
 buildah login <nexus-docker-reg-url>
 ```
+
 Specify admin provided username and password to login.
 
 ## 1. Add **Dockerfile** to application repository
@@ -93,7 +95,7 @@ Look into the following dockerizing guides for a start.
 
 ## 2. Push Docker Image to Nexus
 
-Lets clone the [stakater-nordmart-review-ui](https://github.com/stakater-lab/stakater-nordmart-review-ui) application.
+Lets clone the [`stakater-nordmart-review-ui`](https://github.com/stakater-lab/stakater-nordmart-review-ui) application.
 
 ```bash
 git clone https://github.com/stakater-lab/stakater-nordmart-review-ui
@@ -202,6 +204,7 @@ Run the following command to package the helm chart into compressed file.
 helm package .
 # output : successfully packaged chart and saved it to: /Desktop/Tasks/stakater/stakater-nordmart-review-ui/deploy/stakater-nordmart-review-ui-1.0.0.tgz
 ```
+
 This command packages a chart into a versioned chart archive file.
 
 ```sh
