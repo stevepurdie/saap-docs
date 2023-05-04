@@ -17,9 +17,7 @@ Login to Vault to view your tenant path.
     ![Vault-ocic-login](./images/vault-ocic-login.png)
 
 - You will be brought to the `Vault` console. You should see the key/value path for your tenant.
-    
-
-- External Secrets Operator is used to fetch secret data from Vault, and create kubernetes secret in the cluster.
+- External Secrets Operator is used to fetch secret data from Vault, and create Kubernetes secret in the cluster.
 - External Secrets Operator uses SecretStore to make a connection to the Vault.
 - SecretStore uses ServiceAccount with Vault label to access Vault.
 - SecretStore and ServiceAccount is created in each tenant namespace.
@@ -57,7 +55,7 @@ externalSecret:
       labels:
         key: value
 "```"
-From the above configuration, a kubernetes secret is created.
+From the above configuration, a Kubernetes secret is created.
 
 Let's add a sample secret for Stakater Nordmart Review UI application for demo.
 
