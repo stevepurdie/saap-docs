@@ -1,8 +1,8 @@
 # Adding Secrets
 
-Now, we will setup applications to use consume secrets from Vault, using ExternalSecrets.
+Now, we will set up applications to use consume secrets from Vault, using ExternalSecrets.
 
-Multi-Tenant Operator [MTO] creates a path for each tenant in the vault. 
+Multi-Tenant Operator [MTO] creates a path for each tenant in the Vault. 
 Each user in the cluster is part of a tenant. 
 Users have access to the path corresponding to their tenant.
 In this path, a key/value pair can be stored, and/or another path containing key/value pair can exist. 
@@ -19,15 +19,15 @@ Login to Vault to view your tenant path.
 - You will be brought to the `Vault` console. You should see the key/value path for your tenant.
     
 
-- External Secrets Operator is used to fetch secret data from vault, and create kubernetes secret in the cluster.
-- External Secrets Operator uses SecretStore to make a connection to the vault.
-- SecretStore uses ServiceAccount with vault label to access Vault.
+- External Secrets Operator is used to fetch secret data from Vault, and create kubernetes secret in the cluster.
+- External Secrets Operator uses SecretStore to make a connection to the Vault.
+- SecretStore uses ServiceAccount with Vault label to access Vault.
 - SecretStore and ServiceAccount is created in each tenant namespace.
 - Each ExternalSecret CR contains reference to SecretStore to be used.
 
 Stakater Application Chart contains support for ExternalSecret. 
 
-```
+"```"
 externalSecret:
   enabled: true
 
@@ -56,7 +56,36 @@ externalSecret:
         key: value
       labels:
         key: value
-```
+"```"
 From the above configuration, a kubernetes secret is created.
+
+Let's add a sample secret for Stakater Nordmart Review UI application for demo.
+
+- In the path of your tenant, Click `Create Secret`, add path of secret, and add key/value pair as shown below.
+
+    - Path for secret: nordmart-review-ui-page-title
+    - Secret key: page_title
+    - Secret value: Review (Secret from Vault)
+
+![create-secret](./images/create-secret.png)
+
+- Open `stakater-nordmart-review-ui` project, and navigate to deploy folder
+- In `values.yaml` file, add the following YAML for external secret:
+
+"```"
+  externalSecret:
+    enabled: true
+    secretStore:
+      name: tenant-vault-secret-store
+    refreshInterval: "1m"
+    files:
+      review-ui-secret:
+        dataFrom:
+        - key: review-ui/dev/nordmart-review-ui-page-title
+"```"
+
+- Once the updated secret is created, application pod will be recreated. Refresh the application route to see the change. The title will be updated!
+
+![Review-UI](./images/ui-with-secret.png)
 
 For more information on ExternalSecrets, see [External Secrets documentation](https://external-secrets.io/v0.8.1/introduction/overview/)
