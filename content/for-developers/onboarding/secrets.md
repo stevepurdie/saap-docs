@@ -2,10 +2,10 @@
 
 Now, we will set up applications to use consume secrets from Vault, using ExternalSecrets.
 
-Multi-Tenant Operator [MTO] creates a path for each tenant in the Vault. 
-Each user in the cluster is part of a tenant. 
+Multi-Tenant Operator [MTO] creates a path for each tenant in the Vault.
+Each user in the cluster is part of a tenant.
 Users have access to the path corresponding to their tenant.
-In this path, a key/value pair can be stored, and/or another path containing key/value pair can exist. 
+In this path, a key/value pair can be stored, and/or another path containing key/value pair can exist.
 
 Login to Vault to view your tenant path.
 
@@ -23,7 +23,7 @@ Login to Vault to view your tenant path.
 - SecretStore and ServiceAccount is created in each tenant namespace.
 - Each ExternalSecret CR contains reference to SecretStore to be used.
 
-Stakater Application Chart contains support for ExternalSecret. 
+Stakater Application Chart contains support for ExternalSecret.
 
 "```"
 externalSecret:
@@ -38,7 +38,7 @@ externalSecret:
   `refreshInterval`: "1m"
   files:
     secret-1-name:
-      #Data defines the connection between the Kubernetes Secret keys and the Provider data 
+      #Data defines the connection between the Kubernetes Secret keys and the Provider data
       data:
         example-secret-key:
           `remoteRef`:
