@@ -90,7 +90,6 @@ nav:
         - for-administrators/cluster/terminate.md
         - for-administrators/external-dns.md
         - for-administrators/cluster/add-node.md
-        - for-administrators/cluster/hibernate.md
         - for-administrators/requirements.md
         - for-administrators/giving-access-to-users.md
         - for-administrators/autoscaling.md
@@ -118,6 +117,7 @@ nav:
             - for-developers/onboarding/application-onboarding.md
             - for-developers/onboarding/environment-onboarding.md
             - for-developers/onboarding/developer-training.md
+            - for-developers/onboarding/secrets.md
         - Local Development:
             - for-developers/local-development/inner-loop.md
             - for-developers/local-development/inner-vs-outer-loop.md
