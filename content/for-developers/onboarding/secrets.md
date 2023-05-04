@@ -36,7 +36,7 @@ externalSecret:
     name: example-secret-store
     kind: SecretStore # or ClusterSecretStore  
 
-  # RefreshInterval is the amount of time before the values reading again from the SecretStore provider
+  #RefreshInterval is the amount of time before the values reading again from the SecretStore provider
   refreshInterval: "1m"
   files:
     secret-1-name:
