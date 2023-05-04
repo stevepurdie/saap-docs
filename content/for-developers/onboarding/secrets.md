@@ -35,13 +35,13 @@ externalSecret:
     kind: SecretStore # or ClusterSecretStore  
 
   #RefreshInterval is the amount of time before the values reading again from the SecretStore provider
-  refreshInterval: "1m"
+  `refreshInterval`: "1m"
   files:
     secret-1-name:
       #Data defines the connection between the Kubernetes Secret keys and the Provider data 
       data:
         example-secret-key:
-          remoteRef:
+          `remoteRef`:
             key: example-provider-key
             property: example-provider-key-property
 
@@ -61,8 +61,8 @@ Let's add a sample secret for Stakater Nordmart Review UI application for demo.
 
 - In the path of your tenant, Click `Create Secret`, add path of secret, and add key/value pair as shown below.
 
-    - Path for secret: nordmart-review-ui-page-title
-    - Secret key: page_title
+    - Path for secret: `nordmart-review-ui-page-title`
+    - Secret key: `page_title`
     - Secret value: Review (Secret from Vault)
 
 ![create-secret](./images/create-secret.png)
