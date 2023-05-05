@@ -77,7 +77,7 @@ This AppProject will be used to sync all the Applications in `Infra Gitops Confi
             type: Container
     ```
 
-1. Now that the quota and the tenant have been added, let's create an ArgoCD application in the argocd-apps folder that will point to these resources and help us deploy them.
+1. Now that the quota and the tenant have been added, let's create an ArgoCD application in the `argocd-apps` folder that will point to these resources and help us deploy them.
 Open up the `argocd-apps` folder and add the following file to it:
 
     ```yaml
