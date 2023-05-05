@@ -30,10 +30,8 @@ Individual user-defined projects can be excluded from user workload monitoring. 
 
 Add the label to the project namespace:
 
-```
-
+```bash
 oc label namespace my-project 'openshift.io/user-monitoring=false'
-
 ```
 
 ## Infrastructure Monitoring
