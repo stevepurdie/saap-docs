@@ -5,8 +5,9 @@
 There are 2 types of monitoring:
 
 1. Infrastructure monitoring (comes default with OpenShift installation)
-2. Workload monitoring (it can be enabled)
+2. User Workload monitoring (it can be enabled)
 
+![Monitoring Diagram](./images/monitoring-diagram.png)
 ## Enabling monitoring for user-defined projects
 
 Cluster administrators can enable monitoring for user-defined projects by setting the `enableUserWorkload: true` field in the cluster monitoring ConfigMap object.
@@ -30,9 +31,6 @@ Add the label to the project namespace:
 ```
 $ oc label namespace my-project 'openshift.io/user-monitoring=false'
 ```
-
-
-![Monitoring Diagram](./images/monitoring-diagram.png)
 
 ## Infrastructure Monitoring
 
