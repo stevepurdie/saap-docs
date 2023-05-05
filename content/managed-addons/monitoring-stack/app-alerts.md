@@ -8,6 +8,7 @@ There are 2 types of monitoring:
 2. User Workload monitoring (it can be enabled)
 
 ![Monitoring Diagram](./images/monitoring-diagram.png)
+
 ## Enabling monitoring for user-defined projects
 
 Cluster administrators can enable monitoring for user-defined projects by setting the `enableUserWorkload: true` field in the cluster monitoring ConfigMap object.
@@ -29,7 +30,7 @@ Individual user-defined projects can be excluded from user workload monitoring. 
 Add the label to the project namespace:
 
 ```
-$ oc label namespace my-project 'openshift.io/user-monitoring=false'
+oc label namespace my-project 'openshift.io/user-monitoring=false'
 ```
 
 ## Infrastructure Monitoring
@@ -77,6 +78,7 @@ spec:
     matchLabels:
       app: example-svc-label
 ```
+
 ### Creating alerting rules for user-defined projects
 
 Creating alerting rules for user-defined projects
