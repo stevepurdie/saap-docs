@@ -23,6 +23,7 @@ data:
   config.yaml: |
     enableUserWorkload: true 
 ```
+
 ## Excluding a user-defined project from monitoring
 
 Individual user-defined projects can be excluded from user workload monitoring. To do so, simply add the `openshift.io/user-monitoring` label to the project’s namespace with a value of false.
@@ -30,7 +31,9 @@ Individual user-defined projects can be excluded from user workload monitoring. 
 Add the label to the project namespace:
 
 ```
+
 oc label namespace my-project 'openshift.io/user-monitoring=false'
+
 ```
 
 ## Infrastructure Monitoring
@@ -39,7 +42,7 @@ oc label namespace my-project 'openshift.io/user-monitoring=false'
 2. Grafana
 3. Alertmanager
 
-## Workload Monitoring
+## User Workload Monitoring
 
 1. Prometheus
 2. Grafana
