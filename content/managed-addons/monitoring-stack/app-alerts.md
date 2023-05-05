@@ -5,7 +5,32 @@
 There are 2 types of monitoring:
 
 1. Infrastructure monitoring (comes default with OpenShift installation)
-2. Workload monitoring (comes default with OpenShift installation)
+2. Workload monitoring (it can be enabled)
+
+## Enabling monitoring for user-defined projects
+
+Cluster administrators can enable monitoring for user-defined projects by setting the `enableUserWorkload: true` field in the cluster monitoring ConfigMap object.
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-monitoring-config
+  namespace: openshift-monitoring
+data:
+  config.yaml: |
+    enableUserWorkload: true 
+```
+## Excluding a user-defined project from monitoring
+
+Individual user-defined projects can be excluded from user workload monitoring. To do so, simply add the `openshift.io/user-monitoring` label to the project’s namespace with a value of false.
+
+Add the label to the project namespace:
+
+```
+$ oc label namespace my-project 'openshift.io/user-monitoring=false'
+```
+
 
 ![Monitoring Diagram](./images/monitoring-diagram.png)
 
@@ -53,4 +78,22 @@ spec:
   selector:
     matchLabels:
       app: example-svc-label
+```
+### Creating alerting rules for user-defined projects
+
+Creating alerting rules for user-defined projects
+You can create alerting rules for user-defined projects. Those alerting rules will fire alerts based on the values of chosen metrics.
+
+```yaml
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: example-alert
+  namespace: ns1
+spec:
+  groups:
+  - name: example
+    rules:
+    - alert: VersionAlert
+      expr: version{job="prometheus-example-app"} == 0
 ```
