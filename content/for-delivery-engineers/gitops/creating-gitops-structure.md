@@ -106,7 +106,7 @@ Open up the `argocd-apps` folder and add the following file to it:
     Make sure you replace the `repoUrl` and all instances of `CLUSTER_NAME` with your cluster's name.
     If you notice the path, you will realize that this application is pointing to 'tenant-operator-config' folder housing your tenant and quotas.
 
-1. Deploy an ArgoCD application on the cluster pointing to `<cluster-name>/argocd-apps` directory. You will need to ask Stakater Admin to create it as part of Openshift GitOps Instance.
+1. Deploy an ArgoCD application on the cluster pointing to `<cluster-name>/argocd-apps` directory. You will need to ask Stakater Admin to create it as part of OpenShift GitOps Instance.
 
 We have set up the basic structure for our infra repository. Let's move on to the apps repository.
 
