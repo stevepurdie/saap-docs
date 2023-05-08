@@ -1,6 +1,6 @@
 # Plan your environment
 
-Getting started with cluster provisioning, you need to first
+Getting started with cluster creation, you need to first
 
 - Determine the number of nodes required for your cluster, based on the workload and availability requirements.
 - Identify the type of nodes required, such as master, worker, infra, and storage nodes.
