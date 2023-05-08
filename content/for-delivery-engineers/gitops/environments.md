@@ -31,14 +31,7 @@ Other than CI/CD environment there are applications environments like *qa,stagin
 - bumping of the helm chart version in `Chart.yaml` and
 - bumping image tag version in helm values in `values.yaml`
 
-## Application promotion
-
-To promote application from one environment to another; as mentioned above you will need to bump chart version and image tag version in that environment. You can do so by picking these versions from previous environment.
-
-This guide assumes that application is already [on-boarded](../../for-developers/onboarding/application-onboarding.md) to different environments.
-
-
-### Add Environment to Apps GitOps Repository
+## Add Environment to Apps GitOps Repository
 
 Lets see how can we add an environment to an application in a tenant. Lets say, we have added a production cluster and want to add a new environment in application for it to be deployed on production. 
 
@@ -128,7 +121,12 @@ Lets see how can we add an environment to an application in a tenant. Lets say, 
 1. Make sure Application that deploys applications inside `argocd-apps/cluster-name/` folder is deployed in relevant `infra-gitops-config` repository.
 
 
-### Promote an application
+## Application promotion
+
+To promote application from one environment to another; as mentioned above you will need to bump chart version and image tag version in that environment. You can do so by picking these versions from previous environment.
+
+This guide assumes that application is already [on-boarded](../../for-developers/onboarding/application-onboarding.md) to different environments.
+
 #### 1. Promote chart
 
 To promote application from one environment to another, you can check the chart version from `Chart.yaml` file from one environment and update version in `Chart.yaml` of next environment:
