@@ -79,7 +79,7 @@ They are logical grouping of resources belong to an operator, tenant or service 
 
 This folder is a starting point of all configuration in the cluster. Inside the folder we have following ArgoCD applications that deploy resources in other sibling folders:
 
-- **`tenant-operator.yaml`**: Responsible for creating tenants and qoutas inside `tenant-operator` folder configuration in the cluster.
+- **`tenant-operator.yaml`**: Responsible for creating tenants and quotas inside `tenant-operator` folder configuration in the cluster.
 - **`apps-gitops-config.yaml`**: Points to corresponding cluster folder in `apps-gitops-config` repository. This deploys the `apps-of-apps` structure that deploys all applications environments for the cluster.
 
 ```sh
