@@ -7,21 +7,21 @@ We manage GitOps with two different kinds of repository with different purpose e
 
 ## Structure of Apps GitOps Config
 
-#### Applications
+### Applications
 
 Inside tenants folder, there is a separate folder of each application that belongs to a tenant. The name of the folder should match repository name in SCM.
 
-#### Environments
+### Environments
 
 Inside each application folder, there is a separate folder of each environment where application will gets deployed to. Inside each environment folder there will be actual deployment files.
 
 Deployment files can only be vanilla yaml files, Helm chart and Kustomize repository that are supported by ArgoCD.
 
-#### ArgoCD Applications (at tenant level)
+### ArgoCD Applications (at tenant level)
 
 Inside `argocd-apps` folder there is a folder for each environment. In each environment folder there are `argocd-apps` custom resource that watches deployments files in ```<tenant>/<app>/<env>```.
 
-#### ArgoCD Applications (at root level)
+### ArgoCD Applications (at root level)
 
 Inside `argocd-apps` folder, there are multiple clusters defined. Each cluster holds separate application environments for multiple tenants.
 
@@ -77,9 +77,9 @@ They are logical grouping of resources belong to an operator, tenant or service 
 
 ### ArgoCD Applications
 
-This folder is a starting point of all configuration in the cluster. Inside the folder we have following argocd applications that deploy resources in other sibling folders:
+This folder is a starting point of all configuration in the cluster. Inside the folder we have following ArgoCD applications that deploy resources in other sibling folders:
 
-- **`tenant-operator.yaml`**: Responsible for creating tenants configuration in the cluster
+- **`tenant-operator.yaml`**: Responsible for creating tenants and qoutas inside `tenant-operator` folder configuration in the cluster.
 - **`apps-gitops-config.yaml`**: Points to corresponding cluster folder in `apps-gitops-config` repository. This deploys the `apps-of-apps` structure that deploys all applications environments for the cluster.
 
 ```sh
