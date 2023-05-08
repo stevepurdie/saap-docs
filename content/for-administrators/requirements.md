@@ -85,11 +85,11 @@ At least two infrastructure nodes are required for the SAAP infrastructure workl
 
 No user workloads run on infrastructure nodes.
 
-### 1 x Monitoring
+### 2 x Monitoring
 
 Monitoring components to monitor `SAAP workloads` and user workloads are deployed on monitoring nodes. The monitoring stack includes the Prometheus stack (Prometheus, Grafana and Alertmanager).
 
-Minimum one monitoring node must be used for all production deployments. For high availability consider using two monitoring nodes.
+Minimum two monitoring node must be used for all production deployments.
 
 | Type of monitoring | SAAP component | vCPU requirement (m) | Memory requirement (GiB) |
 |---|:---|---:|---:|
