@@ -19,7 +19,7 @@ Team Stakater will create a root [Tenant](https://docs.stakater.com/mto/main/cus
 This AppProject will be used to sync all the Applications in `Infra Gitops Config` and it will provide visibility of these Applications in ArgoCD UI to customer cluster admins.
 
 1. Open up your SCM and create any empty repository
-1. Create a secret with read permissions over this repository. Navigate to following section for more info [Configure Repository Secret for ArgoCD](#configure-repository-secret-for-argocd). Provide this secret to stakater-admin for it to be deployed with your ArgoCD instance.
+1. Create a secret with read permissions over this repository. Navigate to following section for more info [Configure Repository Secret for ArgoCD](gitops-argocd-secrets.md). Provide this secret to stakater-admin for it to be deployed with your ArgoCD instance.
 1. Now let's copy the structure that we saw in the [template](https://github.com/stakater/infra-gitops-config.git). Add a folder bearing your cluster's name say `dev` at the root of the repository that you just created.
     > If you plan on using this repository for multiple clusters, add a folder for each cluster.
 1. Inside the folder created in step 2, add two folders; one named `argocd-apps`, and another one named `tenant-operator-config`
@@ -107,7 +107,9 @@ Open up the `argocd-apps` folder and add the following file to it:
     Make sure you replace the `repoUrl` and all instances of `CLUSTER_NAME` with your cluster's name.
     If you notice the path, you will realize that this application is pointing to 'tenant-operator-config' folder housing your tenant and quotas.
 
-1. Deploy an ArgoCD application on the cluster pointing to `<cluster-name>/argocd-apps` directory. You will need to ask Stakater Admin to create it as part of OpenShift GitOps Instance.
+1. Deploy an ArgoCD application on the cluster pointing to `<cluster-name>/argocd-apps` directory. You will need to ask Stakater Admin to create it as part of ArgoCD Instance.
+
+1. Login to ArgoCD and check if `infra-gitops-config` application is present. Validate the child application `tenant-operator-config`.
 
 We have set up the basic structure for our infra repository. Let's move on to the apps repository.
 
@@ -137,7 +139,7 @@ This GitOps structure supports:
 ### Create the repository
 
 1. Open up your SCM and create any empty repository named `apps-gitops-config`.
-1. Create a secret with read permissions over this repository. Navigate to following section for more info [Configure Repository Secret for ArgoCD](#configure-repository-secret-for-argocd). We'll use this secret later in [Linking Apps GitOps with Infra GitOps
+1. Create a secret with read permissions over this repository. Navigate to following section for more info [Configure Repository Secret for ArgoCD](gitops-argocd-secrets.md). We'll use this secret later in [Linking Apps GitOps with Infra GitOps
 ](#linking-apps-gitops-with-infra-gitops).
 
 ### Add a tenant
@@ -317,117 +319,98 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
 
 > You will need to do this once per `apps-gitops-config` repository.
 
-We need to create ArgoCD applications that will deploy the apps of apps structure defined in our `apps-gitops-config` repository.
+1. We need to create ArgoCD applications that will deploy the apps of apps structure defined in our `apps-gitops-config` repository.
 
-Suppose we want to deploy our application workloads of our dev (CLUSTER_NAME) cluster. We can create an ArgoCD application for `apps-gitops-config` repository pointing to `argocd-apps/dev (argocd-apps/CLUSTER_NAME)`.
+1. Suppose we want to deploy our application workloads of our dev (CLUSTER_NAME) cluster. We can create an ArgoCD application for `apps-gitops-config` repository pointing to `argocd-apps/dev (argocd-apps/CLUSTER_NAME)` inside `cluster/argocd-apps/` folder in `infra-gitops-config` repository.
 
-```yaml
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: apps-gitops-repo
-  namespace: openshift-gitops
-spec:
-  destination:
-    namespace: openshift-gitops
-    server: 'https://kubernetes.default.svc'
-  project: root-tenant
-  source:
-    path: argocd-apps/dev
-    repoURL: 'APPS_GITOPS_REPO_URL'
-    targetRevision: HEAD
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-```
+   ```yaml
+   apiVersion: argoproj.io/v1alpha1
+   kind: Application
+   metadata:
+     name: apps-gitops-repo
+     namespace: openshift-gitops
+   spec:
+     destination:
+       namespace: openshift-gitops
+       server: 'https://kubernetes.default.svc'
+     project: root-tenant
+     source:
+       path: argocd-apps/dev
+       repoURL: 'APPS_GITOPS_REPO_URL'
+       targetRevision: HEAD
+     syncPolicy:
+       automated:
+         prune: true
+         selfHeal: true
+   ```
 
-> Find the template file [here](https://github.com/stakater/infra-gitops-config/blob/main/CLUSTER_NAME/argocd-apps/apps-gitops-config.yamlSample)
+    > Find the template file [here](https://github.com/stakater/infra-gitops-config/blob/main/CLUSTER_NAME/argocd-apps/apps-gitops-config.yamlSample)
 
-We need to add this resource inside `argocd-apps` folder in `infra-gitops-config/dev (infra-gitops-config/CLUSTER_NAME)`.
+1. We need to add this resource inside `argocd-apps` folder in `dev/argocd-apps (CLUSTER_NAME/argocd-apps)`. If this folder doesnt exist, create it.
 
-  ```bash
-  ├── dev
-      └── argocd-apps
-          └── apps-gitops-config.yaml
-  ```
+   ```bash
+   ├── dev
+       └── argocd-apps
+           └── apps-gitops-config.yaml
+   ```
 
-Next, we need to add the secret for `apps-gitops-config`.
+1. Now lets add the secret required by ArgoCD for reading `apps-gitops-config` repository. Lets add a folder called `argocd-secrets` at `cluster/`. This will contain secrets required by ArgoCD for authentication over repositories.
 
-## Configure Repository Secret for ArgoCD
+   ```bash
+   ├── dev
+       ├── argocd-apps
+       |   └── apps-gitops-config.yaml
+       └── argocd-secrets
+   ```
 
-We need to add secret in ArgoCD namespace that will allow read access over the `apps-gitops-config` repository created in previous section.
+1. Add a secret in Vault at `root-tenant/<repo-name>` path depending upon whether you configure SSH or Token Access. Add a external secret custom resource in `cluster/argocd-secrets/<repo-name>.yaml` folder. Use the following template :
 
-### Configure token or SSH keys
+   ```yaml
+   # Name: apps-gitops-config.yaml (<repo-name>.yaml)
+   # Path: dev/argocd-secrets/
+   apiVersion: external-secrets.io/v1beta1
+   kind: ExternalSecret
+   metadata:
+     name: <repo-name>
+     namespace: argocd-ns
+   spec:
+     secretStoreRef:
+       name: root-tenant-secret-store
+       kind: SecretStore
+     refreshInterval: "1m"
+     target:
+       name: <repo-name>
+       creationPolicy: 'Owner'
+     dataFrom:
+       - key: <repo-name>
+   ```
 
-You need to configure token or SSH based access over the `apps-gitops-config` repository.
-Use the following links:
+1. Add an ArgoCD application pointing to this directory `dev/argocd-secrets/` inside `dev/argocd-apps/argocd-secrets.yaml`.
+   ```yaml
+   # Name: argocd-secrets.yaml (FOLDER_NAME.yaml)
+   # Path: dev/argocd-apps/
+   apiVersion: argoproj.io/v1alpha1
+   kind: Application
+   metadata:
+     name: argocd-secrets
+     namespace: openshift-gitops
+   spec:
+     destination:
+       namespace: openshift-gitops
+       server: 'https://kubernetes.default.svc'
+     project: root-tenant
+     source:
+       path: dev/argocd-secrets/
+       repoURL: 'INFRA_GITOPS_REPO_URL'
+       targetRevision: HEAD
+     syncPolicy:
+       automated:
+         prune: true
+         selfHeal: true
+   ```
 
-- For token access
-    - [`Create a personal access token`](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) or [`Create a fine-grained token`](https://github.blog/2022-10-18-introducing-fine-grained-personal-access-tokens-for-github/)
-- For SSH Access
-    - [`Generate SSH Key Pair`](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
-    - [`Add SSH Public key to your GitHub Account`](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or [`Add Deploy Key to your Repository`](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys)
+1. Login to ArgoCD and check if the secret is deployed by opening `argocd-secrets` application in `infra-gitops-config` application.
 
-### Create a Secret with Token or SSH key
+## View Apps-of-Apps structure on ArgoCD
 
-Create a Kubernetes Secret in ArgoCD namespace with repository credentials. Each repository secret must have a url field and, depending on whether you connect using HTTPS, SSH, username and password (for HTTPS), sshPrivateKey (for SSH).
-
-Example for HTTPS:
-
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-  name: private-repo
-  namespace: argocd-ns
-  labels:
-    argocd.argoproj.io/secret-type: repository
-stringData:
-  type: git
-  url: https://github.com/argoproj/private-repo
-  # Use a personal access token in place of a password.
-  password: my-pat-or-fgt
-  username: my-username
-```
-
-Example for SSH:
-
-```yaml
-apiVersion: v1
-kind: Secret
-metadata:
-  name: private-repo
-  namespace: argocd
-  labels:
-    argocd.argoproj.io/secret-type: repository
-stringData:
-  type: git
-  url: git@github.com:argoproj/my-private-repository
-  sshPrivateKey: |
-    -----BEGIN OPENSSH PRIVATE KEY-----
-    ...
-    -----END OPENSSH PRIVATE KEY-----
-```
-
-> More Info on Connecting ArgoCD to Private Repositories [here](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repositories)
-
-Login to the ArgoCD UI. Click `Setting` from left sidebar, then `Repositories` to view connected repositories.
-> Make sure connection status is successful
-
-  ![`ArgoCD-repositories`](images/ArgoCD-repositories.png)
-
-> Ask stakater-admin or user belonging to `customer-root-tent` to add this secret via Vault and External Secrets to ArgoCD namespace.
-
-### Possible Issues
-
-If connection status is failed, hover over the ❌ adjacent to `Failed` to view the error.
-
-#### SSH Handshake Failed: Key mismatch
-
-> Related GitHub Issue: [here](https://github.com/argoproj/argo-cd/issues/7723)
-
-If you see the following error. Check `argocd-ssh-known-hosts-cm` config map in ArgoCD namespace to verify that public key for repository server is added as `ssh_known_hosts`.
-![`ArgoCD-repo-connection-ssh-issue`](images/ArgoCD-repo-connection-ssh-issue.png)
-
-Some known hosts public keys might be missing in `argocd-ssh-known-hosts-cm` for older ArgoCD versions, Find full list of public keys against repository server [here](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#ssh-known-host-public-keys).
+1. Login to ArgoCD and view `apps-gitops-config` application and explore the `apps-of-apps` structure.
