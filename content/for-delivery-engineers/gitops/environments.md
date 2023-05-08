@@ -86,7 +86,7 @@ Lets see how can we add an environment to an application in a tenant. Lets say, 
          selfHeal: true
    ```
 
-1. Add a folder called production (if not present) corresponding to the cluster name, Add an ArgoCD Application in this folder which points to `<tenant-name>/argocd-apps/prod`.
+1. Add a folder called production (if not present)  corresponding to the cluster name inside `argocd-apps` at root level, Add an ArgoCD Application in this folder which points to `<tenant-name>/argocd-apps/prod`.
 
    ```yaml
    # Name: gabbar-prod.yaml (TENANT_NAME-ENV_NAME.yaml)
