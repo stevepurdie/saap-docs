@@ -19,6 +19,7 @@ Team Stakater will create a root [Tenant](https://docs.stakater.com/mto/main/cus
 This AppProject will be used to sync all the Applications in `Infra Gitops Config` and it will provide visibility of these Applications in ArgoCD UI to customer cluster admins.
 
 1. Open up your SCM and create any empty repository
+1. Create a secret with read permissions over this repository. Navigate to following section for more info [Configure Repository Secret for ArgoCD](##configure-repository-secret-for-argocd). Provide this secret to stakater-admin for it to be deployed with your ArgoCD instance.
 1. Now let's copy the structure that we saw in the [template](https://github.com/stakater/infra-gitops-config.git). Add a folder bearing your cluster's name say `dev` at the root of the repository that you just created.
     > If you plan on using this repository for multiple clusters, add a folder for each cluster.
 1. Inside the folder created in step 2, add two folders; one named `argocd-apps`, and another one named `tenant-operator-config`
@@ -132,6 +133,12 @@ This GitOps structure supports:
 - Multiple tenants/teams/products
 - Multiple apps
 - Multiple environments (both static and dynamic)
+
+### Create the repository
+
+1. Open up your SCM and create any empty repository named `apps-gitops-config`.
+1. Create a secret with read permissions over this repository. Navigate to following section for more info [Configure Repository Secret for ArgoCD](#configure-repository-secret-for-argocd). We'll use this secret later in [Linking Apps GitOps with Infra GitOps
+](#linking-apps-gitops-with-infra-gitops).
 
 ### Add a tenant
 
@@ -345,6 +352,8 @@ We need to add this resource inside `argocd-apps` folder in `infra-gitops-config
           └── apps-gitops-config.yaml
   ```
 
+Next, we need to add the secret for `apps-gitops-config`.
+
 ## Configure Repository Secret for ArgoCD
 
 We need to add secret in ArgoCD namespace that will allow read access over the `apps-gitops-config` repository created in previous section.
@@ -403,11 +412,14 @@ stringData:
 
 > More Info on Connecting ArgoCD to Private Repositories [here](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#repositories)
 
+
 Login to the ArgoCD UI. Click `Setting` from left sidebar, then `Repositories` to view connected repositories.
 
   ![`ArgoCD-repositories`](images/ArgoCD-repositories.png)
 
 > Make sure connection status is successful
+
+> Ask stakater-admin or user belonging to `customer-root-tent` to add this secret via Vault and External Secrets to ArgoCD namespace.
 
 ### Possible Issues
 
