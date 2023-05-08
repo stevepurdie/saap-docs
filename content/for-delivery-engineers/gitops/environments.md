@@ -33,7 +33,7 @@ Other than CI/CD environment there are applications environments like *qa,stagin
 
 ## Add Environment to Apps GitOps Repository
 
-Lets see how can we add an environment to an application in a tenant. Lets say, we have added a production cluster and want to add a new environment in application for it to be deployed on production. 
+Lets see how can we add an environment to an application in a tenant. Lets say, we have added a production cluster and want to add a new environment in application for it to be deployed on production.
 
 1. Create a folder named `production` at `<tenant-name>/<app-name>` which corresponds to the production environment. Suppose `gabbar` as tenant name, `stakater-nordmart-review` as application name, `production` as cluster name, `prod` as environment name.
 
@@ -103,7 +103,9 @@ Lets see how can we add an environment to an application in a tenant. Lets say, 
          prune: true
          selfHeal: true
    ```
+
 1. You should have a similar folder structure at the end:
+
    ```bash
    ├── gabbar
    |   ├── stakater-nordmart-review
@@ -118,8 +120,8 @@ Lets see how can we add an environment to an application in a tenant. Lets say, 
        └── production (cluster name)
            └── gabbar-prod.yaml
    ```
-1. Make sure Application that deploys applications inside `argocd-apps/cluster-name/` folder is deployed in relevant `infra-gitops-config` repository.
 
+1. Make sure Application that deploys applications inside `argocd-apps/cluster-name/` folder is deployed in relevant `infra-gitops-config` repository.
 
 ## Application promotion
 
@@ -127,7 +129,7 @@ To promote application from one environment to another; as mentioned above you w
 
 This guide assumes that application is already [on-boarded](../../for-developers/onboarding/application-onboarding.md) to different environments.
 
-#### 1. Promote chart
+### 1. Promote chart
 
 To promote application from one environment to another, you can check the chart version from `Chart.yaml` file from one environment and update version in `Chart.yaml` of next environment:
 
@@ -144,7 +146,7 @@ version: 1.0.51
 
 pick version `1.0.51` from above `Chart.yaml` and copy it in `Chart.yaml` of next environment
 
-#### 2. Promote image
+### 2. Promote image
 
 To promote application from one environment to another, you can check the image tag version from `values.yaml` file from one environment and update version in `values.yaml` of next environment:
 
