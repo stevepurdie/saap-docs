@@ -10,7 +10,7 @@ There are three type of environments for each tenant:
 
 ### 1. Sandbox Environment
 
-A dedicated namespace in cluster for developer in the cluster for every member of the specific tenant, that will also be preloaded with any selected templates and consume the same pool of resources from the tenants quota creating safe remote dev namespaces that teams can use as scratch namespace for rapid prototyping and development. So, every developer gets a Kubernetes-based cloud development environment that feel like working on localhost.
+A dedicated namespace in cluster for developer in the cluster for every member of the specific tenant, that will also be preloaded with any selected templates and consume the same pool of resources from the tenants quota creating safe remote dev namespaces that teams can use as scratch namespace for rapid prototyping and development. So, every developer gets a Kubernetes-based cloud development environment that feel like working on localhost. These environments are not present in our GitOps structure, they are deployed by `Multi Tenant Operator` if enabled in `Tenant` specification.
 
 ### 2. CI/CD Environments
 
