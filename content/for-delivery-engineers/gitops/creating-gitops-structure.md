@@ -19,7 +19,7 @@ Team Stakater will create a root [Tenant](https://docs.stakater.com/mto/main/cus
 This AppProject will be used to sync all the Applications in `Infra Gitops Config` and it will provide visibility of these Applications in ArgoCD UI to customer cluster admins.
 
 1. Open up your SCM and create any empty repository
-1. Now let's copy the structure that we saw in the [template](https://github.com/stakater/infra-gitops-config.git). Add a folder bearing your cluster's name at the root of the repository that you just created.
+1. Now let's copy the structure that we saw in the [template](https://github.com/stakater/infra-gitops-config.git). Add a folder bearing your cluster's name say `dev` at the root of the repository that you just created.
     > If you plan on using this repository for multiple clusters, add a folder for each cluster.
 1. Inside the folder created in step 2, add two folders; one named `argocd-apps`, and another one named `tenant-operator-config`
     > The `argocd-apps` folder will contain ArgoCD applications that will _watch_ different resources added to the same repository. Let's spare ourselves from the details for now.
@@ -103,8 +103,10 @@ Open up the `argocd-apps` folder and add the following file to it:
           selfHeal: true
     ```
 
-Make sure you replace the `repoUrl` and all instances of `CLUSTER_NAME` with your cluster's name.
-If you notice the path, you will realize that this application is pointing to 'tenant-operator-config' folder housing your tenant and quotas.
+    Make sure you replace the `repoUrl` and all instances of `CLUSTER_NAME` with your cluster's name.
+    If you notice the path, you will realize that this application is pointing to 'tenant-operator-config' folder housing your tenant and quotas.
+
+1. Deploy an ArgoCD application on the cluster pointing to `<cluster-name>/argocd-apps` directory. You will need to ask Stakater Admin to create it as part of Openshift GitOps Instance.
 
 We have set up the basic structure for our infra repository. Let's move on to the apps repository.
 
