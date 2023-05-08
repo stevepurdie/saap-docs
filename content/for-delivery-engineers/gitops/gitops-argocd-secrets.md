@@ -1,8 +1,8 @@
-## Configure Repository Secret for ArgoCD
+# Configure Repository Secret for ArgoCD
 
 We need to add secret in ArgoCD namespace that will allow read access over the `apps-gitops-config` repository created in previous section.
 
-### Configure token or SSH keys
+## Configure token or SSH keys
 
 You need to configure token or SSH based access over the `apps-gitops-config` repository.
 Use the following links:
@@ -13,7 +13,7 @@ Use the following links:
     - [`Generate SSH Key Pair`](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
     - [`Add SSH Public key to your GitHub Account`](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) or [`Add Deploy Key to your Repository`](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/managing-deploy-keys#deploy-keys)
 
-### Create a Secret with Token or SSH key
+## Create a Secret with Token or SSH key
 
 Create a Kubernetes Secret in ArgoCD namespace with repository credentials. Each repository secret must have a url field and, depending on whether you connect using HTTPS, SSH, username and password (for HTTPS), sshPrivateKey (for SSH).
 
@@ -63,11 +63,11 @@ Login to the ArgoCD UI. Click `Setting` from left sidebar, then `Repositories` t
 
 > Ask stakater-admin or user belonging to `customer-root-tent` to add this secret via Vault and External Secrets to ArgoCD namespace.
 
-### Possible Issues
+## Possible Issues
 
 If connection status is failed, hover over the ❌ adjacent to `Failed` to view the error.
 
-#### SSH Handshake Failed: Key mismatch
+### SSH Handshake Failed: Key mismatch
 
 > Related GitHub Issue: [here](https://github.com/argoproj/argo-cd/issues/7723)
 

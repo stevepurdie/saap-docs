@@ -346,7 +346,7 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
 
     > Find the template file [here](https://github.com/stakater/infra-gitops-config/blob/main/CLUSTER_NAME/argocd-apps/apps-gitops-config.yamlSample)
 
-1. We need to add this resource inside `argocd-apps` folder in `dev/argocd-apps (CLUSTER_NAME/argocd-apps)`. If this folder doesnt exist, create it.
+1. We need to add this resource inside `argocd-apps` folder in `dev/argocd-apps (CLUSTER_NAME/argocd-apps)`.
 
    ```bash
    ├── dev
@@ -366,7 +366,7 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
 1. Add a secret in Vault at `root-tenant/<repo-name>` path depending upon whether you configure SSH or Token Access. Add a external secret custom resource in `cluster/argocd-secrets/<repo-name>.yaml` folder. Use the following template :
 
    ```yaml
-   # Name: apps-gitops-config.yaml (<repo-name>.yaml)
+   # Name: apps-gitops-config-external-secret.yaml (<repo-name>-external-secret.yaml)
    # Path: dev/argocd-secrets/
    apiVersion: external-secrets.io/v1beta1
    kind: ExternalSecret
@@ -386,6 +386,7 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
    ```
 
 1. Add an ArgoCD application pointing to this directory `dev/argocd-secrets/` inside `dev/argocd-apps/argocd-secrets.yaml`.
+
    ```yaml
    # Name: argocd-secrets.yaml (FOLDER_NAME.yaml)
    # Path: dev/argocd-apps/
@@ -407,6 +408,15 @@ Lets proceed by adding a tenant to the `apps-gitops-config` repository.
        automated:
          prune: true
          selfHeal: true
+   ```
+
+   ```bash
+   ├── dev
+       ├── argocd-apps
+       |   ├── argocd-secrets.yaml
+       |   └── apps-gitops-config.yaml
+       └── argocd-secrets
+           └── apps-gitops-config-external-secret.yaml
    ```
 
 1. Login to ArgoCD and check if the secret is deployed by opening `argocd-secrets` application in `infra-gitops-config` application.
