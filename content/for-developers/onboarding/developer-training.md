@@ -15,4 +15,4 @@
 
 ## Kubernetes Native Apps
 
-- [What is Kubernetes Native App](../cloud-native-app.md)
+- [What is Kubernetes Native App](../../help/k8s-concepts/cloud-native-app.md)
