@@ -8,7 +8,7 @@
 
 1. Scope of Services
 
-    1. The scope of services provided by STAKATER is determined by the specific details outlined in the contractual orders, service descriptions, and relevant service level agreements (SLAs).
+    1. The scope of services provided by STAKATER is determined by the specific details outlined in the contractual orders, service descriptions, and relevant [service level agreements (SLAs)](sla.md).
 
     1. Customers may request new service orders or extensions to existing agreements from STAKATER, subject to the agreed-upon terms and pricing. Once STAKATER confirms the order and both parties mutually agree in writing (through formal or e-signatures), the order becomes binding.
 
@@ -28,7 +28,7 @@
 
     1. STAKATER will provide the Services to the Customer in compliance with the law, the agreed scope of work and services levels as per the agreement. The services shall be extended with the required professionalism and skill set that meets the industry standards.
 
-    1. The Customer is responsible for taking all necessary actions to enable STAKATER to perform the Services as agreed upon in the Agreement. This includes, but is not limited to, providing access to systems, designating responsible roles, documenting emergencies and error messages, informing STAKATER of planned changes, using approved software versions and hardware, cooperating with STAKATER in error analysis and correction, securing data and software, ensuring authorization to use third-party products, enabling maintenance windows for STAKATER, and fulfilling other obligations set forth in the service description and SLA.It is important to note that any usage of the Services by third parties, including group companies of the Customer, requires the express written consent of STAKATER.
+    1. The Customer is responsible for taking all necessary actions to enable STAKATER to perform the Services as agreed upon in the Agreement. This includes, but is not limited to, providing access to systems, designating responsible roles, documenting emergencies and error messages, informing STAKATER of planned changes, using approved software versions and hardware, cooperating with STAKATER in error analysis and correction, securing data and software, ensuring authorization to use third-party products, enabling maintenance windows for STAKATER, and fulfilling other obligations set forth in the service description and SLA. It is important to note that any usage of the Services by third parties, including group companies of the Customer, requires the express written consent of STAKATER.
 
     1. The Customer is responsible for ensuring the accuracy of all data transmitted to STAKATER.
 
@@ -36,7 +36,7 @@
 
     1. The Customer must take all necessary measures to prevent unauthorized access to its own and third-party systems and comply with all applicable provisions of data protection and copyright law.
 
-    1. Stakater services are meant to be offered only for legal purposes, allowed by law. The Customer is not allowed to use the Services to commit or support criminal acts, and must assume complete responsibility and take necessary actions to prevent criminal use by its own users or its third parties.
+    1. Stakater services are meant to be offered only for legal purposes, allowed by law. The Customer is not allowed to use the Services to commit or support criminal acts, and must assume complete responsibility and take necessary actions to prevent criminal use by its own users or its third parties.
 
     1. If a third party claims a violation of rights by the data, content, and/or information provided by the Customer, STAKATER is entitled to suspend the data, content, and/or information as appropriate and permissible under the GTC or Framework Agreement.
 
@@ -74,11 +74,11 @@
 
     1. If a third-party claims that their intellectual property rights have been violated by the Customer’s use of Stakater’s services, except if the customer is using other service(s) as a combination to Stakater’s services that fall under is intellectual property rights violations, STAKATER will defend the Customer against such a claim at its own expense if the customer:
 
-        1. notifies STAKATER immediately in writing within 03 working days of such event.
+        1. notifies STAKATER immediately in writing within three working days of such event,
 
-        1. allows STAKATER to control the defense and any settlement negotiations, and
+        1. allows STAKATER to control the defense and any settlement negotiations,
 
-        1. supports STAKATER appropriately by providing all required information and evidences.Failure by the Customer to meet his obligation will result in the loss of any claim against STAKATER.
+        1. supports STAKATER appropriately by providing all required information and evidences. Failure by the Customer to meet his obligation will result in the loss of any claim against STAKATER.
 
     1. If STAKATER believes that the use of the Services by the Customer violates or is likely to violate the intellectual property rights of a third party, STAKATER has the right to choose between the following actions:
 
@@ -88,19 +88,21 @@
 
         1. replace the Services with other Services that do not infringe any third-party intellectual property rights and that meet the Customer's requirements or are equivalent to the replaced Services, or
 
-        1. revoke the Services and reimburse the Customer for any advance payments, minus a reasonable amount for use and loss of value.d. The Customer will not be entitled to any legal warranty claims if the infringement of third-party intellectual property rights is due to the use of the Services under conditions other than those contractually provided or if the infringement is based upon an action by Customer or his request.
+        1. revoke the Services and reimburse the Customer for any advance payments, minus a reasonable amount for use and loss of value.
+
+        1. The Customer will not be entitled to any legal warranty claims if the infringement of third-party intellectual property rights is due to the use of the Services under conditions other than those contractually provided or if the infringement is based upon an action by Customer or his request.
 
 1. Material Warranty
 
     1. STAKATER assumes no warranty for disruptions or failures of the Services which are out of its control and fall under force majeure.
 
-    1. If there are dependencies to third parties (such as IT infrastructure of third-party providers) or if the disruption or failure was caused by the Customer or by a person attributable to him.
+    1. If there are dependencies to third parties such as IT infrastructure of third-party providers or if the disruption or failure was caused by the Customer or by a person attributable to him.
 
     1. STAKATER provides no guarantee that the data, content and / or information transmitted by the Customer to the servers of STAKATER remain available after the termination of this Agreement.
 
 1. Acceptance, Defect Rectification and SLA
 
-    1. Customer shall inspect the Work / services during or immediately after delivery. The same shall also apply to the delivery of part of a Work, whereby defects in part of a Work may no longer be notified in the case of delivery of the entire Work. The inspection period lasts a maximum of five working days from delivery of the respective Work by STAKATER.
+    1. Customer shall inspect the Work and Services during or immediately after delivery. The same shall also apply to the delivery of part of a Work, whereby defects in part of a Work may no longer be notified in the case of delivery of the entire Work. The inspection period lasts a maximum of five working days from delivery of the respective Work by STAKATER.
 
     1. The Customer is required to promptly notify STAKATER in writing of any significant defects caused by STAKATER that prevent the use of the work, during the inspection period of the relevant Work immediately after discovery. This notification should be done in a way that the significant defects are comprehensible and reproducible for STAKATER. If a significant defect claimed by the Customer is not comprehensible and reproducible, it will not be considered a relevant significant defect.
 
@@ -128,7 +130,7 @@
 
 1. Data Protection and Security Measures
 
-    1. STAKATER agrees to a data processing agreement with the Customer
+    1. STAKATER agrees to a data processing agreement with the Customer.
 
     1. STAKATER processes Customer personal data in accordance with the applicable data protection law. STAKATER collects, stores and processes only data that is required for the provision of the Services, for the handling and maintenance of Customer relations, for ensuring a high quality of service, for the improvement of existing and development of new products, for the security of operations and infrastructure, and for invoicing.
 
