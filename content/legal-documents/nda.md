@@ -32,20 +32,20 @@ and
 
     The Confidential Information that has been provided to the Contracting Parties in writing, orally, or by any other means, directly or indirectly, for the Purpose outlined in the preamble or that has become known to them in any other way, is subject to the following obligations:
 
-    - To maintain its confidentiality;
-    - To use it exclusively for the aforementioned Purpose, specifically refraining from publishing, applying for industrial property rights, or using it for their own purposes;
-    - To not disclose or make it available to any third party, in any form whatsoever;
-    - To take all necessary precautions to prevent third-party access;
-    - To provide access solely to employees working in connection with the Purpose outlined in the preamble, who have also been bound by the aforementioned obligation of confidentiality. This remains applicable even after an employee leaves their position during the term and continued validity of this agreement.
+    1. To maintain its confidentiality;
+    1. To use it exclusively for the aforementioned Purpose, specifically refraining from publishing, applying for industrial property rights, or using it for their own purposes;
+    1. To not disclose or make it available to any third party, in any form whatsoever;
+    1. To take all necessary precautions to prevent third-party access;
+    1. To provide access solely to employees working in connection with the Purpose outlined in the preamble, who have also been bound by the aforementioned obligation of confidentiality. This remains applicable even after an employee leaves their position during the term and continued validity of this agreement.
 
 1. **Exceptions to Secrecy Agreement**
 
     The obligations of confidentiality outlined in this agreement do not apply to information that:
 
-    - was already known by the other Contracting Party before being disclosed and can be demonstrated as such;
-    - was already publicly known or became so without violating any confidentiality obligations;
-    - has been independently developed by the Contracting Party, without reliance on the confidential information;
-    - is lawfully provided or made accessible to the Contracting Party by a third party who is authorized to disclose it. It is the responsibility of the Contracting Party invoking these exceptions to provide evidence to support their claim.
+    1. Was already known by the other Contracting Party before being disclosed and can be demonstrated as such;
+    1. Was already publicly known or became so without violating any confidentiality obligations;
+    1. Has been independently developed by the Contracting Party, without reliance on the confidential information;
+    1. Is lawfully provided or made accessible to the Contracting Party by a third party who is authorized to disclose it. It is the responsibility of the Contracting Party invoking these exceptions to provide evidence to support their claim.
 
 1. **Restrictions and Prohibitions**
 
