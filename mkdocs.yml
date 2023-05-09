@@ -60,13 +60,13 @@ nav:
             - about/service-definition/artifacts-management.md
             - about/service-definition/cicd-pipelines.md
             - about/service-definition/multitenancy.md
-        - Responsibility Matrix:
-            - about/responsibility-matrix/overview.md
-            - about/responsibility-matrix/incident-operations-management.md
-            - about/responsibility-matrix/change-management.md
-            - about/responsibility-matrix/identity-access-management.md
-            - about/responsibility-matrix/security-regulation-compliance.md
-            - about/responsibility-matrix/disaster-recovery.md
+        - Responsibilities:
+            - about/responsibilities/overview.md
+            - about/responsibilities/incident-operations-management.md
+            - about/responsibilities/change-management.md
+            - about/responsibilities/identity-access-management.md
+            - about/responsibilities/security-regulation-compliance.md
+            - about/responsibilities/disaster-recovery.md
         - Cloud Providers:
             - about/cloud-providers/overview.md
             - about/cloud-providers/aws.md
