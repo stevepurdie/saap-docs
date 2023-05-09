@@ -1,5 +1,7 @@
 # General Terms & Conditions (GTC)
 
+`Version: 9 May 2023`
+
 1. Introduction
 
     1. These General Terms and Conditions ("**GTC**") together with the other documents referenced herein govern the legal relationship (the "**Agreement**") between STAKATER  ("**STAKATER**") and the customer of STAKATER ("**Customer**", each a "**Party**" and together the "**Parties**").
