@@ -20,7 +20,7 @@ and
 
     Both parties acknowledge that they have invested considerable resources in developing their respective intellectual property. Hence, there is a mutual interest in protecting each other's intellectual property and preventing unauthorized access by third parties.
 
-    The party disclosing sensitive information reserves the right to seek industrial property rights related to the subject matter of the confidential information. The present agreement is entered into for this specific purpose.
+    The party disclosing sensitive information reserves the right to seek industrial property rights related to the subject of the confidential information. The present agreement is entered into for this specific purpose.
 
 1. **Definitions**
 

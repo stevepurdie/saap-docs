@@ -150,13 +150,13 @@
 
 1. Non-Solicitation Agreement
 
-    1. The Customer undertakes not to directly or indirectly (through an affiliate) hire employees and supporting persons of STAKATER who are or were involved in execution of the Agreement, during the term of the Agreement and for one year afterwards, or to persuade them in any other way to give up their employment with Stakater.
+    1. The Customer undertakes not to directly or indirectly (through an affiliate) hire employees and supporting persons of STAKATER who are or were involved in execution of the Agreement, during the term of the Agreement and for one year afterward, or to persuade them in any other way to give up their employment with Stakater.
 
     1. In the event of such breach, a penalty equivalent to previous annual salary of the such person shall be payable by customer.
 
 1. Other Provisions
 
-    1. The present Agreement replaces all previous agreements, correspondence, declarations, negotiations or arrangements between the parties concerning the subject matter of the Agreement, including any proposal, tenders or specifications. The only exception to this is if explicit deviations from this Agreement have been agreed in writing.
+    1. The present Agreement replaces all previous agreements, correspondence, declarations, negotiations or arrangements between the parties concerning the subject, including any proposal, tenders or specifications. The only exception to this is if explicit deviations from this Agreement have been agreed in writing.
 
     1. STAKATER has the right to transfer rights and obligations under this Agreement in whole or in part to third parties. The transfer of rights and obligations under this Agreement by the Customer to third parties requires the written consent of STAKATER.
 
