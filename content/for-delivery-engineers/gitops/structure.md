@@ -1,238 +1,112 @@
 # GitOps structure
 
-```sh
-├── 01-tenant
-│   ├── 01-app
-│   │   ├── 00-env
-│   │   │   └── deployment.yaml
-│   │   ├── 01-env
-│   │   │   ├── Chart.yaml
-│   │   │   └── values.yaml
-│   │   ├── 02-env
-│   │   │   ├── Chart.yaml
-│   │   │   └── values.yaml
-│   │   └── 03-env
-│   │       ├── Chart.yaml
-│   │       └── values.yaml
-│   ├── 02-app
-│   │   ├── 00-env
-│   │   │   └── deployment.yaml
-│   │   ├── 01-env
-│   │   │   ├── Chart.yaml
-│   │   │   └── values.yaml
-│   │   ├── 02-env
-│   │   │   ├── Chart.yaml
-│   │   │   └── values.yaml
-│   │   └── 03-env
-│   │       ├── Chart.yaml
-│   │       └── values.yaml
-│   └── configs
-│       ├── 00-env
-│       │   └── space.yaml
-│       │   ├── argocd
-│       │   │   ├── 02-app
-│       │   │   └── 01-app
-│       ├── 01-env
-│       │   ├── argocd
-│       │   │   ├── 02-app
-│       │   │   └── 01-app
-│       │   └── space.yaml
-│       ├── 02-env
-│       │   ├── argocd
-│       │   │   ├── 02-app
-│       │   │   └── 01-app
-│       │   └── space.yaml
-│       └── 03-env
-│           ├── argocd
-│           │   ├── 02-app
-│           │   └── 01-app
-│           └── space.yaml
-├── 02-tenant
-│   ├── 01-app
-│   │   ├── 00-env
-│   │   ├── 01-env
-│   │   │   ├── Chart.yaml
-│   │   │   └── values.yaml
-│   │   ├── 02-env
-│   │   │   ├── Chart.yaml
-│   │   │   └── values.yaml
-│   │   └── 03-env
-│   │       ├── Chart.yaml
-│   │       └── values.yaml
-│   └── configs
-│       ├── 00-env
-│       │   ├── argocd
-│       │   │   └── 01-app.yaml
-│       │   └── space.yaml
-├       |── 01-env
-│       |   ├── argocd
-│       |   │   └── 01-app
-│       |   └── space.yaml
-│       ├── 02-env
-│       │   ├── argocd
-│       │   │   └── 01-app.yaml
-│       │   └── space.yaml
-│       └── 03-env
-│           ├── argocd
-│           │   └── 01-app.yaml
-│           └── space.yaml
-├── 03-sre
-│   ├── 01-cluster
-│   │   ├── argocd
-│   │   │   ├── 00-env
-│   │   │   │   └── 01-tenant.yaml
-│   │   │   ├── 01-env
-│   │   │   │   ├── 01-tenant.yaml
-│   │   │   │   └── 02-tenant.yaml
-│   |    │   └── tenant-operator.yaml
-│   |    └── tenant-operator
-│   |        ├── quota
-│   |        │   ├── 01-quota.yaml
-│   |        │   ├── 02-quota.yaml
-│   |        │   └── 03-quota.yaml
-│   |        └── tenants
-│   |            ├── 01-tenent.yaml
-│   |            └── 02-tenent.yaml
-│   └── 02-cluster
-│      ├── argocd
-│       │   ├── 02-env
-│       │   │   ├── 01-tenant.yaml
-│       │   │   └── 02-tenant.yaml
-│       │   ├── 03-env
-│       │   │   ├── 01-tenant.yaml
-│       │   │   └── 02-tenant.yaml
-│       │   └── tenant-operator.yaml
-│       └── tenant-operator
-│           ├── quota
-│           │   ├── 01-quota.yaml
-│           │   ├── 02-quota.yaml
-│           │   └── 03-quota.yaml
-│           └── tenants
-│               ├── tenant-1.yaml
-│               └── tenant-2.yaml
+We manage GitOps with two different kinds of repository with different purpose enlisted below:
 
-└── README.md
-```
+- **`Apps GitOps Config`**: Used for delivering applications belonging to tenants.
+- **`Infra GitOps Config`**: Used for delivering cluster scoped resources for application tenants or other services.
 
-The sample configured GitOps directory can be found [here](https://github.com/stakater/gitops-config-template)
+## Structure of Apps GitOps Config
 
-Above structure supports following
+### Applications
 
-* multi cluster
-* multi tenant
-* multi application
-* multi environment
+Inside tenants folder, there is a separate folder of each application that belongs to a tenant. The name of the folder should match repository name in SCM.
 
-## Tenant Types
-
-At the root of repository, it has folder with tenant name; tenant is a synonym of team. Each tenant will get its own folder at the root of repository e.g. alpha, beta, etc. There are two type of tenants:
-
-1. **Application Tenants:**  Tenants that have one or more applications
-2. **SRE or DeliveryEngineering Tenant:** Tenant that is responsible for cluster level configuration
-
-Each type of tenant follows different structure.
-
-## Application Tenant
-
-```sh
-├── 01-tenant
-│   ├── 01-app
-│   │   ├── 00-env
-│   │   │   └── deployment.yaml
-│   │   ├── 01-env
-│   │   │   ├── Chart.yaml
-│   │   │   └── values.yaml
-│   │   ├── 02-env
-│   │   │   ├── Chart.yaml
-│   │   │   └── values.yaml
-│   │   └── 03-env
-│   │       ├── Chart.yaml
-│   │       └── values.yaml
-│   ├── 02-app
-│   │   ├── 00-env
-│   │   │   └── deployment.yaml
-│   │   ├── 01-env
-│   │   │   ├── Chart.yaml
-│   │   │   └── values.yaml
-│   │   ├── 02-env
-│   │   │   ├── Chart.yaml
-│   │   │   └── values.yaml
-│   │   └── 03-env
-│   │       ├── Chart.yaml
-│   │       └── values.yaml
-│   └── configs
-│       ├── 00-env
-│       │   └── space.yaml
-│       │   ├── argocd
-│       │   │   ├── 02-app
-│       │   │   └── 01-app
-│       ├── 01-env
-│       │   ├── argocd
-│       │   │   ├── 02-app
-│       │   │   └── 01-app
-│       │   └── space.yaml
-
-```
-
-It contains 2 type of folders.
-
-### 1. Applications
-
-Inside application tenants folder, there is a separate folder of each application that belongs to a tenant. The name of the folder should match repository name in SCM.
-
-#### Environments
+### Environments
 
 Inside each application folder, there is a separate folder of each environment where application will gets deployed to. Inside each environment folder there will be actual deployment files.
 
 Deployment files can only be vanilla yaml files, Helm chart and Kustomize repository that are supported by ArgoCD.
 
-### 2. Configs
+### ArgoCD Applications (at tenant level)
 
-Inside config folder there is a folder for each environment. In each environment folder there are 2 entities.
+Inside `argocd-apps` folder there is a folder for each environment. In each environment folder there are `argocd-apps` custom resource that watches deployments files in ```<tenant>/<app>/<env>```.
 
-1. **Space.yaml**: File that contains space configuration for each environment. Space is a Stakater created ```Tenant-Operator``` Custom Resource that is responsible for creating namespace and assigning appropriate permission to associated tenant members
-2. **ArgoCD**:  Folder that contains ArgoCD ```Application``` Custom Resource that watches deployments files in ```<tenant>/<app>/<env>```  (Layer#3 Environment) folder
+### ArgoCD Applications (at root level)
 
-## SRE or DeliveryEngineering Tenant
-
-Below is the structure of SRE tenant
+Inside `argocd-apps` folder, there are multiple clusters defined. Each cluster holds separate application environments for multiple tenants.
 
 ```sh
-├── 03-sre
+├── 01-tenant
+│   ├── 01-app
+│   │   ├── 00-env
+│   │   │   └── deployment.yaml
+│   │   ├── 01-env
+│   │   │   ├── Chart.yaml
+│   │   │   └── values.yaml
+│   ├── 02-app
+│   │   ├── 01-env
+│   │   │   ├── Chart.yaml
+│   │   │   └── values.yaml
+│   │   ├── 02-env
+│   │   │   ├── Chart.yaml
+│   │   │   └── values.yaml
+│   │   └── 03-env
+│   │       ├── Chart.yaml
+│   │       └── values.yaml
+│   └── argocd-apps
+│       ├── 00-env
+│       │   └── 00-env-01-app.yaml (points to 01-app/00-env)
+│       ├── 01-env
+│       │   ├── 01-env-01-app.yaml (points to 01-app/01-env)
+│       │   └── 01-env-02-app.yaml (points to 02-app/01-env)
+│       ├── 02-env
+│       │   └── 02-env-02-app.yaml (points to 02-app/02-env)
+│       └── 03-env
+│           ├── 03-env-01-app.yaml (points to 01-app/03-env)
+│           └── 03-env-02-app.yaml (points to 02-app/03-env)
+├── argocd-apps
 │   ├── 01-cluster
-│   │   ├── argocd
-│   │   │   ├── 00-env
-│   │   │   │   └── 01-tenant.yaml
-│   │   │   ├── 01-env
-│   │   │   │   ├── 01-tenant.yaml
-│   │   │   │   └── 02-tenant.yaml
-│   |    │   └── tenant-operator.yaml
-│   |    └── tenant-operator
-│   |        ├── quotas
-│   |        │   ├── 01-quota.yaml
-│   |        │   ├── 02-quota.yaml
-│   |        │   └── 03-quota.yaml
-│   |        └── tenants
-│   |            ├── 01-tenant.yaml
-│   |            └── 02-tenant.yaml
+│   │   ├── 01-tenant-00-env.yaml (points to 01-tenant/argocd-apps/00-env)
+│   │   └── 01-tenant-01-env.yaml (points to 01-tenant/argocd-apps/01-env)
+│   └── 02-cluster
+│       ├── 01-tenant-02-env.yaml (points to 01-tenant/argocd-apps/02-env)
+│       └── 01-tenant-03-env.yaml (points to 01-tenant/argocd-apps/03-env)
+└── README.md
 ```
 
-### Cluster
+## Structure of Infra GitOps Config
 
-At the root of SRE tenant, there is a folder of each cluster.
+In each cluster folder there are folders containing resource for particular cluster. These include resources that are cluster scoped or don't belong to application tenant. It is further divided into 2 kinds of folders:
 
-In each cluster folder there are config files for particular cluster. It is further divided into 2 sub folders:
+### Cluster Deployments
 
-#### Multi Tenant Operator
+They are logical grouping of resources belong to an operator, tenant or service into folders. Each folder includes resources that are cluster scoped or don't belong to application tenant e.g. `tenant-operator` folder contains custom resources of ```Multi Tenant Operator```. They are following
 
-tenant-operator folder contain custom resources of ```Multi Tenant Operator```. They are following
+- quotas: Amount of resource (configmaps, cpus, memory, i.e.) for each tenant that can consume.
+- tenants: Contains file for each team. It contain information of members that are part of tenant.
 
-* quotas: Amount of resource (configmaps, cpus, memory, i.e.) for each tenant that can consume.
-* tenants: Contains file for each team. It contain information of members that are part of tenant.
+### ArgoCD Applications
 
-#### ArgoCD
+This folder is a starting point of all configuration in the cluster. Inside the folder we have following ArgoCD applications that deploy resources in other sibling folders:
 
-This folder is a starting point of all configuration in the cluster. ArgoCD by default is configured to watch this folder. Inside the folder we have following:
+- **`tenant-operator.yaml`**: Responsible for creating tenants and quotas inside `tenant-operator` folder configuration in the cluster.
+- **`apps-gitops-config.yaml`**: Points to corresponding cluster folder in `apps-gitops-config` repository. This deploys the `apps-of-apps` structure that deploys all applications environments for the cluster.
 
-* tenant-operator.yaml: Responsible for creating tenants configuration in the cluster
-* Environment(s) Folder: Sub-folder for each environment that is a part of cluster. Environment folders contain ```Application``` CR's that are responsible for bringing up the particular environment.
+```sh
+├── 01-cluster
+│   ├── argocd-apps
+|   │   ├── apps-gitops-config.yaml (points to argocd-apps/01-cluster/ of seprate apps-gitops-config repository)
+|   │   ├── minio-operator.yaml (points to 01-cluster/minio-operator)
+|   │   └── tenant-operator.yaml (points to 01-cluster/tenant-operator)
+│   ├── minio-operator
+│   │   ├── Chart.yaml
+│   │   └── values.yaml
+|   └── tenant-operator
+|       ├── quotas
+|       │   ├── 01-quota.yaml
+|       │   ├── 02-quota.yaml
+|       │   └── 03-quota.yaml
+|       └── tenants
+|           ├── 01-tenant.yaml
+|           └── 02-tenant.yaml
+├── 02-cluster
+│   ├── argocd-apps
+|   │   ├── apps-gitops-config.yaml (points to argocd-apps/02-cluster/ of seprate apps-gitops-config repository)
+|   │   └── tenant-operator.yaml (points to 02-cluster/tenant-operator)
+|   └── tenant-operator
+|       ├── quotas
+|       │   └── 04-quota.yaml
+|       └── tenants
+|           └── 04-tenant.yaml
+└── README.md
+```
