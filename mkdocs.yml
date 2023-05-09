@@ -49,6 +49,7 @@ nav:
         - Service Definition:
             - about/service-definition/overview.md
             - about/service-definition/account-management.md
+            - about/service-definition/k8s-management.md
             - about/service-definition/logging.md
             - about/service-definition/monitoring.md
             - about/service-definition/networking.md
@@ -91,13 +92,20 @@ nav:
         - for-administrators/external-dns.md
         - for-administrators/cluster/add-node.md
         - for-administrators/requirements.md
+        - for-administrators/cluster/provisioning.md
         - for-administrators/giving-access-to-users.md
+        - for-administrators/cluster/add-node.md
+        - for-administrators/cluster/terminate.md
+        - for-administrators/cluster/upgrade.md
+        - for-administrators/external-dns.md
         - for-administrators/autoscaling.md
         - for-administrators/hibernating-your-cluster.md
         - for-administrators/node-configuration.md
         - for-administrators/volume-expander.md
         - for-administrators/hosting-dns.md
         - for-administrators/routes.md
+        - for-administrators/onboarding/day-1.md
+        - for-administrators/onboarding/day-2.md
     - For Delivery Engineers:
         - for-delivery-engineers/overview.md
         - GitOps:
@@ -118,7 +126,6 @@ nav:
     - For Developers:
         - for-developers/overview.md
         - Onboarding:
-            - for-developers/onboarding/gitops-onboarding.md
             - for-developers/onboarding/tenant-onboarding.md
             - for-developers/onboarding/application-onboarding.md
             - for-developers/onboarding/environment-onboarding.md
