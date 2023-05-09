@@ -102,13 +102,19 @@ nav:
         - for-delivery-engineers/overview.md
         - GitOps:
             - for-delivery-engineers/gitops/introduction.md
+            - for-delivery-engineers/gitops/structure.md
+            - for-delivery-engineers/gitops/creating-gitops-structure.md
+            - for-delivery-engineers/gitops/gitops-argocd-secrets.md
+            - for-delivery-engineers/gitops/environments.md
             - for-delivery-engineers/gitops/github.md
             - for-delivery-engineers/gitops/gitlab.md
             - for-delivery-engineers/gitops/bot-account.md
-            - for-delivery-engineers/gitops/structure.md
-            - for-delivery-engineers/gitops/environments.md
-            - for-delivery-engineers/gitops/environments.md
             - for-delivery-engineers/gitops/faq.md
+        - Pipelines:
+          - Tekton:
+            - for-delivery-engineers/ci-pipelines/tekton/intro.md
+          - GitHub Actions:
+            - for-delivery-engineers/ci-pipelines/github-actions/intro.md
     - For Developers:
         - for-developers/overview.md
         - Onboarding:
