@@ -99,7 +99,6 @@ nav:
           - Tekton:
             - for-delivery-engineers/ci-pipelines/tekton/intro.md
             - for-delivery-engineers/ci-pipelines/tekton/bot-account.md
-
           - GitHub Actions:
             - for-delivery-engineers/ci-pipelines/github-actions/intro.md
     - For Developers:
