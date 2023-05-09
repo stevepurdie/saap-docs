@@ -40,7 +40,7 @@ from
 1. **Orders and Changes**
 
     1. The CUSTOMER can make a written request to STAKATER at any time by giving details of the desired services for an order. STAKATER may either reject the order, discuss further details with the CUSTOMER or make a non-binding proposal to the CUSTOMER using the completed order form in accordance with (the "**Order Form**"). The order is only validated by the legally valid signature (including e-signature) of the order by both Parties.
-    1. A change to an existing order can be bindingly agreed directly by e-mail or in the customer portal by the authorized persons designated by the Parties.
+    1. A change to an existing order can be agreed in binding directly by e-mail or in the customer portal by the authorized persons designated by the Parties.
     1. Each order is subject to the provisions of this Framework Agreement and its Annexes if any.
 
 1. **Scope of Services and Charges**
