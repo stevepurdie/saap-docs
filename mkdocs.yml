@@ -95,12 +95,15 @@ nav:
             - for-delivery-engineers/gitops/gitops-argocd-secrets.md
             - for-delivery-engineers/gitops/environments.md
             - for-delivery-engineers/gitops/faq.md
-        - Pipelines:
+        - Continous Integration:
             - Tekton:
                 - for-delivery-engineers/ci-pipelines/tekton/intro.md
                 - for-delivery-engineers/ci-pipelines/tekton/bot-account.md
             - GitHub Actions:
                 - for-delivery-engineers/ci-pipelines/github-actions/intro.md
+        - Continous Delivery:
+            - ArgoCD:
+                - for-delivery-engineers/cd-pipelines/argocd/intro.md
     - For Developers:
         - for-developers/overview.md
         - Onboarding:
