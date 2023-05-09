@@ -4,7 +4,7 @@ SAAP Pipelines requires secrets for CI/CD workflow. Following are the secrets us
 
 ## nexus-helm-auth-forked
 
-**Purpose:** nexus-helm-auth-forked secret is used in CI pipeline to push and pull helm charts from private nexus registry hosted on the cluster. This secret contains credentials for a machine-user to login into the registry. 
+**Purpose:** nexus-helm-auth-forked secret is used in CI pipeline to push and pull helm charts from private nexus registry hosted on the cluster. This secret contains credentials for a machine-user to login into the registry.
 
 **Owner:** Stakater
 
@@ -14,7 +14,7 @@ SAAP Pipelines requires secrets for CI/CD workflow. Following are the secrets us
 
 **Do not use for:** Logging in to registry from your local machine
 
-**Creation:** This secret is created at the time Nexus is set up. It is hardcoded in `nexus-pre-install` configMap, and created through `nexus-setup` job.
+**Creation:** This secret is created at the time Nexus is set up. It is hard-coded in `nexus-pre-install` configMap, and created through `nexus-setup` job.
 
 **Rotation:** This secret needs to be added to Vault, which is then reconciled by External Secrets Operator, and a Kubernetes secret is created in cluster against it.
 
@@ -32,7 +32,7 @@ SAAP Pipelines requires secrets for CI/CD workflow. Following are the secrets us
 
 **Do not use for:** Logging in to registry from your local machine
 
-**Creation:** This secret is created at the time Nexus is set up. It is hardcoded in `nexus-pre-install` configMap, and created through `nexus-setup` job.
+**Creation:** This secret is created at the time Nexus is set up. It is hard-coded in `nexus-pre-install` configMap, and created through `nexus-setup` job.
 
 **Rotation:** This secret needs to be added to Vault, which is then reconciled by External Secrets Operator, and a Kubernetes secret is created in cluster against it.
 
@@ -50,7 +50,7 @@ SAAP Pipelines requires secrets for CI/CD workflow. Following are the secrets us
 
 **Do not use for:** Logging in to registry from your local machine
 
-**Creation:** This secret is created by Github organization admin. More details on how to create this can be seen [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+**Creation:** This secret is created by GitHub organization admin. More details on how to create this can be seen [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
 **Rotation:** This secret needs to be added to Vault, which is then reconciled by External Secrets Operator, and a Kubernetes secret is created in cluster against it.
 
