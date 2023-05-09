@@ -4,7 +4,7 @@
 
 1. **Objectives of DPA**
 
-    1. The Parties, STAKATER and the Customer, have entered into a contract for specific IT services, referred to as the "Framework Agreement." In the performance of the "Framework Agreement", STAKATER processes personal data, referred to as the "Data," on behalf of the Customer.
+    1. The Parties, STAKATER and the Customer, have entered into a contract for specific IT services, referred to as the ["Framework Agreement."](./agreement.md) In the performance of the "Framework Agreement", STAKATER processes personal data, referred to as the "Data," on behalf of the Customer.
 
     1. This Data Processing Agreement (DPA) governs the processing of Customer Data by STAKATER in accordance with Article 28 of the [EU General Data Protection Regulation (GDPR)](../for-cisos/data-protection/gdpr.md).
 
@@ -12,7 +12,7 @@
 
     1. The characteristics of the Data, the categories of individuals whose data is being processed, and the duration and objectives of the processing are as follows, unless otherwise explicitly stated in the Framework Agreement:
 
-        1. **Data type:** The processed Data includes personal master data, communication data (e.g. e-mail, chat), registration data, documents, and other data in electronic format that the Processor processes for the Controller in connection with the main contractual services. The Controller assures that no data that requires special protection will be transferred for processing without prior agreement.
+        1. **Data type:** The processed Data includes personal master data, communication data (e.g. email, chat), registration data, documents, and other data in electronic format that the Processor processes for the Controller in connection with the main contractual services. The Controller assures that no data that requires special protection will be transferred for processing without prior agreement.
 
         1. **Categorization of data subjects:** Employees, customers, suppliers, and any other individuals associated with the data controller whose data the Controller transmits to the Processor under the Framework Agreement.
 
@@ -41,13 +41,13 @@
 
     Prior written consent of the Controller is required for awarding contracts with subcontractors for processing Personal Data covered by the contract.
 
-    The Controller grants the Processor general authorization to use subcontractors in accordance with the provisions of this DPA. The Processor shall inform the Controller in a timely manner of any intended change with respect to the use or replacement of other subcontractors. The Controller may object to the change within 30 days if there is a valid reason. The objection must be in writing, specifying the reasons for the objection. Any further outsourcing by the subcontractor requires the express consent of the Controller.
+    The Controller grants the Processor general authorization to use subcontractors in accordance with the provisions of this DPA. The Processor shall inform the Controller in a timely manner of any intended change with respect to the use or replacement of other subcontractors. The Controller may object to the change within thirty (30) days if there is a valid reason. The objection must be in writing, specifying the reasons for the objection. Any further outsourcing by the subcontractor requires the express consent of the Controller.
 
     The Processor must ensure that authorized subcontractors have data protection obligations fundamentally comparable to those contained in this Agreement before processing Personal Data of the Controller.
 
     Subcontractors are service providers whose services are directly related to the provision of the main service under the Framework Agreement and concern the processing of Data. Ancillary services, such as telecommunications services, postal or transport services, maintenance and user service, or the disposal of data carriers, are excluded from this definition.
 
-    The Processor is obliged to take appropriate and legally compliant contractual agreements and control measures to ensure that the Data of the Controller is protected, even in the case of outsourced ancillary services.The Processor or its subcontractors process the Data in Sweden unless otherwise agreed. Processing of Data outside the EEA and Sweden requires the Processor to ensure that the conditions for transferring the data to third countries in accordance with the DPA are met. The Processor shall provide proof of compliance upon request.
+    The Processor is obliged to take appropriate and legally compliant contractual agreements and control measures to ensure that the Data of the Controller is protected, even in the case of outsourced ancillary services. The Processor or its subcontractors process the Data in Sweden unless otherwise agreed. Processing of Data outside the EU and Sweden requires the Processor to ensure that the conditions for transferring the data to third countries in accordance with the DPA are met. The Processor shall provide proof of compliance upon request.
 
 1. **Data and Personal Locations**
 
@@ -89,7 +89,7 @@
 
     1. STAKATER reserves the right to modify this DPA at any time and will notify customers of the changes in a suitable manner, including electronically.
 
-    1. Any changes or additions to this DPA will become a binding part of the agreement unless the Customer objects within 30 days of being informed of the amended provisions.
+    1. Any changes or additions to this DPA will become a binding part of the agreement unless the Customer objects within thirty (30) days of being informed of the amended provisions.
 
     1. If any provision of this DPA or the remaining contract is found to be invalid, ineffective, or unenforceable, such provision shall be replaced with a valid and enforceable provision that best reflects the intent of the original provision and corresponds to the economic balance of the Parties.
 
