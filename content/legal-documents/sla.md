@@ -1,6 +1,6 @@
 # Service Level Agreement (SLA)
 
-`Version: 31 Jan 2023`
+`Version: 9 May 2023`
 
 This SERVICE LEVEL AGREEMENT ("**SLA**") is by and between **Stakater** and you ("**Customer**"). Each a "Party", and together the "Parties".
 
@@ -50,9 +50,9 @@ This SERVICE LEVEL AGREEMENT ("**SLA**") is by and between **Stakater** and you 
 
     - 6.1.5 The unavailability of the cloud-based services used by Stakater;
 
-    - 6.1.6 In the case of Stakater having insufficient privileges to the Customers cloud environment/s to perform required maintenance and support tasks;
+    - 6.1.6 In the case of Stakater having insufficient privileges to the Customers cloud environments to perform required maintenance and support tasks;
 
-    - 6.1.7 Due to issues caused by software/application bugs or faults as confirmed by the upstream vendors or product owners that are out of Stakaters control to patch and remediate;
+    - 6.1.7 Due to issues caused by software or application bugs or faults as confirmed by the upstream vendors or product owners that are out of Stakaters control to patch and remediate;
 
     - 6.1.8 Blocking or throttling by an internet service provider or transit provider;
 
@@ -134,7 +134,7 @@ This SERVICE LEVEL AGREEMENT ("**SLA**") is by and between **Stakater** and you 
 
 ## 12. Service Improvements
 
-- 12.1 Stakater will make available to customers new versions, releases, and updates to the Service to solve defects and/or errors, keep the Service up-to-date with market developments, or otherwise improve the Service. Stakater will only support the most recent version of the Service.
+- 12.1 Stakater will make available to customers new versions, releases, and updates to the Service to solve defects or errors, keep the Service up-to-date with market developments, or otherwise improve the Service. Stakater will only support the most recent version of the Service.
 
 - 12.2 New versions, releases, or updates will contain at least the level of functionality as set out in this SLA and as contained in the version or release of the Service previously used by Customer, and will not otherwise negatively impact Customer’s use of the Service. Stakater shall make reasonable efforts to ensure that when performing such actions, the impact on Customer and its customer(s) is limited.
 
@@ -158,7 +158,7 @@ The SLA does not apply to any:
 
     - 13.5.3 that resulted from abuses or other behaviours that violate the SLA;
 
-    - 13.5.4 that resulted from quotas/limits applied by the system;
+    - 13.5.4 that resulted from quotas or limits applied by the system;
 
     - 13.5.5 that resulted from cluster nodes running out of capacity;
 
@@ -168,7 +168,7 @@ The SLA does not apply to any:
 
     - 13.5.8 that resulted from Customer attempts to perform operations that exceed prescribed quotas or allowed permissions or that resulted from Stakater’s throttling of suspected abusive behaviour;
 
-    - 13.5.9 that resulted from Customer attempts to perform operations on the account/subscription/etc. being managed by Stakater, even though Customer has permissions they should treat them as read only;
+    - 13.5.9 that resulted from Customer attempts to perform operations on the account or subscription being managed by Stakater, even though Customer has permissions they should treat them as read only;
 
     - 13.5.10 for subscriptions reserved, but not paid for, at the time of the incident.
 
