@@ -4,9 +4,7 @@ SAAP Pipelines requires secrets for CI/CD workflow. Following are the secrets us
 
 ## nexus-helm-auth-forked
 
-### Purpose:
-
-nexus-helm-auth-forked secret is used in CI pipeline to push and pull helm charts from private nexus registry hosted on the cluster. This secret contains credentials for a machine-user to login into the registry. 
+**Purpose:** nexus-helm-auth-forked secret is used in CI pipeline to push and pull helm charts from private nexus registry hosted on the cluster. This secret contains credentials for a machine-user to login into the registry. 
 
 **Owner:** Stakater
 
@@ -16,7 +14,7 @@ nexus-helm-auth-forked secret is used in CI pipeline to push and pull helm chart
 
 **Do not use for:** Logging in to registry from your local machine
 
-**Creation:** This secret is created at the time Nexus is set up. It is hardcoded in `nexus-pre-install` configMap, and created through `nexus-setup` job. 
+**Creation:** This secret is created at the time Nexus is set up. It is hardcoded in `nexus-pre-install` configMap, and created through `nexus-setup` job.
 
 **Rotation:** This secret needs to be added to Vault, which is then reconciled by External Secrets Operator, and a Kubernetes secret is created in cluster against it.
 
@@ -24,9 +22,7 @@ nexus-helm-auth-forked secret is used in CI pipeline to push and pull helm chart
 
 ## nexus-docker-auth-forked
 
-### Purpose:
-
-nexus-docker-auth-forked secret is used in CI pipeline to push and pull docker images from private nexus registry hosted on the cluster. This secret contains credentials for a machine-user to login into the registry.
+**Purpose:** nexus-docker-auth-forked secret is used in CI pipeline to push and pull docker images from private nexus registry hosted on the cluster. This secret contains credentials for a machine-user to login into the registry.
 
 **Owner:** Stakater
 
@@ -36,7 +32,7 @@ nexus-docker-auth-forked secret is used in CI pipeline to push and pull docker i
 
 **Do not use for:** Logging in to registry from your local machine
 
-**Creation:** This secret is created at the time Nexus is set up. It is hardcoded in `nexus-pre-install` configMap, and created through `nexus-setup` job. 
+**Creation:** This secret is created at the time Nexus is set up. It is hardcoded in `nexus-pre-install` configMap, and created through `nexus-setup` job.
 
 **Rotation:** This secret needs to be added to Vault, which is then reconciled by External Secrets Operator, and a Kubernetes secret is created in cluster against it.
 
@@ -44,9 +40,7 @@ nexus-docker-auth-forked secret is used in CI pipeline to push and pull docker i
 
 ## git-auth-forked
 
-### Purpose:
-
-git-auth-forked secret is used in CI pipeline. It's purpose is to clone git repositories into workspaces that are used in pipeline steps to perform any defined action. The secret contains a token that has access to defined user and repository permission (fine-grained token).
+**Purpose:** git-auth-forked secret is used in CI pipeline. It's purpose is to clone git repositories into workspaces that are used in pipeline steps to perform any defined action. The secret contains a token that has access to defined user and repository permission (fine-grained token).
 
 **Owner:** Stakater
 
@@ -61,5 +55,3 @@ git-auth-forked secret is used in CI pipeline. It's purpose is to clone git repo
 **Rotation:** This secret needs to be added to Vault, which is then reconciled by External Secrets Operator, and a Kubernetes secret is created in cluster against it.
 
 **Stored in:** Keeper
-
-
