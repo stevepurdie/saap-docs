@@ -93,6 +93,7 @@ nav:
             - for-delivery-engineers/gitops/structure.md
             - for-delivery-engineers/gitops/creating-gitops-structure.md
             - for-delivery-engineers/gitops/gitops-argocd-secrets.md
+            - for-delivery-engineers/gitops/application-onboarding.md
             - for-delivery-engineers/gitops/environments.md
             - for-delivery-engineers/gitops/faq.md
         - Continous Integration:
