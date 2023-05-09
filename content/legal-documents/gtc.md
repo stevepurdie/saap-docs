@@ -14,7 +14,7 @@
 
     1. STAKATER may provide additional services beyond the agreed-upon support scope or charge for additional expenses incurred due to the Customer's inadequate performance of its obligations. These additional services and expenses will be charged based on STAKATER's current hourly rates.
 
-    1. STAKATER has the right to modify its services, including the SLA, at any time. If these changes affect the services purchased by the Customer, STAKATER will provide written notice at least one month before the changes take effect. If the Customer does not indicate their refusal to the changes prior to the proposed date of effect, their consent will be assumed.
+    1. STAKATER has the right to modify its services, including the SLA, at any time. If these changes affect the services purchased by the Customer, STAKATER will provide written notice at least one (1) month before the changes take effect. If the Customer does not indicate their refusal to the changes prior to the proposed date of effect, their consent will be assumed.
 
 1. STAKATER’s Obligations
 
@@ -44,7 +44,7 @@
 
     1. Unless otherwise agreed, STAKATER will invoice the Services quarterly in advance.
 
-    1. Payment for the Services is due within 15 days of invoice issuance. Invoices that are not contested by the Customer in good faith and with reasons stated by the due date will be deemed accepted and processed for payment.
+    1. Payment for the Services is due within fifteen (15) days of invoice issuance. Invoices that are not contested by the Customer in good faith and with reasons stated by the due date will be deemed accepted and processed for payment.
 
     1. Services requested by the Customer that were not specifically priced will be invoiced based on STAKATER's standard rates at the time the Agreement was concluded.
 
@@ -56,11 +56,11 @@
 
     1. The Customer is not authorized to assert or lodge a settlement.
 
-    1. STAKATER can change its service charges with one-month notice period, effective at the end of the following month unless a term commitment has been agreed between Stakater and customer. For term commitment contracts, charges shall be locked for the agreed term. However, early termination / exist charges shall be applicable for premature termination.
+    1. STAKATER can change its service charges with one (1) month's notice period, effective at the end of the following month unless a term commitment has been agreed between Stakater and customer. For term commitment contracts, charges shall be locked for the agreed term. However, early termination / exist charges shall be applicable for premature termination.
 
 1. Term of agreement and Termination
 
-    1. Services orders are established for a specific duration and may be terminated in writing after that, subject to the notice period. Unless agreed otherwise, the minimum term is 12 months, and the notice period is three months.
+    1. Services orders are established for a specific duration and may be terminated in writing after that, subject to the notice period. Unless agreed otherwise, the minimum term is twelve (12) months, and the notice period is three (3) months.
 
     1. Both parties have the right to terminate the Agreement or specific orders immediately for cause, which can arise if the Customer utilizes the Services in a manner that violates the law, Agreement, or its purpose; or if the Customer makes them accessible to unauthorized third parties. If there is a reasonable suspicion that the Customer is insolvent, immediate termination for cause can occur by Stakater for customer’s inability to pay for services.
 
@@ -74,7 +74,7 @@
 
     1. If a third-party claims that their intellectual property rights have been violated by the Customer’s use of Stakater’s services, except if the customer is using other service(s) as a combination to Stakater’s services that fall under is intellectual property rights violations, STAKATER will defend the Customer against such a claim at its own expense if the customer:
 
-        1. notifies STAKATER immediately in writing within three working days of such event,
+        1. notifies STAKATER immediately in writing within three (3) working days of such event,
 
         1. allows STAKATER to control the defense and any settlement negotiations,
 
