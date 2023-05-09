@@ -40,7 +40,7 @@
 
     1. Stakater services are meant to be offered only for legal purposes, allowed by law. The Customer is not allowed to use the Services to commit or support criminal acts, and must assume complete responsibility and take necessary actions to prevent criminal use by its own users or its third parties.
 
-    1. If a third party claims a violation of rights by the data, content, and/or information provided by the Customer, STAKATER is entitled to suspend the data, content, and/or information as appropriate and permissible under the GTC or Framework Agreement.
+    1. If a third party claims a violation of rights by the data, content, or information provided by the Customer, STAKATER is entitled to suspend the data, content, or information as appropriate and permissible under the GTC or Framework Agreement.
 
 1. **Invoicing and Payment**
 
@@ -54,11 +54,11 @@
 
     1. If the Customer fails to make full payment by the end of the payment period, they will be liable to pay late payment fees on outstanding charges.
 
-    1. After the payment period expires, STAKATER has the right to discontinue Services and/or terminate the Agreement without notice or compensation. The Customer will be charged for STAKATER's expenses related to any adjustments, debt collection costs, court and legal fees.
+    1. After the payment period expires, STAKATER has the right to discontinue Services or terminate the Agreement without notice or compensation. The Customer will be charged for STAKATER's expenses related to any adjustments, debt collection costs, court and legal fees.
 
     1. The Customer is not authorized to assert or lodge a settlement.
 
-    1. STAKATER can change its service charges with one (1) month's notice period, effective at the end of the following month unless a term commitment has been agreed between Stakater and customer. For term commitment contracts, charges shall be locked for the agreed term. However, early termination / exist charges shall be applicable for premature termination.
+    1. STAKATER can change its service charges with one (1) month's notice period, effective at the end of the following month unless a term commitment has been agreed between Stakater and customer. For term commitment contracts, charges shall be locked for the agreed term. However, early termination or exit charges shall be applicable for premature termination.
 
 1. **Term of Agreement and Termination**
 
@@ -100,7 +100,7 @@
 
     1. If there are dependencies to third parties such as IT infrastructure of third-party providers or if the disruption or failure was caused by the Customer or by a person attributable to him.
 
-    1. STAKATER provides no guarantee that the data, content and / or information transmitted by the Customer to the servers of STAKATER remain available after the termination of this Agreement.
+    1. STAKATER provides no guarantee that the data, content or information transmitted by the Customer to the servers of STAKATER remain available after the termination of this Agreement.
 
 1. **Acceptance, Defect Rectification and SLA**
 
