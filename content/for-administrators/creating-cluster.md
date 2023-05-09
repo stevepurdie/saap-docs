@@ -1,6 +1,6 @@
 # Creating your cluster
 
-Stakater creates cluster after 
+Stakater creates cluster after
 
 - you have selected [desired cloud provider](../about/cloud-providers/overview.md).
 
