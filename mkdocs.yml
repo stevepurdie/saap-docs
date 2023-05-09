@@ -49,7 +49,6 @@ nav:
         - Service Definition:
             - about/service-definition/overview.md
             - about/service-definition/account-management.md
-            - about/service-definition/k8s-management.md
             - about/service-definition/logging.md
             - about/service-definition/monitoring.md
             - about/service-definition/networking.md
