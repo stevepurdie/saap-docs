@@ -1,25 +1,26 @@
 # Access Your Cluster
 
-Access your cluster by going to [Stakater App Agility Platform](`https://cloud.stakater.com/`). Enter your enterprise domain provide by Stakater Cloud administrator.
+1. Access your cluster by going to [Stakater App Agility Platform](`https://cloud.stakater.com/`). Enter your enterprise domain provide by Stakater Cloud administrator.
 
-![Stakater App Agility Platform Home](images/cloud-stakater-com.png)
+    ![Stakater App Agility Platform Home](images/cloud-stakater-com.png)
 
-Log In with the method configured for your Organization. 
-![Stakater App Agility Platform Login](images/cloud-stakater-com-login.png)
+2. Log In with the method configured for your Organization.
 
-Once you've logged in, you ll be directed to similar cluster overview page.
+    ![Stakater App Agility Platform Login](images/cloud-stakater-com-login.png)
 
-![Stakater App Agility Platform Home](images/cluster-management-page.png)
+3. Once you've logged in, you ll be directed to similar cluster overview page.
 
-Click on drop down toggle for the relevant cluster: 
+    ![Stakater App Agility Platform Home](images/cluster-management-page.png)
 
-  1. Select `OpenShift Web Console` to open the Openshift Web Console.
+3. Click on drop down toggle for the relevant cluster: 
+
+    1. Select `OpenShift Web Console` to open the Openshift Web Console.
 
         ![OpenShift Console](images/saap-admin-view.png)
 
         > You should belong to a Tenant
 
-  2. Select Forecastle for view services available on the cluster.
+    2. Select Forecastle for view services available on the cluster.
 
         ![Stakater App Agility Platform Home](images/forecastle-homepage.png)
 
