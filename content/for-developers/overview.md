@@ -1,6 +1,6 @@
 # Overview
 
-In this section, We will cover how the developers can perform operations, enable features and general operations for their applications.
+In this section, We will cover how the developers can perform operations and enable different configurations and features for their applications.
 
 This section will cover tutorials around planning, containerizing, packaging, deploying, monitoring, logging, injecting configuration, securing, persisting, scaling, monitoring, exposing your application on OpenShift.
 
