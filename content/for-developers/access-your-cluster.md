@@ -11,7 +11,7 @@ Once you've logged in, you ll be directed to similar cluster overview page.
 
 ![Stakater App Agility Platform Home](images/cluster-management-page.png)
 
-Click on drop down toggle in workshop cluster: 
+Click on drop down toggle for the relevant cluster: 
 
   1. Select `OpenShift Web Console` to open the Openshift Web Console.
 
