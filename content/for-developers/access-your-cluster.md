@@ -16,7 +16,7 @@ Lets see how will you access your cluster.
 
 1. Click on drop down toggle for the relevant cluster:
 
-    1. Select `OpenShift Web Console` to open the Openshift Web Console.
+    1. Select `OpenShift Web Console` to open the OpenShift Web Console.
 
         ![OpenShift Console](images/saap-admin-view.png)
 
