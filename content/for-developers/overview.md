@@ -8,7 +8,7 @@ This section will cover tutorials around planning, containerizing, packaging, de
 - [Explore ArgoCD, Vault, Nexus](explore-argocd-vault-nexus.md)
 - [Plan your Deployment](plan-your-deployment.md)
 - [Containerize the Application](containerize-the-application.md)
-- [Develop your application](deploy-your-application.md)
+- [Develop your application](develop-your-application.md)
 - [Package the Application](package-the-application.md)
 - [Deploy your Application](deploy-the-application.md)
 - [Expose your Application](expose-your-application.md)
