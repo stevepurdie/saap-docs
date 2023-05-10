@@ -17,7 +17,7 @@ This section will cover tutorials around planning, containerizing, packaging, de
 - [Enable metrics for your Application]()
 - [Enable logging for your Application]()
 - [Enable alerts for your Application]()
-- [Add grafana dashboard for your Application]()
+- [Add Grafana dashboard for your Application]()
 - [Backup your Application]()
 - [Block Ingress/Egress with Network Policies]()
 - [Help]()
