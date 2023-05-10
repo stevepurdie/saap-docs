@@ -19,5 +19,4 @@ This section will cover tutorials around planning, containerizing, packaging, de
 - [Enable alerts for your Application](enable-alerts-for-your-application.md)
 - [Add Grafana dashboard for your Application](add-grafana-dashboard-for-your-application.md)
 - [Backup your Application](backup-your-application.md)
-- [Block Ingress/Egress with Network Policies](block-ingres-egress-with-network-policies.md)
 - [Help](help.md)

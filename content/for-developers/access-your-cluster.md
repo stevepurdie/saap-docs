@@ -1,5 +1,7 @@
 # Access Your Cluster
 
+Lets see how will you access your cluster.
+
 1. Access your cluster by going to [Stakater App Agility Platform](`https://cloud.stakater.com/`). Enter your enterprise domain provide by Stakater Cloud administrator.
 
     ![Stakater App Agility Platform Home](images/cloud-stakater-com.png)
@@ -32,4 +34,4 @@ Following CLI tools are required for working with Stakater App Agility Platform.
 - [Kubectl](https://kubernetes.io/docs/tasks/tools/) The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs.
 - [Helm](https://helm.sh/docs/intro/install/) Helm helps you manage Kubernetes applications — Helm Charts help you define, install, and upgrade even the most complex Kubernetes application.
 
-
+## Login with oc

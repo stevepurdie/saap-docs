@@ -1,1 +1,0 @@
-# Block Ingress/Egress with Network Policies
