@@ -27,5 +27,8 @@ Evaluate the application to identify external service credentials, internal conf
 ### What files and directories are used by the application ?
 Evaluate what configurations are provided as files. For each file or directory, determine whether the content is static, configuration, or dynamic. You can use mount `persistent volumes`, `configmaps` and `secrets` as files to containers filesystem.
 
-## Understanding Kubernetes objects for apps
+### Do you want to restrict access in/out from your app ?
+Evaluate if you want to restrict ingress/egress for your application. You'll use network policies for implementing this.
+
+ ## Understanding Kubernetes objects for apps
 
