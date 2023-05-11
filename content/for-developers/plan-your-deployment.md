@@ -25,10 +25,33 @@ Evaluate whether application needs to be exposed publically or only within the c
 Evaluate the application to identify external service credentials, internal configuration files, certificates required for proper function. You will need to provision appropriate resource `(configmaps or secrets)` on the cluster depending on whether the information.
 
 ### What files and directories are used by the application ?
-Evaluate what configurations are provided as files. For each file or directory, determine whether the content is static, configuration, or dynamic. You can use mount `persistent volumes`, `configmaps` and `secrets` as files to containers filesystem.
+Evaluate what configurations are provided as files. For each file or directory, determine whether the content is static, configuration, or dynamic. You can use mount `persistent volumes`, `configmaps` and `secrets` as files to containers filesystem depending on requirements.
 
 ### Do you want to restrict access in/out from your app ?
 Evaluate if you want to restrict ingress/egress for your application. You'll use network policies for implementing this.
 
- ## Understanding Kubernetes objects for apps
+## Understanding Kubernetes objects for apps
 
+You can define many objects in Kubernetes for various use.
+
+### What is a Pod ?
+Pod is the smallest unit in Kubernetes and it runs one or more containers with shared network and filesystem. Typically, pod will contain a single container, but other containers can be run for assistance such as container syncing static files from remote source, containers reading logs from a shared volume and transferring them into a log aggregation system.
+
+### What type of Kubernetes objects can I make for my app?
+
+### What if I want my app configuration to use variables? How do I add these variables to the YAML?
+
+### How can I make sure that my app has the correct resources?
+
+### How can I add capabilities to my app configuration?
+
+### How can I increase the availability of my app?
+
+### How can I scale my app?
+
+### How can I update my app ?
+
+### How can I automate my app deployment?
+
+### How can I expose my application ? 
+Setting up service discovery
