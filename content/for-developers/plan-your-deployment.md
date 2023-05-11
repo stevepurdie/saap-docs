@@ -25,8 +25,7 @@ Evaluate whether application needs to be exposed publically or only within the c
 Evaluate the application to identify external service credentials, internal configuration files, certificates required for proper function. You will need to provision appropriate resource `(configmaps or secrets)` on the cluster depending on whether the information.
 
 ### What files and directories are used by the application ?
-
-### What are the CPU/Memory requirements ?
+Evaluate what configurations are provided as files. For each file or directory, determine whether the content is static, configuration, or dynamic. You can use mount `persistent volumes`, `configmaps` and `secrets` as files to containers filesystem.
 
 ## Understanding Kubernetes objects for apps
 
