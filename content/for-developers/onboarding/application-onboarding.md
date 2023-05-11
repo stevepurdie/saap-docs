@@ -88,6 +88,7 @@ CMD ["node", "server.js"]
 > Create [multi-stage builds](https://docs.docker.com/build/building/multi-stage/), use multiple `FROM` statements. Each `FROM` instruction can use a different base, and each of them begins a new stage of the build. You can selectively copy artifacts from one stage to another, leaving behind everything you don’t want in the final image. The end result is the same tiny production image as before, with a significant reduction in complexity. You don’t need to create any intermediate images, and you don’t need to extract any artifacts to your local system at all.
 
 Look into the following dockerizing guides for a start.
+
 | Framework/Language | Reference                                                   |
 |--------------------|-------------------------------------------------------------|
 | NodeJS             | <https://nodejs.org/en/docs/guides/nodejs-docker-webapp/>     |
@@ -254,13 +255,3 @@ Visit the OpenShift console to verify the application deployment.
 Visit the application url using routes to check if application is working as expected.
 
 ![review-web-ui](./images/review-web-ui.png)
-
-## Junkyard
-
-SAAP ships with few generic Tekton pipelines for quick jump start; all those pipelines expect to have Dockerfile in the root of the repository. Dockerfile should handle both build and package part; we typically use multi-stage Dockerfiles with 2 steps; one for build and another for run e.g.
-
-The idea is to avoid having different pipelines for different applications and if possible do stuff in dockerfiles, but there can be use cases where users might need language specific pipelines.
-
-Customers can do the way they like; as we ship few generic Tekton pipelines just for the sake of jump start.
-
-We do have a separate offering `Pipeline as a Service`; in which we completely manage all sorts (generic and specific) of Tekton pipelines; reach out to [`sales@stakater.com`](mailto:sales@stakater.com) for more information.
