@@ -123,6 +123,7 @@ nav:
             - for-developers/access-your-cluster.md
             - for-developers/explore-argocd-vault-nexus.md
             - for-developers/plan-your-deployment.md
+            - for-developers/requirements-for-next-section.md
         - Deploy your App:
             - for-developers/containerize-the-application.md
             - for-developers/package-the-application.md
