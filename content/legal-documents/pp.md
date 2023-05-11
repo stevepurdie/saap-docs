@@ -1,5 +1,7 @@
 # Privacy Policy
 
+`Version: 11 May 2023`
+
 1. **Data Protection**
 
     Stakater AB (hereinafter referred to as STAKATER) remains committed to protection of your personal data, treat it with confidentially, and in compliance with the applicable data protection regulations and this Privacy Policy.
