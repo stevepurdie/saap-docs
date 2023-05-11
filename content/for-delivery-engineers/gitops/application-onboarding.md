@@ -207,6 +207,7 @@ helm package .
 # output : successfully packaged chart and saved it to: /Desktop/Tasks/stakater/stakater-nordmart-review-ui/deploy/stakater-nordmart-review-ui-1.0.0.tgz
 ```
 
+
 This command packages a chart into a versioned chart archive file.
 
 ```sh

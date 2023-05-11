@@ -48,6 +48,7 @@ nav:
         - Service Definition:
             - about/service-definition/overview.md
             - about/service-definition/account-management.md
+            - about/service-definition/k8s-management.md
             - about/service-definition/logging.md
             - about/service-definition/monitoring.md
             - about/service-definition/networking.md
@@ -70,41 +71,60 @@ nav:
             - about/cloud-providers/overview.md
             - about/cloud-providers/aws.md
             - about/cloud-providers/azure.md
+            - about/cloud-providers/complior.md
+            - about/cloud-providers/elastx.md
             - about/cloud-providers/gcp.md
             - about/cloud-providers/binero.md
             - about/cloud-providers/upcloud.md
-            - about/cloud-providers/exoscale.md            
+            - about/cloud-providers/exoscale.md
+            - about/cloud-providers/safespring.md
         - about/update-lifecycle.md
         - about/onboarding.md
+        - about/release-notes.md
     - For Administrators:
         - for-administrators/overview.md
         - for-administrators/requirements.md
+        - for-administrators/cluster/provisioning.md
         - for-administrators/giving-access-to-users.md
+        - for-administrators/cluster/add-node.md
+        - for-administrators/cluster/terminate.md
+        - for-administrators/cluster/upgrade.md
+        - for-administrators/external-dns.md
         - for-administrators/autoscaling.md
         - for-administrators/hibernating-your-cluster.md
         - for-administrators/node-configuration.md
         - for-administrators/volume-expander.md
         - for-administrators/hosting-dns.md
         - for-administrators/routes.md
+        - for-administrators/onboarding/day-1.md
+        - for-administrators/onboarding/day-2.md
     - For Delivery Engineers:
         - for-delivery-engineers/overview.md
         - GitOps:
             - for-delivery-engineers/gitops/introduction.md
-            - for-delivery-engineers/gitops/github.md
-            - for-delivery-engineers/gitops/gitlab.md
-            - for-delivery-engineers/gitops/bot-account.md
             - for-delivery-engineers/gitops/structure.md
-            - for-delivery-engineers/gitops/environments.md
+            - for-delivery-engineers/gitops/creating-gitops-structure.md
+            - for-delivery-engineers/gitops/gitops-argocd-secrets.md
+            - for-delivery-engineers/gitops/application-onboarding.md
             - for-delivery-engineers/gitops/environments.md
             - for-delivery-engineers/gitops/faq.md
+        - Continous Integration:
+            - Tekton:
+                - for-delivery-engineers/ci-pipelines/tekton/intro.md
+                - for-delivery-engineers/ci-pipelines/tekton/bot-account.md
+            - GitHub Actions:
+                - for-delivery-engineers/ci-pipelines/github-actions/intro.md
+        - Continous Delivery:
+            - ArgoCD:
+                - for-delivery-engineers/cd-pipelines/argocd/intro.md
     - For Developers:
         - for-developers/overview.md
         - Onboarding:
-            - for-developers/onboarding/gitops-onboarding.md
             - for-developers/onboarding/tenant-onboarding.md
             - for-developers/onboarding/application-onboarding.md
             - for-developers/onboarding/environment-onboarding.md
             - for-developers/onboarding/developer-training.md
+            - for-developers/onboarding/secrets.md
         - Local Development:
             - for-developers/local-development/inner-loop.md
             - for-developers/local-development/inner-vs-outer-loop.md
@@ -133,6 +153,11 @@ nav:
             - for-cisos/backup-restore/stateful-app-example.md
             - for-cisos/backup-restore/restore-with-gitops.md
             - for-cisos/backup-restore/limitations.md
+        - Data Protection:
+            - for-cisos/data-protection/gdpr.md
+            - for-cisos/data-protection/rhacm-data-lifecycle.md
+            - for-cisos/data-protection/rhacm-data-collection.md
+            - for-cisos/data-protection/rhacm-data-storage.md
     - For Partners:
         - for-partners/overview.md
     - Managed Addons:
@@ -192,11 +217,11 @@ nav:
             - managed-addons/velero/overview.md
     - Legal Documents:
         - legal-documents/gtc.md
-        - legal-documents/sla.md        
+        - legal-documents/sla.md
         - legal-documents/agreement.md
         - legal-documents/dpa.md
         - legal-documents/nda.md
-        - legal-documents/pp.md                                    
+        - legal-documents/pp.md
     - Help:
         - help/overview.md
         - help/support/support.md
