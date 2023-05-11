@@ -118,7 +118,28 @@ nav:
             - ArgoCD:
                 - for-delivery-engineers/cd-pipelines/argocd/intro.md
     - For Developers:
-        - for-developers/overview.md
+        - Overview:
+            - for-developers/overview.md
+            - for-developers/access-your-cluster.md
+            - for-developers/explore-argocd-vault-nexus.md
+            - for-developers/plan-your-deployment.md
+            - for-developers/requirements-for-next-section.md
+        - Deploy your App:
+            - for-developers/containerize-the-application.md
+            - for-developers/package-the-application.md
+            - for-developers/deploy-the-application.md
+        - Networking:
+            - for-developers/expose-your-application.md
+        - Persistence:
+            - for-developers/persist-your-application.md
+            - for-developers/backup-your-application.md
+        - Scaling:
+            - for-developers/scale-your-application.md
+        - Logging & Monitoring:
+            - for-developers/enable-metrics-for-your-application.md
+            - for-developers/enable-logging-for-your-application.md
+            - for-developers/enable-alerts-for-your-application.md
+            - for-developers/add-grafana-dashboard-for-your-application.md
         - Onboarding:
             - for-developers/onboarding/tenant-onboarding.md
             - for-developers/onboarding/application-onboarding.md
