@@ -4,9 +4,9 @@ site_url: https://docs.stakater.com/saap/
 repo_url: https://github.com/stakater/saap-docs
 edit_uri: blob/main/content/
 use_directory_urls: false
+strict: true
 theme:
     name: material
-    prev_next_buttons_location: none
     logo: assets/images/favicon.svg
     favicon: assets/images/favicon.svg
     custom_dir: custom_theme/
@@ -107,8 +107,11 @@ nav:
             - for-delivery-engineers/gitops/gitops-argocd-secrets.md
             - for-delivery-engineers/gitops/application-onboarding.md
             - for-delivery-engineers/gitops/environments.md
+            - for-delivery-engineers/gitops/github.md
+            - for-delivery-engineers/gitops/gitlab.md
             - for-delivery-engineers/gitops/faq.md
         - Continous Integration:
+            - for-delivery-engineers/ci-pipelines/secrets.md
             - Tekton:
                 - for-delivery-engineers/ci-pipelines/tekton/intro.md
                 - for-delivery-engineers/ci-pipelines/tekton/bot-account.md
@@ -120,10 +123,12 @@ nav:
     - For Developers:
         - Overview:
             - for-developers/overview.md
+            - for-developers/develop-your-application.md
             - for-developers/access-your-cluster.md
             - for-developers/explore-argocd-vault-nexus.md
             - for-developers/plan-your-deployment.md
             - for-developers/requirements-for-next-section.md
+            - for-developers/help.md
         - Deploy your App:
             - for-developers/containerize-the-application.md
             - for-developers/package-the-application.md
@@ -142,7 +147,6 @@ nav:
             - for-developers/add-grafana-dashboard-for-your-application.md
         - Onboarding:
             - for-developers/onboarding/tenant-onboarding.md
-            - for-developers/onboarding/application-onboarding.md
             - for-developers/onboarding/environment-onboarding.md
             - for-developers/onboarding/developer-training.md
             - for-developers/onboarding/secrets.md

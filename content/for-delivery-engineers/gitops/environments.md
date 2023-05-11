@@ -127,7 +127,7 @@ Lets see how can we add an environment to an application in a tenant. Lets say, 
 
 To promote application from one environment to another; as mentioned above you will need to bump chart version and image tag version in that environment. You can do so by picking these versions from previous environment.
 
-This guide assumes that application is already [on-boarded](../../for-developers/onboarding/application-onboarding.md) to different environments.
+This guide assumes that application is already [on-boarded](application-onboarding.md) to different environments.
 
 ### 1. Promote chart
 
