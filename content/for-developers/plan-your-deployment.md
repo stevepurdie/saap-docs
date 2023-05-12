@@ -58,7 +58,7 @@ You can make many different types of workloads for your application. The followi
 | DaemonSet   | DaemonSet is a controller that runs same pod on every worker node typically used log collection applications. Find More Info on DaemonSet [here](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)                                                                                                                                                          |
 | Job         | Job ensures that a number of pods are completed successfully. You can use jobs for batch or parallel processing or configuring other services. Additionally, you can use CronJob to schedule Job at certain times. Find More Info on Job [here](https://kubernetes.io/docs/concepts/workloads/controllers/job/)                                                                 |
 
-### What if I want my app configuration to use variables? How do I add these variables to the YAML?
+### What if I want my app configuration to use variables?
 
 If you application used environments variables or configuration files, you can define them in separate ConfigMap or Secrets. You can reference values from these resources and specify them as either files at required path or environment variables.
 
@@ -66,7 +66,7 @@ Typically, [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/config
 
 ### How can I make sure that my app has the correct resources?
 
-You can configure your pod YAML or pod template to set resource (CPU/Memory) limits and requests for each container.
+You can configure your pod yaml or pod template to set resource (CPU/Memory) limits and requests for each container.
 
 Resource Quotas can be setup by Administrators to enforce resource limits and prioritize pods with [Resource Quotas](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) and [Pod Priority](https://kubernetes.io/docs/concepts/scheduling-eviction/pod-priority-preemption/).
 
@@ -85,7 +85,7 @@ There are various methods to increase the availability of your application.
 
 ### How can I update my app ?
 
-Manage your Kubernetes Yaml inside source code repository. We recommend packaging applications as Helm Chart along with source code. You can Kustomize for reusing your configuration. You can update Kubernetes YAML files and update them with `oc apply` for raw Kubernetes Manifests and `helm template chart_dir | oc apply` or `helm install chart_dir` for Helm Charts.
+Manage your Kubernetes yaml inside source code repository. We recommend packaging applications as Helm Chart along with source code. You can Kustomize for reusing your configuration. You can update Kubernetes yaml files and update them with `oc apply` for raw Kubernetes Manifests and `helm template chart_dir | oc apply` or `helm install chart_dir` for Helm Charts.
 
 You can use different strategies for update your Application. You might start with a rolling deployment or instantaneous switch before you progress to a more complicated canary deployment.
 
@@ -106,7 +106,7 @@ See [StatefulSet Updates](https://kubernetes.io/docs/concepts/workloads/controll
 
 There can be multiple ways to scale your application.
 
-- Use Horizontal Pod Autoscaler (HPA) to specify how OpenShift Container Platform should automatically increase or decrease the scale of a replication controller or deployment configuration, based on metrics collected from the pods that belong to that replication controller or deployment configuration. See [Horizontal Pod AutoScaling Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) & [Horizontal Pod AutoScaling Openshift](https://docs.openshift.com/container-platform/4.9/nodes/pods/nodes-pods-autoscaling.html)
+- Use Horizontal Pod Autoscaler (HPA) to specify how OpenShift Container Platform should automatically increase or decrease the scale of a replication controller or deployment configuration, based on metrics collected from the pods that belong to that replication controller or deployment configuration. See [Horizontal Pod AutoScaling Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) & [Horizontal Pod AutoScaling OpenShift](https://docs.openshift.com/container-platform/4.9/nodes/pods/nodes-pods-autoscaling.html)
 
 - Use Vertical Pod Autoscaler Operator (VPA) to automatically reviews the historic and current CPU and memory resources for containers in pods and can update the resource limits and requests based on the usage values it learns. See [Vertical Pod AutoScaling](https://docs.openshift.com/container-platform/4.9/nodes/pods/nodes-pods-vertical-autoscaler.html)
 
