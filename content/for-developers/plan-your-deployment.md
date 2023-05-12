@@ -98,10 +98,10 @@ It is referred to as a blue-green deployment.
 This strategy enables you to test a new application version on a real user base without committing to a full rollout. You pick a percentage of users such as 5% and send them to the new app version. You collect metrics in your logging and monitoring tools on how the new app version performs, do A/B testing, and then roll out the update to more users.
 
 See [Deployment Updates](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#updating-a-deployment)
-
 See [StatefulSet Updates](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#update-strategies)
 
 ### How can I scale my app?
+
 There can be multiple ways to scale your application.
 
 - Use Horizontal Pod Autoscaler (HPA) to specify how OpenShift Container Platform should automatically increase or decrease the scale of a replication controller or deployment configuration, based on metrics collected from the pods that belong to that replication controller or deployment configuration. See [Horizontal Pod AutoScaling Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) & [Horizontal Pod AutoScaling Openshift](https://docs.openshift.com/container-platform/4.9/nodes/pods/nodes-pods-autoscaling.html)
@@ -109,7 +109,8 @@ There can be multiple ways to scale your application.
 - Use Vertical Pod Autoscaler Operator (VPA) to automatically reviews the historic and current CPU and memory resources for containers in pods and can update the resource limits and requests based on the usage values it learns. See [Vertical Pod AutoScaling](https://docs.openshift.com/container-platform/4.9/nodes/pods/nodes-pods-vertical-autoscaler.html)
 
 ### How can I automate my app deployment?
-Setup a CI/CD pipeline to for Continous Integration and Continous Deployments. We will be using Tekton Pipelines for building, testing and packaging your applications and ArgoCD for continous deployments of your Application Deployments.
+
+Setup a CI/CD pipeline to for Continous Integration and Continous Deployments. We will be using Tekton Pipelines for building, testing and packaging your applications and ArgoCD for continously deploying of your Application Deployments.
 
 ### How can I expose my application ?
 
