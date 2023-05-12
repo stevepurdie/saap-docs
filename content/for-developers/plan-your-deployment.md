@@ -60,9 +60,9 @@ You can make many different types of workloads for your application. The followi
 
 ### What if I want my app configuration to use variables?
 
-If you application used environments variables or configuration files, you can define them in separate ConfigMap or Secrets. You can reference values from these resources and specify them as either files at required path or environment variables.
+If your application uses environments variables or configuration files, you can define them in separate ConfigMap or Secrets. You can reference values from these resources and specify them as either files at required path or environment variables.
 
-Typically, [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) are used for storing non sensitive configuration information. [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) are used for sensitive information like system credentials or personally identifiable information.
+Typically, [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/) are used for storing non-sensitive configuration information. [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) are used for sensitive information like system credentials or personally identifiable information.
 
 ### How can I make sure that my app has the correct resources?
 
