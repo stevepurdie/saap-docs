@@ -98,6 +98,7 @@ It is referred to as a blue-green deployment.
 This strategy enables you to test a new application version on a real user base without committing to a full rollout. You pick a percentage of users such as 5% and send them to the new app version. You collect metrics in your logging and monitoring tools on how the new app version performs, do A/B testing, and then roll out the update to more users.
 
 See [Deployment Updates](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#updating-a-deployment)
+
 See [StatefulSet Updates](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#update-strategies)
 
 ### How can I scale my app?
@@ -121,4 +122,5 @@ Users can expose your application in/out the cluster using Services, Ingresses, 
 Openshift has a built-in HAProxy ingress controller that allows users to expose services externally with routes and ingress.
 
 Read more about Routes vs Ingress [here](https://cloud.redhat.com/blog/kubernetes-ingress-vs-openshift-route)
+
 Read More about Routes Configuration [here](https://docs.openshift.com/container-platform/4.12/networking/routes/route-configuration.html)
