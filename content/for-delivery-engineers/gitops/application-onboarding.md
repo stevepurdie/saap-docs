@@ -27,8 +27,8 @@ In this section, we will use [`stakater-nordmart-review-ui`](https://github.com/
 
 ## Prerequisites
 
-- `tenant` for application must be defined via `infra-gitops-config` [See GitOps Onboarding](gitops-onboarding.md)
-- `tenant` for application should be onboarded onto `apps-gitops-config` [See GitOps Onboarding](gitops-onboarding.md)
+- `tenant` for application must be defined via `infra-gitops-config`
+- `tenant` for application should be onboarded onto `apps-gitops-config`
 - [helm](https://helm.sh/docs/intro/install/)
 - [git](https://git-scm.com/downloads)
 - [oc](https://docs.openshift.com/container-platform/4.11/cli_reference/openshift_cli/getting-started-cli.html)
