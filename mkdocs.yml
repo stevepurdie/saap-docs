@@ -4,6 +4,7 @@ site_url: https://docs.stakater.com/saap/
 repo_url: https://github.com/stakater/saap-docs
 edit_uri: blob/main/content/
 use_directory_urls: false
+strict: true
 theme:
     name: material
     logo: assets/images/favicon.svg
@@ -107,8 +108,11 @@ nav:
             - for-delivery-engineers/gitops/gitops-argocd-secrets.md
             - for-delivery-engineers/gitops/application-onboarding.md
             - for-delivery-engineers/gitops/environments.md
+            - for-delivery-engineers/gitops/github.md
+            - for-delivery-engineers/gitops/gitlab.md
             - for-delivery-engineers/gitops/faq.md
         - Continous Integration:
+            - for-delivery-engineers/ci-pipelines/secrets.md
             - Tekton:
                 - for-delivery-engineers/ci-pipelines/tekton/intro.md
                 - for-delivery-engineers/ci-pipelines/tekton/bot-account.md
@@ -118,10 +122,32 @@ nav:
             - ArgoCD:
                 - for-delivery-engineers/cd-pipelines/argocd/intro.md
     - For Developers:
-        - for-developers/overview.md
+        - Overview:
+            - for-developers/overview.md
+            - for-developers/develop-your-application.md
+            - for-developers/access-your-cluster.md
+            - for-developers/explore-argocd-vault-nexus.md
+            - for-developers/plan-your-deployment.md
+            - for-developers/requirements-for-next-section.md
+            - for-developers/help.md
+        - Deploy your App:
+            - for-developers/containerize-the-application.md
+            - for-developers/package-the-application.md
+            - for-developers/deploy-the-application.md
+        - Networking:
+            - for-developers/expose-your-application.md
+        - Persistence:
+            - for-developers/persist-your-application.md
+            - for-developers/backup-your-application.md
+        - Scaling:
+            - for-developers/scale-your-application.md
+        - Logging & Monitoring:
+            - for-developers/enable-metrics-for-your-application.md
+            - for-developers/enable-logging-for-your-application.md
+            - for-developers/enable-alerts-for-your-application.md
+            - for-developers/add-grafana-dashboard-for-your-application.md
         - Onboarding:
             - for-developers/onboarding/tenant-onboarding.md
-            - for-developers/onboarding/application-onboarding.md
             - for-developers/onboarding/environment-onboarding.md
             - for-developers/onboarding/developer-training.md
             - for-developers/onboarding/secrets.md

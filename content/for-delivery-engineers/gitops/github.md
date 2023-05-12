@@ -8,5 +8,3 @@
 - Add the Stakater bot user as collaborator with `Admin` permissions (ask Stakater team about the bot user id); `Settings > Manage access > Invite people or team`
 
 ![grant-admin-access](./images/grant-admin-access.png)
-
-For more about bot account permissions. [Read here](../gitops/bot-account.md)
