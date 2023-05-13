@@ -1,36 +1,52 @@
 # General Terms & Conditions (GTC)
 
-`Version: 9 May 2023`
+`Version: 13 May 2023`
 
 1. **Introduction**
 
     1. These General Terms and Conditions ("**GTC**") together with the other documents referenced herein govern the legal relationship (the "**Agreement**") between STAKATER  ("**STAKATER**") and the customer of STAKATER ("**Customer**", each a "**Party**" and together the "**Parties**").
 
-    1. These GTC apply to all legal relationships between the parties.
+    1. This Agreement applies to all relationships engaged between The Parties.
 
 1. **Scope of Services**
 
-    1. The scope of services provided by STAKATER is determined by the specific details outlined in the contractual orders, service descriptions, and relevant [service level agreements (SLAs)](sla.md).
+    1. The scope of services provided by STAKATER is determined by the specific details outlined in the contractual orders, service descriptions, and relevant [Service Level Agreements (SLAs)](sla.md).
+   
+    1. Both Parties agree to collaborate on related activities and, persuant to statements of work [Service Level Agreements (SLAs)](sla.md) to this Agreement.
+    
+    1. Any services provided by STAKATER under this Agreement shall be known as the "**Services**".
+    
+    1. All Services negotiated between the Parties shall be in writing and executed by both Parties and shall be attached hereto as supplemental Exhibits, and shall be incorporated into, and governed by, this Agreement.
 
-    1. Customers may request new service orders or extensions to existing agreements from STAKATER, subject to the agreed-upon terms and pricing. Once STAKATER confirms the order and both parties mutually agree in writing (through formal or e-signatures), the order becomes binding.
+    1. Once STAKATER confirms an order and both parties mutually agree in writing (through formal or e-signatures)to the change in Services, the order becomes binding.
 
-    1. STAKATER may provide additional services beyond the agreed-upon support scope or charge for additional expenses incurred due to the Customer's inadequate performance of its obligations. These additional services and expenses will be charged based on STAKATER's current hourly rates.
+    1. Should STAKATER be required to provide additional services beyond the agreed support scope or charge for additional expenses incurred due to the Customer's non-compliance of its obligations, these additional services and expenses will be charged based on [STAKATER's current hourly rates](https://#). 
 
-    1. STAKATER has the right to modify its services, including the SLA, at any time. If these changes affect the services purchased by the Customer, STAKATER will provide written notice at least one (1) month before the changes take effect. If the Customer does not indicate their refusal to the changes prior to the proposed date of effect, their consent will be assumed.
+    1. STAKATER has the right to modify its services, including the SLA, at any time. If these changes affect the services purchased by the Customer, STAKATER will provide written notice at least 30 (30) calendar days prior to the changes taking effect. If the Customer does not indicate their objection to such changes prior to the proposed date of effect, consent will be assumed on their behalf.
 
 1. **STAKATER's Obligations**
 
-    1. The Services, as defined in the Agreement, will be delivered by STAKATER with professionalism and reasonable care in accordance with the current standards of the industry.
+    1. The Services, as defined in the Agreement, will be delivered by STAKATER in accordance with the currently applicable standards of the Technology Industry.
 
-    1. Upon timely payment of the agreed remuneration, STAKATER grants the Customer a non-exclusive right to use the Services for its own purposes during the term of the Agreement, subject to compliance with applicable laws and the terms of the Agreement.
+    1. Upon payment of the agreed services value, STAKATER grants the Customer a non-exclusive right to use the Services for its own purposes during the term of the Agreement, subject to applicable laws and the binding terms of this Agreement.
 
-    1. Any usage by third parties, including affiliates of the Customer, requires prior written consent from STAKATER.
+    1. Should the Customer wish to extend their exclusive rights to any Third Party, prior written consent from STAKATER is required. Non compliance of this article will render the Agreement invalid and STAKATER reserves the right to withdraw all and any services provided to the Customer.
 
 1. **Customer's Rights and Obligations**
 
-    1. STAKATER will provide the Services to the Customer in compliance with the law, the agreed scope of work and services levels as per the agreement. The services shall be extended with the required professionalism and skill set that meets the industry standards.
+    1. STAKATER will provide the Services to the Customer in the agreed scope of work and services levels as per the agreement.
 
-    1. The Customer is responsible for taking all necessary actions to enable STAKATER to perform the Services as agreed upon in the Agreement. This includes, but is not limited to, providing access to systems, designating responsible roles, documenting emergencies and error messages, informing STAKATER of planned changes, using approved software versions and hardware, cooperating with STAKATER in error analysis and correction, securing data and software, ensuring authorization to use third-party products, enabling maintenance windows for STAKATER, and fulfilling other obligations set forth in the service description and SLA. It is important to note that any usage of the Services by third parties, including group companies of the Customer, requires the express written consent of STAKATER.
+    1. The Customer is responsible for taking all necessary actions to enable STAKATER to perform the Services as agreed upon in the Agreement. This includes, but is not limited to:
+        - providing access to systems, 
+        - designating responsible roles, 
+        - documenting emergencies and error messages, 
+        - informing STAKATER of planned changes, 
+        - using approved software versions and hardware, 
+        - cooperating with STAKATER in error analysis and correction, 
+        - securing data and software, 
+        - ensuring authorization to use third-party products, 
+        - enabling maintenance windows for STAKATER, 
+        - and fulfilling other obligations set forth in the service description and SLA. 
 
     1. The Customer is responsible for ensuring the accuracy of all data transmitted to STAKATER.
 
@@ -38,37 +54,38 @@
 
     1. The Customer must take all necessary measures to prevent unauthorized access to its own and third-party systems and comply with all applicable provisions of data protection and copyright law.
 
-    1. Stakater services are meant to be offered only for legal purposes, allowed by law. The Customer is not allowed to use the Services to commit or support criminal acts, and must assume complete responsibility and take necessary actions to prevent criminal use by its own users or its third parties.
+    1. Stakater Services are meant to be offered only for legally applicable purposes where allowed by law. The Customer will not use the Services to commit or solicit criminal acts.
+    2. The Customer will assume complete responsibility and take necessary actions to prevent criminal use by its own users or any approved Third Parties.
 
-    1. If a third party claims a violation of rights by the data, content, or information provided by the Customer, STAKATER is entitled to suspend the data, content, or information as appropriate and permissible under the GTC or Framework Agreement.
+    1. If a third party claims a violation of rights by the data, content, or information provided by the Customer, STAKATER is entitled to suspend the data, content, or information as appropriate and permissible under the General Terms and Conditions.
 
 1. **Invoicing and Payment**
 
-    1. Unless otherwise agreed, STAKATER will invoice the Services quarterly in advance.
+    1. Unless otherwise agreed in writing, STAKATER will invoice the Services quarterly in advance.
 
-    1. Payment for the Services is due within fifteen (15) days of invoice issuance. Invoices that are not contested by the Customer in good faith and with reasons stated by the due date will be deemed accepted and processed for payment.
+    1. Payment for the Services is due within fifteen (15) days of invoice issuance. Invoices that are not contested by the Customer in good faith and with reasons stated by the due date will be deemed acceptable and binding.
 
     1. Services requested by the Customer that were not specifically priced will be invoiced based on STAKATER's standard rates at the time the Agreement was concluded.
 
-    1. Travel and logistics expenses will be the responsibility of the Customer and will be invoiced as per actual.
+    1. Travel and logistics expenses will be the responsibility of the Customer and will be invoiced as such.
 
     1. If the Customer fails to make full payment by the end of the payment period, they will be liable to pay late payment fees on outstanding charges.
 
     1. After the payment period expires, STAKATER has the right to discontinue Services or terminate the Agreement without notice or compensation. The Customer will be charged for STAKATER's expenses related to any adjustments, debt collection costs, court and legal fees.
 
-    1. The Customer is not authorized to assert or lodge a settlement.
+    1. The Customer is not authorized to assert or lodge a settlement on invalidated Services due to the non compliane of the Customer.
 
-    1. STAKATER can change its service charges with one (1) month's notice period, effective at the end of the following month unless a term commitment has been agreed between Stakater and customer. For term commitment contracts, charges shall be locked for the agreed term. However, early termination or exit charges shall be applicable for premature termination.
+    1. STAKATER may change its service charges within thirty (30) day's notice, effective at the end of the following month unless a term commitment has been agreed between STAKATER and Customer. For term commitment contracts, charges shall be locked for the agreed term. However, early termination or exit charges shall be applicable for any Customer who wishes to exercise premature termination.
 
 1. **Term of Agreement and Termination**
 
-    1. Services orders are established for a specific duration and may be terminated in writing after that, subject to the notice period. Unless agreed otherwise, the minimum term is twelve (12) months, and the notice period is three (3) months.
+    1. Services orders are established for a specific duration and may be terminated in writing after that, subject to the notice period. Unless agreed otherwise, the minimum term is twelve (12) months, and the notice period is ninety (90) calendar days.
 
-    1. Both parties have the right to terminate the Agreement or specific orders immediately for cause, which can arise if the Customer utilizes the Services in a manner that violates the law, Agreement, or its purpose; or if the Customer makes them accessible to unauthorized third parties. If there is a reasonable suspicion that the Customer is insolvent, immediate termination for cause can occur by Stakater for customer's inability to pay for services.
+    1. Both parties have the right to terminate the Agreement or specific orders immediately for cause, which can arise if the Customer utilizes the Services in a manner that violates the law, Agreement, or its purpose; or if the Customer makes them accessible to unauthorized third parties. If there is a reasonable suspicion that the Customer is insolvent, immediate termination for cause can occur by STAKATER for the Customer's inability to pay for services.
 
-    1. Customer's access to STAKATER's Services is immediately revoked after termination of the Agreement.
+    1. Customer's access to STAKATER's Services will be immediately revoked after termination of the Agreement.
 
-    1. The Customer is solely responsible to ensure continuity of their own systems and backing up their data during and before termination of contract. Upon request, STAKATER can assist the Customer in transferring services and data to their own or third-party systems and may charge standard rates for the service.
+    1. The Customer will be solely responsible to ensure continuity of their own systems and backing up their data during and before termination of contract. Upon request, STAKATER may assist the Customer in transferring services and data to their own or third-party systems and may charge [standard rates](https://#) for the service.
 
 1. **Legal Warranty**
 
@@ -104,7 +121,7 @@
 
 1. **Acceptance, Defect Rectification and SLA**
 
-    1. Customer shall inspect the Work and Services during or immediately after delivery. The same shall also apply to the delivery of part of a Work, whereby defects in part of a Work may no longer be notified in the case of delivery of the entire Work. The inspection period lasts a maximum of five working days from delivery of the respective Work by STAKATER.
+    1. The Customer shall inspect work and services during or immediately after delivery. The same shall also apply to the delivery of part of that work, whereby defects in part of a work may no longer be notified in the case of entire delivery. The inspection period lasts a maximum of five (5) business days from delivery of the respective work by STAKATER.
 
     1. The Customer is required to promptly notify STAKATER in writing of any significant defects caused by STAKATER that prevent the use of the work, during the inspection period of the relevant Work immediately after discovery. This notification should be done in a way that the significant defects are comprehensible and reproducible for STAKATER. If a significant defect claimed by the Customer is not comprehensible and reproducible, it will not be considered a relevant significant defect.
 
@@ -116,19 +133,20 @@
 
 1. **Liability and Indemnification**
 
-    1. STAKATER is liable to the Customer for damages caused intentionally or by its gross negligence. The liability of STAKATER for damages caused negligently but unknowingly, or damage caused by auxiliary persons is excluded, as far as legally permissible.
+    1. STAKATER is liable to the Customer for damages caused intentionally or by gross negligence. The liability of STAKATER for damages caused by negligence unintentionally, or damage caused by an auxiliary person(s) is excluded, as far as legally permissible.
 
-    1. The Customer is responsible for the legally and contractually compliant use of the Services he has obtained. STAKATER is not liable for damages resulting from use in violation of the law or the Agreement, and the Customer is liable for all damages incurred by STAKATER as a result. The Customer shall indemnify STAKATER for all damages resulting from breach of Agreement or rights, including third-party claims and any legal and attorney's fees.
+    1. STAKATER is not liable for damages resulting from use in violation of the Agreement or to the law, and the Customer is liable for all damages incurred by STAKATER as a result. The Customer shall indemnify STAKATER for all damages resulting from breach of Agreement or rights, including third-party claims and any legal and attorney's fees.
 
     1. STAKATER is not liable for service delays or disruptions and damages that arise due to events that are not the responsibility of STAKATER or that make the performance significantly more difficult or impossible and that cannot be avoided, such as natural disasters of any kind, pandemics, riots, blockade, fire, civil war, embargo, earthquakes, hostage taking, war, revolution, sabotage, strikes, terrorism, traffic accidents or production disruptions, such as the failure of communication networks and gateways of other operators.
 
 1. **Confidentiality**
 
-    1. STAKATER undertakes to treat Customer data with care. Customer gives STAKATER its consent that its data may be used for the fulfilment of contractual obligations and may be used in anonymous form to improve the services and products of STAKATER.
+    1. STAKATER commits to treat Customer data with care. Customer gives STAKATER its consent that its data may be used for the fulfilment of contractual obligations and may be used in anonymous form to improve the services and products of STAKATER.
 
-    1. Both Parties undertake to treat as confidential all information not generally known which they have learned from the other Party or about its Customers and business relations in connection with the provision of their services within the scope of the contractual relationship. Furthermore, they undertake not to make such information available to third parties, either in whole or in part, nor to publish such information, unless and to the extent as the other Party expressly permits this, this becomes necessary due to a court order or legal obligation or this is necessary for the execution of the Agreement.
+    1. Both Parties undertake to treat as confidential all information not generally known which they have learned from the other Party or about its Customers and business relations in connection with the provision of their services within the scope of the contractual relationship.
+    2. Furthermore, both Parties undertake not to make such information available to third parties, either in whole or in part, nor to publish such information, unless and to the extent as the other Party expressly permits this, becomes necessary due to a court order or legal obligation or this is necessary for the execution of the Agreement.
 
-    1. If the Customer processes or discloses personal data within the meaning of the Data Protection Act in the context of the use of the STAKATER Services, the Customer will first obtain the necessary consent of each affected individual.
+    1. If the Customer processes or discloses personal information within the definition of the Data Protection Act by use of a STAKATER Service(s), the Customer must obtain necessary consent of each affected individual. If the Customer is unable to obtain such consent, then it will be identified as a Data Breach and the Customer must proceed with their processes according to the law, and contact their respective Supervisory Authority where the breach took place.
 
 1. **Data Protection and Security Measures**
 
@@ -140,19 +158,19 @@
 
     1. STAKATER undertakes to take all appropriate technical and organizational measures for the protection of Customer data.
 
-1. **Intellectual Property**
+1. **License of Provisioned Services**
 
     1. Unless otherwise agreed in writing, all rights to existing intellectual property or intellectual property arising during the performance of the Agreement with respect to STAKATER's services or products (e.g. programs, templates, data, trademarks, patents, copyrights, etc.) remain with STAKATER or with the third parties used by STAKATER for provision of services.
 
-    1. STAKATER grants the Customer a non-exclusive, temporally unlimited and non-transferable right to use the Services (including Works) for his own internal use.
+    1. STAKATER grants the Customer a non-exclusive, temporally unlimited and non-transferable license to use the Services (including Works) for his own internal use.
 
     1. Third-party software is subject to the third-parties' license terms and subscriptions.
 
 1. **Non-Solicitation Agreement**
 
-    1. The Customer undertakes not to directly or indirectly (through an affiliate) hire employees and supporting persons of STAKATER who are or were involved in execution of the Agreement, during the term of the Agreement and for one year afterward, or to persuade them in any other way to give up their employment with Stakater.
+    1. The Customer will not directly or indirectly (through an affiliate) hire employees and supporting persons of STAKATER who are or were involved in the execution of the Agreement, or the provisioning of any Services under said Agreement, during the term of the Agreement and for twelve (12) months after the conclusion of those Services, or to persuade them in any other way to give up their employment with Stakater.
 
-    1. In the event of such breach, a penalty equivalent to previous annual salary of the such person shall be payable by customer.
+    1. In the event of such a breach in contract, a penalty equivalent to previous annual salary of the individual shall be payable by the Customer.
 
 1. **Other Provisions**
 
@@ -160,8 +178,16 @@
 
     1. STAKATER has the right to transfer rights and obligations under this Agreement in whole or in part to third parties. The transfer of rights and obligations under this Agreement by the Customer to third parties requires the written consent of STAKATER.
 
-    1. STAKATER reserves the right to modify these General Terms and Conditions (GTC) at any time and shall inform the Customer for such changes in a suitable manner. Any amendments or supplements to these GTC shall become an integral part of the Agreement if the Customer does not object within 30 days of becoming aware of the amended provisions.
+    1. STAKATER reserves the right to modify these General Terms and Conditions (GTC) at any time and shall inform the Customer for such changes in a suitable manner. Any amendments or supplements to these GTC shall become an integral part of the Agreement if the Customer does not object within thirty (30) days of becoming aware of the amended provisions.
 
     1. Should one or more provisions of these GTC or the remaining Agreement be or become invalid, ineffective or void, this provision shall be replaced by a valid and effective provision that comes closest to the meaning of the original provision and corresponds to the economic balance of the Parties.
 
-    1. The present Agreement and all disputes arising from it are subject exclusively to Swedish law, unless otherwise agreed.
+1. **Disputes**
+
+    1. This Agreement is subject to Swedish law, and the territorial legal bindings of the Customers registered head offices.
+    1. In the event that the Customer believes STAKATER to be in breach of this Agreement ("Dispute"), the aggreived Party shall notify STAKATER or its legal representative of the alleged breach or violation, and the Parties shall attempt in good faith to resolve or clarify the Dispute.
+    1. In the event that both Parties are unable to cooperatively resolve the Dispute, they shall attempt, in good faith, to mediate the matter in a mutually acceptable location (“Arbritration”), engaging the services of a mediator familiar with subject matter at issue and acceptable to both Parties.
+    1. The requirement of Arbritration shall be deemed satisfied if the filing Party proposed a qualified mediator and offered to make itself reasonably available during the sixty (60) calendar days following Notice, but Mediation did not take place or conclude within such 60-day period.
+    1. The requirement of Mediation and Negotiation may be waived upon mutual written consent of the Parties. Further, notwithstanding the foregoing, either Party may seek injunctive relief against a Party related to the acts or omissions of such Party that breach this Agreement and cause or are likely to cause irreparable harm to the other Party, without the requirement of Mediation or Negotiation.
+
+    
