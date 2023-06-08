@@ -20,7 +20,7 @@
 
     1. Once STAKATER confirms an order and both parties mutually agree in writing (through formal or e-signatures)to the change in Services, the order becomes binding.
 
-    1. Should STAKATER be required to provide additional services beyond the agreed support scope or charge for additional expenses incurred due to the Customer's non-compliance of its obligations, these additional services and expenses will be charged based on [STAKATER's current hourly rates](https://#). 
+    1. Should STAKATER be required to provide additional services beyond the agreed support scope or charge for additional expenses incurred due to the Customer's non-compliance of its obligations, these additional services and expenses will be charged based on STAKATER's current hourly rates. 
 
     1. STAKATER has the right to modify its services, including the SLA, at any time. If these changes affect the services purchased by the Customer, STAKATER will provide written notice at least 30 (30) calendar days prior to the changes taking effect. If the Customer does not indicate their objection to such changes prior to the proposed date of effect, consent will be assumed on their behalf.
 
@@ -85,7 +85,7 @@
 
     1. Customer's access to STAKATER's Services will be immediately revoked after termination of the Agreement.
 
-    1. The Customer will be solely responsible to ensure continuity of their own systems and backing up their data during and before termination of contract. Upon request, STAKATER may assist the Customer in transferring services and data to their own or third-party systems and may charge [standard rates](https://#) for the service.
+    1. The Customer will be solely responsible to ensure continuity of their own systems and backing up their data during and before termination of contract. Upon request, STAKATER may assist the Customer in transferring services and data to their own or third-party systems and may charge standard rates for the service.
 
 1. **Legal Warranty**
 
