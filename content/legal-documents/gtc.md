@@ -11,8 +11,8 @@
 1. **Scope of Services**
 
     1. The scope of services provided by STAKATER is determined by the specific details outlined in the contractual orders, service descriptions, and relevant [Service Level Agreements (SLAs)](sla.md).
-   
-    1. Both Parties agree to collaborate on related activities and, persuant to statements of work [Service Level Agreements (SLAs)](sla.md) to this Agreement.
+
+    1. Both Parties agree to collaborate on related activities and, pursuant to statements of work [Service Level Agreements (SLAs)](sla.md) to this Agreement.
     
     1. Any services provided by STAKATER under this Agreement shall be known as the "**Services**".
     
@@ -20,7 +20,7 @@
 
     1. Once STAKATER confirms an order and both parties mutually agree in writing (through formal or e-signatures)to the change in Services, the order becomes binding.
 
-    1. Should STAKATER be required to provide additional services beyond the agreed support scope or charge for additional expenses incurred due to the Customer's non-compliance of its obligations, these additional services and expenses will be charged based on STAKATER's current hourly rates. 
+    1. Should STAKATER be required to provide additional services beyond the agreed support scope or charge for additional expenses incurred due to the Customer's non-compliance of its obligations, these additional services and expenses will be charged based on STAKATER's current hourly rates.
 
     1. STAKATER has the right to modify its services, including the SLA, at any time. If these changes affect the services purchased by the Customer, STAKATER will provide written notice at least 30 (30) calendar days prior to the changes taking effect. If the Customer does not indicate their objection to such changes prior to the proposed date of effect, consent will be assumed on their behalf.
 
@@ -37,16 +37,16 @@
     1. STAKATER will provide the Services to the Customer in the agreed scope of work and services levels as per the agreement.
 
     1. The Customer is responsible for taking all necessary actions to enable STAKATER to perform the Services as agreed upon in the Agreement. This includes, but is not limited to:
-        - providing access to systems, 
-        - designating responsible roles, 
-        - documenting emergencies and error messages, 
-        - informing STAKATER of planned changes, 
-        - using approved software versions and hardware, 
-        - cooperating with STAKATER in error analysis and correction, 
-        - securing data and software, 
-        - ensuring authorization to use third-party products, 
-        - enabling maintenance windows for STAKATER, 
-        - and fulfilling other obligations set forth in the service description and SLA. 
+        - providing access to systems,
+        - designating responsible roles,
+        - documenting emergencies and error messages,
+        - informing STAKATER of planned changes,
+        - using approved software versions and hardware,
+        - cooperating with STAKATER in error analysis and correction,
+        - securing data and software,
+        - ensuring authorization to use third-party products,
+        - enabling maintenance windows for STAKATER,
+        - and fulfilling other obligations set forth in the service description and SLA.
 
     1. The Customer is responsible for ensuring the accuracy of all data transmitted to STAKATER.
 
@@ -55,7 +55,8 @@
     1. The Customer must take all necessary measures to prevent unauthorized access to its own and third-party systems and comply with all applicable provisions of data protection and copyright law.
 
     1. Stakater Services are meant to be offered only for legally applicable purposes where allowed by law. The Customer will not use the Services to commit or solicit criminal acts.
-    2. The Customer will assume complete responsibility and take necessary actions to prevent criminal use by its own users or any approved Third Parties.
+
+    1. The Customer will assume complete responsibility and take necessary actions to prevent criminal use by its own users or any approved Third Parties.
 
     1. If a third party claims a violation of rights by the data, content, or information provided by the Customer, STAKATER is entitled to suspend the data, content, or information as appropriate and permissible under the General Terms and Conditions.
 
@@ -73,7 +74,7 @@
 
     1. After the payment period expires, STAKATER has the right to discontinue Services or terminate the Agreement without notice or compensation. The Customer will be charged for STAKATER's expenses related to any adjustments, debt collection costs, court and legal fees.
 
-    1. The Customer is not authorized to assert or lodge a settlement on invalidated Services due to the non compliane of the Customer.
+    1. The Customer is not authorized to assert or lodge a settlement on invalidated Services due to the non compliance of the Customer.
 
     1. STAKATER may change its service charges within thirty (30) day's notice, effective at the end of the following month unless a term commitment has been agreed between STAKATER and Customer. For term commitment contracts, charges shall be locked for the agreed term. However, early termination or exit charges shall be applicable for any Customer who wishes to exercise premature termination.
 
@@ -142,9 +143,8 @@
 1. **Confidentiality**
 
     1. STAKATER commits to treat Customer data with care. Customer gives STAKATER its consent that its data may be used for the fulfilment of contractual obligations and may be used in anonymous form to improve the services and products of STAKATER.
-
-    1. Both Parties undertake to treat as confidential all information not generally known which they have learned from the other Party or about its Customers and business relations in connection with the provision of their services within the scope of the contractual relationship.
-    2. Furthermore, both Parties undertake not to make such information available to third parties, either in whole or in part, nor to publish such information, unless and to the extent as the other Party expressly permits this, becomes necessary due to a court order or legal obligation or this is necessary for the execution of the Agreement.
+    2. Both Parties undertake to treat as confidential all information not generally known which they have learned from the other Party or about its Customers and business relations in connection with the provision of their services within the scope of the contractual relationship.
+    3. Furthermore, both Parties undertake not to make such information available to third parties, either in whole or in part, nor to publish such information, unless and to the extent as the other Party expressly permits this, becomes necessary due to a court order or legal obligation or this is necessary for the execution of the Agreement.
 
     1. If the Customer processes or discloses personal information within the definition of the Data Protection Act by use of a STAKATER Service(s), the Customer must obtain necessary consent of each affected individual. If the Customer is unable to obtain such consent, then it will be identified as a Data Breach and the Customer must proceed with their processes according to the law, and contact their respective Supervisory Authority where the breach took place.
 
@@ -185,9 +185,7 @@
 1. **Disputes**
 
     1. This Agreement is subject to Swedish law, and the territorial legal bindings of the Customers registered head offices.
-    1. In the event that the Customer believes STAKATER to be in breach of this Agreement ("Dispute"), the aggreived Party shall notify STAKATER or its legal representative of the alleged breach or violation, and the Parties shall attempt in good faith to resolve or clarify the Dispute.
-    1. In the event that both Parties are unable to cooperatively resolve the Dispute, they shall attempt, in good faith, to mediate the matter in a mutually acceptable location (“Arbritration”), engaging the services of a mediator familiar with subject matter at issue and acceptable to both Parties.
-    1. The requirement of Arbritration shall be deemed satisfied if the filing Party proposed a qualified mediator and offered to make itself reasonably available during the sixty (60) calendar days following Notice, but Mediation did not take place or conclude within such 60-day period.
+    1. In the event that the Customer believes STAKATER to be in breach of this Agreement ("Dispute"), the aggrieved Party shall notify STAKATER or its legal representative of the alleged breach or violation, and the Parties shall attempt in good faith to resolve or clarify the Dispute.
+    1. In the event that both Parties are unable to cooperatively resolve the Dispute, they shall attempt, in good faith, to mediate the matter in a mutually acceptable location (“Arbitration”), engaging the services of a mediator familiar with subject matter at issue and acceptable to both Parties.
+    1. The requirement of Arbitration shall be deemed satisfied if the filing Party proposed a qualified mediator and offered to make itself reasonably available during the sixty (60) calendar days following Notice, but Mediation did not take place or conclude within such 60-day period.
     1. The requirement of Mediation and Negotiation may be waived upon mutual written consent of the Parties. Further, notwithstanding the foregoing, either Party may seek injunctive relief against a Party related to the acts or omissions of such Party that breach this Agreement and cause or are likely to cause irreparable harm to the other Party, without the requirement of Mediation or Negotiation.
-
-    
