@@ -13,9 +13,9 @@
     1. The scope of services provided by STAKATER is determined by the specific details outlined in the contractual orders, service descriptions, and relevant [Service Level Agreements (SLAs)](sla.md).
 
     1. Both Parties agree to collaborate on related activities and, pursuant to statements of work [Service Level Agreements (SLAs)](sla.md) to this Agreement.
-    
+
     1. Any services provided by STAKATER under this Agreement shall be known as the "**Services**".
-    
+
     1. All Services negotiated between the Parties shall be in writing and executed by both Parties and shall be attached hereto as supplemental Exhibits, and shall be incorporated into, and governed by, this Agreement.
 
     1. Once STAKATER confirms an order and both parties mutually agree in writing (through formal or e-signatures)to the change in Services, the order becomes binding.
