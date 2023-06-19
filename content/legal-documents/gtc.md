@@ -143,9 +143,8 @@
 1. **Confidentiality**
 
     1. STAKATER commits to treat Customer data with care. Customer gives STAKATER its consent that its data may be used for the fulfilment of contractual obligations and may be used in anonymous form to improve the services and products of STAKATER.
-    2. Both Parties undertake to treat as confidential all information not generally known which they have learned from the other Party or about its Customers and business relations in connection with the provision of their services within the scope of the contractual relationship.
-    3. Furthermore, both Parties undertake not to make such information available to third parties, either in whole or in part, nor to publish such information, unless and to the extent as the other Party expressly permits this, becomes necessary due to a court order or legal obligation or this is necessary for the execution of the Agreement.
-
+    1. Both Parties undertake to treat as confidential all information not generally known which they have learned from the other Party or about its Customers and business relations in connection with the provision of their services within the scope of the contractual relationship.
+    1. Furthermore, both Parties undertake not to make such information available to third parties, either in whole or in part, nor to publish such information, unless and to the extent as the other Party expressly permits this, becomes necessary due to a court order or legal obligation or this is necessary for the execution of the Agreement.
     1. If the Customer processes or discloses personal information within the definition of the Data Protection Act by use of a STAKATER Service(s), the Customer must obtain necessary consent of each affected individual. If the Customer is unable to obtain such consent, then it will be identified as a Data Breach and the Customer must proceed with their processes according to the law, and contact their respective Supervisory Authority where the breach took place.
 
 1. **Data Protection and Security Measures**
